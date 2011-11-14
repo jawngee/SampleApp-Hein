@@ -1,2 +1,4 @@
 /* Localized versions of Info.plist keys */
-
+"name" = "Name of note";
+"content" = "Content of note";
+"date" = "Date of note";
