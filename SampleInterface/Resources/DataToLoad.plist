@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>item0</key>
+	<dict>
+		<key>icon2x</key>
+		<string>global-icon-cell-1@2x.png</string>
+		<key>label1</key>
+		<string>古罗马新创世纪运动与时装的超现实演绎</string>
+		<key>label2</key>
+		<string>— RDK 2011春夏新品静态展</string>
+		<key>label3</key>
+		<string>星期二,七月 19TH, 2011</string>
+		<key>icon</key>
+		<string>global-icon-cell-1.png</string>
+	</dict>
+	<key>item1</key>
+	<dict>
+		<key>icon2x</key>
+		<string>global-icon-cell-3@2x.png</string>
+		<key>label1</key>
+		<string>诠释 “有内涵的运动” </string>
+		<key>label2</key>
+		<string>— ROBE DI KAPPA  打造运动品牌新领域</string>
+		<key>label3</key>
+		<string>星期二,七月 19TH, 2011</string>
+		<key>icon</key>
+		<string>global-icon-cell-3.png</string>
+	</dict>
+	<key>item2</key>
+	<dict>
+		<key>icon2x</key>
+		<string>global-icon-cell-2@2x.png</string>
+		<key>label1</key>
+		<string>当北京与哥本哈根不期而遇 </string>
+		<key>label2</key>
+		<string>— RDK WEEKEND SURPRISE 周末惊喜系列音乐演出首演首演   </string>
+		<key>label3</key>
+		<string> 星期二,七月 19TH, 2011</string>
+		<key>icon</key>
+		<string>global-icon-cell-2.png</string>
+	</dict>
+</dict>
+</plist>

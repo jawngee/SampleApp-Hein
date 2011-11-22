@@ -95,6 +95,7 @@
     CGContextFillRect(context, _paperRect);
     
     ///create shadow
+    
     CGContextSaveGState(context);
     CGContextSetShadowWithColor(context, CGSizeMake(0, 2), 3.0, shadowColor);
     CGContextSetFillColorWithColor(context, lightColor);

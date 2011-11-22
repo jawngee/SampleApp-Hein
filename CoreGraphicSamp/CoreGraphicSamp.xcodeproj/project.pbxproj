@@ -137,7 +137,6 @@
 				FEE9C3E514724C2800C27CD6 /* CustomFooter.m */,
 				FEE9C3A81472169F00C27CD6 /* AppDelegate.h */,
 				FEE9C3A91472169F00C27CD6 /* AppDelegate.m */,
-				FEE9C3AB1472169F00C27CD6 /* MainStoryboard.storyboard */,
 				FEE9C3A01472169F00C27CD6 /* Supporting Files */,
 			);
 			path = CoreGraphicSamp;
@@ -146,6 +145,7 @@
 		FEE9C3A01472169F00C27CD6 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FEE9C3AB1472169F00C27CD6 /* MainStoryboard.storyboard */,
 				FEE9C3E7147272FD00C27CD6 /* main_bg.jpg */,
 				FEE9C3A11472169F00C27CD6 /* CoreGraphicSamp-Info.plist */,
 				FEE9C3A21472169F00C27CD6 /* InfoPlist.strings */,
