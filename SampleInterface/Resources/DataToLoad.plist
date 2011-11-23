@@ -4,8 +4,6 @@
 <dict>
 	<key>item0</key>
 	<dict>
-		<key>icon2x</key>
-		<string>global-icon-cell-1@2x.png</string>
 		<key>label1</key>
 		<string>古罗马新创世纪运动与时装的超现实演绎</string>
 		<key>label2</key>
@@ -13,12 +11,10 @@
 		<key>label3</key>
 		<string>星期二,七月 19TH, 2011</string>
 		<key>icon</key>
-		<string>global-icon-cell-1.png</string>
+		<string>home-icon-cell-1.png</string>
 	</dict>
 	<key>item1</key>
 	<dict>
-		<key>icon2x</key>
-		<string>global-icon-cell-3@2x.png</string>
 		<key>label1</key>
 		<string>诠释 “有内涵的运动” </string>
 		<key>label2</key>
@@ -26,12 +22,10 @@
 		<key>label3</key>
 		<string>星期二,七月 19TH, 2011</string>
 		<key>icon</key>
-		<string>global-icon-cell-3.png</string>
+		<string>home-icon-cell-3.png</string>
 	</dict>
 	<key>item2</key>
 	<dict>
-		<key>icon2x</key>
-		<string>global-icon-cell-2@2x.png</string>
 		<key>label1</key>
 		<string>当北京与哥本哈根不期而遇 </string>
 		<key>label2</key>
@@ -39,7 +33,7 @@
 		<key>label3</key>
 		<string> 星期二,七月 19TH, 2011</string>
 		<key>icon</key>
-		<string>global-icon-cell-2.png</string>
+		<string>home-icon-cell-2.png</string>
 	</dict>
 </dict>
 </plist>

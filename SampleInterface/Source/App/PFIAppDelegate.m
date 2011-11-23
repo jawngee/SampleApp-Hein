@@ -7,7 +7,7 @@
 //
 
 #import "PFIAppDelegate.h"
-#import "RootViewController.h"
+#import "PFIRootViewController.h"
 @implementation PFIAppDelegate
 
 @synthesize window = _window;
@@ -27,17 +27,16 @@
 -(BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window     = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
-    CGRect screen   = [[UIScreen mainScreen] bounds];
-
-    PFIHomeViewController *homeViewController = [[[PFIHomeViewController alloc] initWithNibName:@"HomeViewController" bundle:nil] autorelease];
+   
+    PFIHomeViewController *homeViewController = [[[PFIHomeViewController alloc] initWithNibName:@"PFIHomeViewController" bundle:nil] autorelease];
     
-    CalendarViewController *calendarViewController = [[[CalendarViewController alloc] initWithNibName:@"CalendarViewController" bundle:nil] autorelease];
+    PFICalendarViewController *calendarViewController = [[[PFICalendarViewController alloc] initWithNibName:@"PFICalendarViewController" bundle:nil] autorelease];
     
-    ClotheViewController *clotheViewController = [[[ClotheViewController alloc] initWithNibName:@"ClotheViewController" bundle:nil] autorelease];
+    PFIClotheViewController *clotheViewController = [[[PFIClotheViewController alloc] initWithNibName:@"PFIClotheViewController" bundle:nil] autorelease];
     
-    BagViewController *bagViewController = [[[BagViewController alloc] initWithNibName:@"BagViewController" bundle:nil] autorelease];
+    PFIBagViewController *bagViewController = [[[PFIBagViewController alloc] initWithNibName:@"PFIBagViewController" bundle:nil] autorelease];
     
-    MapViewController *mapViewController = [[[MapViewController alloc] initWithNibName:@"MapViewController" bundle:nil] autorelease];
+    PFIMapViewController *mapViewController = [[[PFIMapViewController alloc] initWithNibName:@"PFIMapViewController" bundle:nil] autorelease];
     
     ///init home navigation
     self.homeNavigationController = [[[UINavigationController alloc] initWithRootViewController:homeViewController] autorelease];
@@ -62,7 +61,7 @@
     self.mapNavigationController.navigationBar.tintColor = [UIColor blackColor];
         
     /// init Root view controller and configure it
-    self.tabBarViewController = [[[RootViewController alloc] initWithNibName:@"RootViewController" bundle:nil] autorelease];
+    self.tabBarViewController = [[[PFIRootViewController alloc] initWithNibName:@"PFIRootViewController" bundle:nil] autorelease];
     self.tabBarViewController.viewControllers = [NSArray arrayWithObjects:self.homeNavigationController, self.calendarNavigationController, self.clotheNavigationController, self.bagNavigationController, self.mapNavigationController, nil];
     
     [self.homeNavigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"global-header-background"] forBarMetrics: UIBarMetricsDefault];
@@ -88,8 +87,6 @@
     unselectedImage4 = [UIImage imageNamed:@"global-footer-map"];
     
     [tabBar setBackgroundImage:[UIImage imageNamed:@"global-footer-background"]];
-    
-    
     
     
     UITabBarItem *item0 = [tabBar.items objectAtIndex:0];

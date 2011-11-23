@@ -1,19 +1,19 @@
 //
-//  ClotheViewController.m
+//  MapViewController.m
 //  SampleInterface
 //
 //  Created by Doan The Hien on 11/18/11.
 //  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import "ClotheViewController.h"
+#import "PFIMapViewController.h"
 
-@implementation ClotheViewController
+@implementation PFIMapViewController
 
 -(id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) 
+    if (self)
     {
         // Custom initialization
     }

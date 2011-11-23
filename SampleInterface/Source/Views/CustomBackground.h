@@ -7,6 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+/**
+ * CustomBackground is used for customming the background view of the TableView from PFIHomeViewController.
+ */
 
 @interface CustomBackground : UIView
 {

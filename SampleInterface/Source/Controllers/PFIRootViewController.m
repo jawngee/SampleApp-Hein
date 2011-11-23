@@ -1,21 +1,22 @@
 //
-//  MapViewController.m
+//  PFIViewController.m
 //  SampleInterface
 //
 //  Created by Doan The Hien on 11/18/11.
 //  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import "MapViewController.h"
+#import "PFIRootViewController.h"
 
-@implementation MapViewController
+@implementation PFIRootViewController
 
 -(id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self)
+    if (self) 
     {
         // Custom initialization
+        
     }
     return self;
 }

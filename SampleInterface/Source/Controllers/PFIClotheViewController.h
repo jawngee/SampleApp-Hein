@@ -1,5 +1,5 @@
 //
-//  BagViewController.h
+//  ClotheViewController.h
 //  SampleInterface
 //
 //  Created by Doan The Hien on 11/18/11.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BagViewController : UIViewController
+@interface PFIClotheViewController : UIViewController
 
 @end

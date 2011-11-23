@@ -1,14 +1,14 @@
 //
-//  PFIViewController.m
+//  ClotheViewController.m
 //  SampleInterface
 //
 //  Created by Doan The Hien on 11/18/11.
 //  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import "RootViewController.h"
+#import "PFIClotheViewController.h"
 
-@implementation RootViewController
+@implementation PFIClotheViewController
 
 -(id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -16,7 +16,6 @@
     if (self) 
     {
         // Custom initialization
-        
     }
     return self;
 }

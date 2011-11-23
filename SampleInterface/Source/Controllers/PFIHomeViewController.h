@@ -7,17 +7,20 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "CustomCellBackground.h"
 /**
- * What is this?
+ * PFIHomeViewController contains a table view to show out the outline of all News.
  */
 @interface PFIHomeViewController : UITableViewController
 {
-    /** What is this too? */
+    /** 
+     * data is to keep all the news which are contained in a plist file.
+     * cellBackground is to custom the background of every cell in table view.
+     */
     NSArray *data;
-    int ratioScreen;
+    CustomCellBackground *cellBackground;
 }
 
 @property(nonatomic, retain) NSArray *data;
-
+@property(nonatomic, retain) CustomCellBackground *cellBackground;
 @end

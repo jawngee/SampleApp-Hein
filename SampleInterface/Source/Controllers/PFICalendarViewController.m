@@ -6,9 +6,9 @@
 //  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import "CalendarViewController.h"
+#import "PFICalendarViewController.h"
 
-@implementation CalendarViewController
+@implementation PFICalendarViewController
 
 @synthesize imageScrollView;
 
@@ -41,18 +41,19 @@
     self.view.backgroundColor = [UIColor colorWithRed: 212.0 / 255.0 green: 212.0 / 255.0 blue: 212.0 / 255.0 alpha: 1.0];
     int imageWidth   = 320;
     int imageHeight  = 365;
-//  int gapX         = 2;
     int contentWidth = imageWidth * 3;
     int x = 0, y = 0;
     [imageScrollView setPagingEnabled:YES];
     [imageScrollView setUserInteractionEnabled:YES];
+    [imageScrollView setShowsHorizontalScrollIndicator: NO];
+    [imageScrollView setShowsVerticalScrollIndicator: NO];
     imageScrollView.contentSize = CGSizeMake(contentWidth, imageHeight);
     for (int i = 1; i <= 3; i++) 
     {
         UIImageView *addedImage = [[[UIImageView alloc] initWithImage:[UIImage imageNamed:[NSString stringWithFormat:@"calendar-image-%d.jpg",i]]]autorelease];
         addedImage.frame = CGRectMake(x, y, imageWidth, imageHeight);
         [imageScrollView addSubview: addedImage];
-        x = x + imageWidth ;//+ gapX;
+        x = x + imageWidth ;
     }
 }
 

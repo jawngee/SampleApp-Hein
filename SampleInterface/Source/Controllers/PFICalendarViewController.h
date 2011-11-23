@@ -8,8 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CalendarViewController : UIViewController
+/**
+ * PFICalendarViewController is a UIViewController that contains a scroll view to show out all the images of the collection.
+ */
+@interface PFICalendarViewController : UIViewController
 {
+    /**
+     * imageScrollView is the scroll view to show out all the images of the collection.
+     */
     IBOutlet UIScrollView *imageScrollView;
     
 }
