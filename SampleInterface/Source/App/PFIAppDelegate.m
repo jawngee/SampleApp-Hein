@@ -28,8 +28,8 @@
 {
     self.window     = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     CGRect screen   = [[UIScreen mainScreen] bounds];
-    int ratioScreen = screen.size.width / 320;
-    HomeViewController *homeViewController = [[[HomeViewController alloc] initWithNibName:@"HomeViewController" bundle:nil] autorelease];
+
+    PFIHomeViewController *homeViewController = [[[PFIHomeViewController alloc] initWithNibName:@"HomeViewController" bundle:nil] autorelease];
     
     CalendarViewController *calendarViewController = [[[CalendarViewController alloc] initWithNibName:@"CalendarViewController" bundle:nil] autorelease];
     
@@ -65,60 +65,29 @@
     self.tabBarViewController = [[[RootViewController alloc] initWithNibName:@"RootViewController" bundle:nil] autorelease];
     self.tabBarViewController.viewControllers = [NSArray arrayWithObjects:self.homeNavigationController, self.calendarNavigationController, self.clotheNavigationController, self.bagNavigationController, self.mapNavigationController, nil];
     
-    ///set Header background of Navigation Bar
-    if (ratioScreen == 1)
-    {
-        [self.homeNavigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"global-header-background.png"] forBarMetrics: UIBarMetricsDefault];
-        [self.calendarNavigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"global-header-background.png"] forBarMetrics: UIBarMetricsDefault];
-    }
-    else
-    {
-        [self.homeNavigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"global-header-background@2x.png"] forBarMetrics: UIBarMetricsDefault];
-        [self.calendarNavigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"global-header-background@2x.png"] forBarMetrics: UIBarMetricsDefault];
-    }
+    [self.homeNavigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"global-header-background"] forBarMetrics: UIBarMetricsDefault];
+    [self.calendarNavigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"global-header-background"] forBarMetrics: UIBarMetricsDefault];
     
     UIImage *selectedImage0, *unselectedImage0, *selectedImage1, *unselectedImage1,
     *selectedImage2, *unselectedImage2,*selectedImage3, *unselectedImage3,*selectedImage4, *unselectedImage4;
     UITabBar *tabBar = self.tabBarViewController.tabBar;
     
-    if (ratioScreen == 1) 
-    {
-        selectedImage0   = [UIImage imageNamed:@"global-footer-home-on.png"];
-        unselectedImage0 = [UIImage imageNamed:@"global-footer-home.png"];
-        
-        selectedImage1   = [UIImage imageNamed:@"global-footer-calendar-on.png"];
-        unselectedImage1 = [UIImage imageNamed:@"global-footer-calendar.png"];
-        
-        selectedImage2   = [UIImage imageNamed:@"global-footer-cloth-on.png"];
-        unselectedImage2 = [UIImage imageNamed:@"global-footer-cloth.png"];
-        
-        selectedImage3   = [UIImage imageNamed:@"global-footer-bag-on.png"];
-        unselectedImage3 = [UIImage imageNamed:@"global-footer-bag.png"];
-        
-        selectedImage4   = [UIImage imageNamed:@"global-footer-map-on.png"];
-        unselectedImage4 = [UIImage imageNamed:@"global-footer-map.png"];
-        
-        [tabBar setBackgroundImage:[UIImage imageNamed:@"global-footer-background.png"]];
-    }
-    else
-    {
-        selectedImage0   = [UIImage imageNamed:@"global-footer-home-on@2x.png"];
-        unselectedImage0 = [UIImage imageNamed:@"global-footer-home@2x.png"];
-        
-        selectedImage1   = [UIImage imageNamed:@"global-footer-calendar-on@2x.png"];
-        unselectedImage1 = [UIImage imageNamed:@"global-footer-calendar@2x.png"];
-        
-        selectedImage2   = [UIImage imageNamed:@"global-footer-cloth-on@2x.png"];
-        unselectedImage2 = [UIImage imageNamed:@"global-footer-cloth@2x.png"];
-        
-        selectedImage3   = [UIImage imageNamed:@"global-footer-bag-on@2x.png"];
-        unselectedImage3 = [UIImage imageNamed:@"global-footer-bag@2x.png"];
-        
-        selectedImage4   = [UIImage imageNamed:@"global-footer-map-on@2x.png"];
-        unselectedImage4 = [UIImage imageNamed:@"global-footer-map@2x.png"];
-        
-        [tabBar setBackgroundImage:[UIImage imageNamed:@"global-footer-background@2x.png"]];
-    }
+    selectedImage0   = [UIImage imageNamed:@"global-footer-home-on"];
+    unselectedImage0 = [UIImage imageNamed:@"global-footer-home"];
+    
+    selectedImage1   = [UIImage imageNamed:@"global-footer-calendar-on"];
+    unselectedImage1 = [UIImage imageNamed:@"global-footer-calendar"];
+    
+    selectedImage2   = [UIImage imageNamed:@"global-footer-cloth-on"];
+    unselectedImage2 = [UIImage imageNamed:@"global-footer-cloth"];
+    
+    selectedImage3   = [UIImage imageNamed:@"global-footer-bag-on"];
+    unselectedImage3 = [UIImage imageNamed:@"global-footer-bag"];
+    
+    selectedImage4   = [UIImage imageNamed:@"global-footer-map-on"];
+    unselectedImage4 = [UIImage imageNamed:@"global-footer-map"];
+    
+    [tabBar setBackgroundImage:[UIImage imageNamed:@"global-footer-background"]];
     
     
     

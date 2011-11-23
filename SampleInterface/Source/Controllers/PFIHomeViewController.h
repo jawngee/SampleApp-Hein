@@ -8,10 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HomeViewController : UITableViewController
+/**
+ * What is this?
+ */
+@interface PFIHomeViewController : UITableViewController
 {
+    /** What is this too? */
     NSArray *data;
     int ratioScreen;
 }
+
 @property(nonatomic, retain) NSArray *data;
+
 @end

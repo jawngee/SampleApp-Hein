@@ -6,9 +6,9 @@
 //  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import "HomeViewController.h"
+#import "PFIHomeViewController.h"
 #import "CustomBackground.h"
-@implementation HomeViewController
+@implementation PFIHomeViewController
 
 @synthesize data;
 
@@ -67,6 +67,7 @@
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
 }
+
 -(void) refreshPage:(id)sender
 {
     
@@ -165,7 +166,7 @@
     [cell addSubview: contentLabel];
     
     ////add date label
-    UILabel *dateLabel = [[[UILabel alloc] initWithFrame:CGRectMake(173 * ratioScreen, 94 * ratioScreen, 133 * ratioScreen, 15 * ratioScreen)]autorelease];
+    UILabel *dateLabel = [[[UILabel alloc] initWithFrame:CGRectMake(173 * ratioScreen, 94 * ratioScreen, 133 * ratioScreen, 15 * ratioScreen)] autorelease];
     dateLabel.text = [dataItem objectForKey:@"label3"];
     [dateLabel setFont:[UIFont systemFontOfSize:12 * ratioScreen]];
     [dateLabel setTextColor:[UIColor colorWithRed:153.0 / 255.0 green:153.0 / 255.0 blue:153.0 / 255.0 alpha:1.0]];

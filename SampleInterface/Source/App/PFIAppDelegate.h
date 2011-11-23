@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "HomeViewController.h"
+#import "PFIHomeViewController.h"
 #import "CalendarViewController.h"
 #import "ClotheViewController.h"
 #import "BagViewController.h"
