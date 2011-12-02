@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>item0</key>
+	<dict>
+		<key>description</key>
+		<string>锦纶,人造革,100% 涤</string>
+		<key>title</key>
+		<string>多层次小手提包</string>
+		<key>showThumnail3</key>
+		<string>clothe-gridview-detail-1-silverImage</string>
+		<key>showThumnail2</key>
+		<string>clothe-gridview-detail-1-silverImage</string>
+		<key>showThumnail1</key>
+		<string>clothe-gridview-detail-1-silverImage</string>
+		<key>thumnail3</key>
+		<string>clothe-gridview-detail-1-thumnail1</string>
+		<key>thumnail2</key>
+		<string>clothe-gridview-detail-1-thumnail1</string>
+		<key>thumnail1</key>
+		<string>clothe-gridview-detail-1-thumnail1</string>
+		<key>orangeImage</key>
+		<string>clothe-gridview-detail-1-orangeImage</string>
+		<key>silverImage</key>
+		<string>clothe-gridview-detail-1-silverImage</string>
+		<key>iconImage</key>
+		<string>clothe-gridview-cell-1</string>
+	</dict>
+</dict>
+</plist>

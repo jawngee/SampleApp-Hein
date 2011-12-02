@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FE00EA42147E104B00874935 /* PFIHomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FE00EA41147E104B00874935 /* PFIHomeTableViewCell.m */; };
+		FE00EA4F147E313600874935 /* dataBase.plist in Resources */ = {isa = PBXBuildFile; fileRef = FE00EA4E147E313600874935 /* dataBase.plist */; };
+		FE00EA58147E4BE300874935 /* PFIClotheViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE00EA56147E4BE300874935 /* PFIClotheViewController.m */; };
+		FE00EA5B147E4C3D00874935 /* PFIClotheViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE00EA5A147E4C3D00874935 /* PFIClotheViewController.xib */; };
+		FE00EA5E147E4F8C00874935 /* PFIClotheTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FE00EA5D147E4F8C00874935 /* PFIClotheTableViewCell.m */; };
+		FE00EA60147E50A200874935 /* ClotheData.plist in Resources */ = {isa = PBXBuildFile; fileRef = FE00EA5F147E50A200874935 /* ClotheData.plist */; };
+		FE00EA6A147E5C8D00874935 /* clothe-bag@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE00EA62147E5C8D00874935 /* clothe-bag@2x.png */; };
+		FE00EA6B147E5C8D00874935 /* clothe-clothes.png in Resources */ = {isa = PBXBuildFile; fileRef = FE00EA63147E5C8D00874935 /* clothe-clothes.png */; };
+		FE00EA6C147E5C8D00874935 /* clothe-clothes@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE00EA64147E5C8D00874935 /* clothe-clothes@2x.png */; };
+		FE00EA6E147E5C8D00874935 /* clothe-shoes@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE00EA66147E5C8D00874935 /* clothe-shoes@2x.png */; };
+		FE00EA6F147E5C8D00874935 /* clothe-trousers.png in Resources */ = {isa = PBXBuildFile; fileRef = FE00EA67147E5C8D00874935 /* clothe-trousers.png */; };
+		FE00EA70147E5C8D00874935 /* clothe-trousers@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE00EA68147E5C8D00874935 /* clothe-trousers@2x.png */; };
 		FE4B0FA5147CE340003CEDFD /* home-background-tableview.png in Resources */ = {isa = PBXBuildFile; fileRef = FE4B0F9D147CE340003CEDFD /* home-background-tableview.png */; };
 		FE4B0FA6147CE340003CEDFD /* home-background-tableview@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE4B0F9E147CE340003CEDFD /* home-background-tableview@2x.png */; };
 		FE4B0FA7147CE340003CEDFD /* home-icon-cell-1.png in Resources */ = {isa = PBXBuildFile; fileRef = FE4B0F9F147CE340003CEDFD /* home-icon-cell-1.png */; };
@@ -18,13 +30,34 @@
 		FE4B0FAF147CEFD2003CEDFD /* home-background-cell.png in Resources */ = {isa = PBXBuildFile; fileRef = FE4B0FAD147CEFD2003CEDFD /* home-background-cell.png */; };
 		FE4B0FB0147CEFD2003CEDFD /* home-background-cell@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE4B0FAE147CEFD2003CEDFD /* home-background-cell@2x.png */; };
 		FE4B0FB3147CF36D003CEDFD /* CustomCellBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = FE4B0FB2147CF36D003CEDFD /* CustomCellBackground.m */; };
+		FE81FEB2148692B0007E3F63 /* clothe-gridview-cell-hightlight.png in Resources */ = {isa = PBXBuildFile; fileRef = FE81FEB0148692B0007E3F63 /* clothe-gridview-cell-hightlight.png */; };
+		FE81FEB3148692B0007E3F63 /* clothe-gridview-cell-hightlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE81FEB1148692B0007E3F63 /* clothe-gridview-cell-hightlight@2x.png */; };
+		FE81FEC31486A708007E3F63 /* PFIClotheGridViewCellDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = FE81FEC11486A708007E3F63 /* PFIClotheGridViewCellDetail.m */; };
+		FE81FEC61486A74A007E3F63 /* PFIClotheGridViewCellDetail.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE81FEC51486A74A007E3F63 /* PFIClotheGridViewCellDetail.xib */; };
+		FE8AC5DD1487318600A7F867 /* clothe-gridview-under-line.png in Resources */ = {isa = PBXBuildFile; fileRef = FE8AC5DB1487318600A7F867 /* clothe-gridview-under-line.png */; };
+		FE8AC5DE1487318600A7F867 /* clothe-gridview-under-line@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE8AC5DC1487318600A7F867 /* clothe-gridview-under-line@2x.png */; };
+		FE8AC5EE14876AD600A7F867 /* clothe-girdview-detail-shadow.png in Resources */ = {isa = PBXBuildFile; fileRef = FE8AC5E014876AD600A7F867 /* clothe-girdview-detail-shadow.png */; };
+		FE8AC5F114876AD600A7F867 /* clothe-gridview-detail-1-silverImage.png in Resources */ = {isa = PBXBuildFile; fileRef = FE8AC5E314876AD600A7F867 /* clothe-gridview-detail-1-silverImage.png */; };
+		FE8AC5F214876AD600A7F867 /* clothe-gridview-detail-1-silverImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE8AC5E414876AD600A7F867 /* clothe-gridview-detail-1-silverImage@2x.png */; };
+		FE8AC5F314876AD600A7F867 /* clothe-gridview-detail-1-thumnail1.png in Resources */ = {isa = PBXBuildFile; fileRef = FE8AC5E514876AD600A7F867 /* clothe-gridview-detail-1-thumnail1.png */; };
+		FE8AC5F414876AD600A7F867 /* clothe-gridview-detail-1-thumnail1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE8AC5E614876AD600A7F867 /* clothe-gridview-detail-1-thumnail1@2x.png */; };
+		FE8AC5F514876AD600A7F867 /* clothe-gridview-detail-button-color-orange.png in Resources */ = {isa = PBXBuildFile; fileRef = FE8AC5E714876AD600A7F867 /* clothe-gridview-detail-button-color-orange.png */; };
+		FE8AC5F614876AD600A7F867 /* clothe-gridview-detail-button-color-orange@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE8AC5E814876AD600A7F867 /* clothe-gridview-detail-button-color-orange@2x.png */; };
+		FE8AC5F714876AD600A7F867 /* clothe-gridview-detail-button-color-silver.png in Resources */ = {isa = PBXBuildFile; fileRef = FE8AC5E914876AD600A7F867 /* clothe-gridview-detail-button-color-silver.png */; };
+		FE8AC5F814876AD600A7F867 /* clothe-gridview-detail-button-color-silver@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE8AC5EA14876AD600A7F867 /* clothe-gridview-detail-button-color-silver@2x.png */; };
+		FE8AC5F914876AD600A7F867 /* clothe-gridview-detail-content-background.png in Resources */ = {isa = PBXBuildFile; fileRef = FE8AC5EB14876AD600A7F867 /* clothe-gridview-detail-content-background.png */; };
+		FE8AC5FA14876AD600A7F867 /* clothe-gridview-detail-content-background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE8AC5EC14876AD600A7F867 /* clothe-gridview-detail-content-background@2x.png */; };
+		FE8AC5FB14876AD600A7F867 /* clothe-gridview-detail-shadow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE8AC5ED14876AD600A7F867 /* clothe-gridview-detail-shadow@2x.png */; };
+		FE8AC5FE14876B4000A7F867 /* clothe-gridview-detail-1-orangeImage.png in Resources */ = {isa = PBXBuildFile; fileRef = FE8AC5FC14876B4000A7F867 /* clothe-gridview-detail-1-orangeImage.png */; };
+		FE8AC5FF14876B4000A7F867 /* clothe-gridview-detail-1-orangeImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE8AC5FD14876B4000A7F867 /* clothe-gridview-detail-1-orangeImage@2x.png */; };
+		FEBD195C1486008700692310 /* PFIClotheGridViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FEBD195B1486008700692310 /* PFIClotheGridViewCell.m */; };
 		FEBF461114761F1F004C0525 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEBF461014761F1F004C0525 /* UIKit.framework */; };
 		FEBF461314761F1F004C0525 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEBF461214761F1F004C0525 /* Foundation.framework */; };
 		FEBF461514761F1F004C0525 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEBF461414761F1F004C0525 /* CoreGraphics.framework */; };
+		FEDF76C7148362B000623535 /* PFINavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEDF76C5148362B000623535 /* PFINavigationController.m */; };
 		FEDFA76C147BB0520028A7E5 /* PFIBagViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FEDFA762147BB0520028A7E5 /* PFIBagViewController.xib */; };
 		FEDFA76D147BB0520028A7E5 /* PFICalendarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FEDFA763147BB0520028A7E5 /* PFICalendarViewController.xib */; };
-		FEDFA76E147BB0520028A7E5 /* PFIClotheViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FEDFA764147BB0520028A7E5 /* PFIClotheViewController.xib */; };
-		FEDFA76F147BB0520028A7E5 /* DataToLoad.plist in Resources */ = {isa = PBXBuildFile; fileRef = FEDFA765147BB0520028A7E5 /* DataToLoad.plist */; };
+		FEDFA76F147BB0520028A7E5 /* HomeData.plist in Resources */ = {isa = PBXBuildFile; fileRef = FEDFA765147BB0520028A7E5 /* HomeData.plist */; };
 		FEDFA770147BB0520028A7E5 /* PFIHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FEDFA766147BB0520028A7E5 /* PFIHomeViewController.xib */; };
 		FEDFA771147BB0520028A7E5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FEDFA767147BB0520028A7E5 /* InfoPlist.strings */; };
 		FEDFA772147BB0520028A7E5 /* PFIMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FEDFA768147BB0520028A7E5 /* PFIMapViewController.xib */; };
@@ -33,11 +66,32 @@
 		FEDFA78B147BB05E0028A7E5 /* PFIAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FEDFA779147BB05E0028A7E5 /* PFIAppDelegate.m */; };
 		FEDFA78C147BB05E0028A7E5 /* PFIBagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEDFA77C147BB05E0028A7E5 /* PFIBagViewController.m */; };
 		FEDFA78D147BB05E0028A7E5 /* PFICalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEDFA77E147BB05E0028A7E5 /* PFICalendarViewController.m */; };
-		FEDFA78E147BB05E0028A7E5 /* PFIClotheViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEDFA780147BB05E0028A7E5 /* PFIClotheViewController.m */; };
 		FEDFA78F147BB05E0028A7E5 /* PFIHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEDFA782147BB05E0028A7E5 /* PFIHomeViewController.m */; };
 		FEDFA790147BB05E0028A7E5 /* PFIMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEDFA784147BB05E0028A7E5 /* PFIMapViewController.m */; };
 		FEDFA791147BB05E0028A7E5 /* PFIRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEDFA786147BB05E0028A7E5 /* PFIRootViewController.m */; };
 		FEDFA792147BB05E0028A7E5 /* CustomBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = FEDFA789147BB05E0028A7E5 /* CustomBackground.m */; };
+		FEDFB5F4147F6742002E11BE /* clothe-bag.png in Resources */ = {isa = PBXBuildFile; fileRef = FEDFB5F3147F6742002E11BE /* clothe-bag.png */; };
+		FEDFB5FD147F74B5002E11BE /* clothe-bag-hightlight.png in Resources */ = {isa = PBXBuildFile; fileRef = FEDFB5F5147F74B5002E11BE /* clothe-bag-hightlight.png */; };
+		FEDFB5FE147F74B5002E11BE /* clothe-bag-hightlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FEDFB5F6147F74B5002E11BE /* clothe-bag-hightlight@2x.png */; };
+		FEDFB5FF147F74B5002E11BE /* clothe-clothes-hightlight.png in Resources */ = {isa = PBXBuildFile; fileRef = FEDFB5F7147F74B5002E11BE /* clothe-clothes-hightlight.png */; };
+		FEDFB600147F74B5002E11BE /* clothe-clothes-hightlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FEDFB5F8147F74B5002E11BE /* clothe-clothes-hightlight@2x.png */; };
+		FEDFB601147F74B5002E11BE /* clothe-shoes-hightlight.png in Resources */ = {isa = PBXBuildFile; fileRef = FEDFB5F9147F74B5002E11BE /* clothe-shoes-hightlight.png */; };
+		FEDFB602147F74B5002E11BE /* clothe-shoes-hightlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FEDFB5FA147F74B5002E11BE /* clothe-shoes-hightlight@2x.png */; };
+		FEDFB603147F74B5002E11BE /* clothe-trousers-hightlight.png in Resources */ = {isa = PBXBuildFile; fileRef = FEDFB5FB147F74B5002E11BE /* clothe-trousers-hightlight.png */; };
+		FEDFB604147F74B5002E11BE /* clothe-trousers-hightlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FEDFB5FC147F74B5002E11BE /* clothe-trousers-hightlight@2x.png */; };
+		FEDFB606147F774B002E11BE /* clothe-shoes.png in Resources */ = {isa = PBXBuildFile; fileRef = FEDFB605147F774B002E11BE /* clothe-shoes.png */; };
+		FEE327221488A57500B68517 /* PFIGradientButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FEE327211488A57500B68517 /* PFIGradientButton.m */; };
+		FEFFF6F31484B91F00F614C0 /* PFIClotheGridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFFF6F11484B91F00F614C0 /* PFIClotheGridViewController.m */; };
+		FEFFF6F71484B99A00F614C0 /* PFIClotheGridViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FEFFF6F61484B99A00F614C0 /* PFIClotheGridViewController.xib */; };
+		FEFFF6FE1484C40A00F614C0 /* clothe-gridview-cell-1.png in Resources */ = {isa = PBXBuildFile; fileRef = FEFFF6F81484C40A00F614C0 /* clothe-gridview-cell-1.png */; };
+		FEFFF6FF1484C40A00F614C0 /* clothe-gridview-cell-1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FEFFF6F91484C40A00F614C0 /* clothe-gridview-cell-1@2x.png */; };
+		FEFFF7001484C40A00F614C0 /* clothe-gridview-cell-2.png in Resources */ = {isa = PBXBuildFile; fileRef = FEFFF6FA1484C40A00F614C0 /* clothe-gridview-cell-2.png */; };
+		FEFFF7011484C40A00F614C0 /* clothe-gridview-cell-2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FEFFF6FB1484C40A00F614C0 /* clothe-gridview-cell-2@2x.png */; };
+		FEFFF7021484C40A00F614C0 /* clothe-gridview-cell-3.png in Resources */ = {isa = PBXBuildFile; fileRef = FEFFF6FC1484C40A00F614C0 /* clothe-gridview-cell-3.png */; };
+		FEFFF7031484C40A00F614C0 /* clothe-gridview-cell-3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FEFFF6FD1484C40A00F614C0 /* clothe-gridview-cell-3@2x.png */; };
+		FEFFF7051484C44800F614C0 /* ClotheGridViewData.plist in Resources */ = {isa = PBXBuildFile; fileRef = FEFFF7041484C44800F614C0 /* ClotheGridViewData.plist */; };
+		FEFFF7081484D80B00F614C0 /* clothe-gridview-seperation-line.png in Resources */ = {isa = PBXBuildFile; fileRef = FEFFF7061484D80B00F614C0 /* clothe-gridview-seperation-line.png */; };
+		FEFFF7091484D80B00F614C0 /* clothe-gridview-seperation-line@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FEFFF7071484D80B00F614C0 /* clothe-gridview-seperation-line@2x.png */; };
 		FFAC226E147CA7CC00FA37B8 /* calendar-image-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FFAC223E147CA7CC00FA37B8 /* calendar-image-1.jpg */; };
 		FFAC226F147CA7CC00FA37B8 /* calendar-image-1@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FFAC223F147CA7CC00FA37B8 /* calendar-image-1@2x.jpg */; };
 		FFAC2270147CA7CC00FA37B8 /* calendar-image-2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FFAC2240147CA7CC00FA37B8 /* calendar-image-2.jpg */; };
@@ -81,6 +135,21 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FE00EA40147E104B00874935 /* PFIHomeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFIHomeTableViewCell.h; sourceTree = "<group>"; };
+		FE00EA41147E104B00874935 /* PFIHomeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFIHomeTableViewCell.m; sourceTree = "<group>"; };
+		FE00EA4E147E313600874935 /* dataBase.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = dataBase.plist; sourceTree = "<group>"; };
+		FE00EA55147E4BE300874935 /* PFIClotheViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFIClotheViewController.h; sourceTree = "<group>"; };
+		FE00EA56147E4BE300874935 /* PFIClotheViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFIClotheViewController.m; sourceTree = "<group>"; };
+		FE00EA5A147E4C3D00874935 /* PFIClotheViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PFIClotheViewController.xib; sourceTree = "<group>"; };
+		FE00EA5C147E4F8C00874935 /* PFIClotheTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFIClotheTableViewCell.h; sourceTree = "<group>"; };
+		FE00EA5D147E4F8C00874935 /* PFIClotheTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFIClotheTableViewCell.m; sourceTree = "<group>"; };
+		FE00EA5F147E50A200874935 /* ClotheData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ClotheData.plist; sourceTree = "<group>"; };
+		FE00EA62147E5C8D00874935 /* clothe-bag@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clothe-bag@2x.png"; sourceTree = "<group>"; };
+		FE00EA63147E5C8D00874935 /* clothe-clothes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clothe-clothes.png"; sourceTree = "<group>"; };
+		FE00EA64147E5C8D00874935 /* clothe-clothes@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clothe-clothes@2x.png"; sourceTree = "<group>"; };
+		FE00EA66147E5C8D00874935 /* clothe-shoes@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clothe-shoes@2x.png"; sourceTree = "<group>"; };
+		FE00EA67147E5C8D00874935 /* clothe-trousers.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clothe-trousers.png"; sourceTree = "<group>"; };
+		FE00EA68147E5C8D00874935 /* clothe-trousers@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clothe-trousers@2x.png"; sourceTree = "<group>"; };
 		FE4B0F9D147CE340003CEDFD /* home-background-tableview.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home-background-tableview.png"; sourceTree = "<group>"; };
 		FE4B0F9E147CE340003CEDFD /* home-background-tableview@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home-background-tableview@2x.png"; sourceTree = "<group>"; };
 		FE4B0F9F147CE340003CEDFD /* home-icon-cell-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home-icon-cell-1.png"; sourceTree = "<group>"; };
@@ -93,14 +162,38 @@
 		FE4B0FAE147CEFD2003CEDFD /* home-background-cell@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home-background-cell@2x.png"; sourceTree = "<group>"; };
 		FE4B0FB1147CF36D003CEDFD /* CustomCellBackground.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCellBackground.h; sourceTree = "<group>"; };
 		FE4B0FB2147CF36D003CEDFD /* CustomCellBackground.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCellBackground.m; sourceTree = "<group>"; };
+		FE81FEB0148692B0007E3F63 /* clothe-gridview-cell-hightlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clothe-gridview-cell-hightlight.png"; sourceTree = "<group>"; };
+		FE81FEB1148692B0007E3F63 /* clothe-gridview-cell-hightlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clothe-gridview-cell-hightlight@2x.png"; sourceTree = "<group>"; };
+		FE81FEC01486A708007E3F63 /* PFIClotheGridViewCellDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFIClotheGridViewCellDetail.h; sourceTree = "<group>"; };
+		FE81FEC11486A708007E3F63 /* PFIClotheGridViewCellDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFIClotheGridViewCellDetail.m; sourceTree = "<group>"; };
+		FE81FEC51486A74A007E3F63 /* PFIClotheGridViewCellDetail.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PFIClotheGridViewCellDetail.xib; sourceTree = "<group>"; };
+		FE8AC5DB1487318600A7F867 /* clothe-gridview-under-line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clothe-gridview-under-line.png"; sourceTree = "<group>"; };
+		FE8AC5DC1487318600A7F867 /* clothe-gridview-under-line@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clothe-gridview-under-line@2x.png"; sourceTree = "<group>"; };
+		FE8AC5E014876AD600A7F867 /* clothe-girdview-detail-shadow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clothe-girdview-detail-shadow.png"; sourceTree = "<group>"; };
+		FE8AC5E314876AD600A7F867 /* clothe-gridview-detail-1-silverImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clothe-gridview-detail-1-silverImage.png"; sourceTree = "<group>"; };
+		FE8AC5E414876AD600A7F867 /* clothe-gridview-detail-1-silverImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clothe-gridview-detail-1-silverImage@2x.png"; sourceTree = "<group>"; };
+		FE8AC5E514876AD600A7F867 /* clothe-gridview-detail-1-thumnail1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clothe-gridview-detail-1-thumnail1.png"; sourceTree = "<group>"; };
+		FE8AC5E614876AD600A7F867 /* clothe-gridview-detail-1-thumnail1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clothe-gridview-detail-1-thumnail1@2x.png"; sourceTree = "<group>"; };
+		FE8AC5E714876AD600A7F867 /* clothe-gridview-detail-button-color-orange.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clothe-gridview-detail-button-color-orange.png"; sourceTree = "<group>"; };
+		FE8AC5E814876AD600A7F867 /* clothe-gridview-detail-button-color-orange@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clothe-gridview-detail-button-color-orange@2x.png"; sourceTree = "<group>"; };
+		FE8AC5E914876AD600A7F867 /* clothe-gridview-detail-button-color-silver.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clothe-gridview-detail-button-color-silver.png"; sourceTree = "<group>"; };
+		FE8AC5EA14876AD600A7F867 /* clothe-gridview-detail-button-color-silver@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clothe-gridview-detail-button-color-silver@2x.png"; sourceTree = "<group>"; };
+		FE8AC5EB14876AD600A7F867 /* clothe-gridview-detail-content-background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clothe-gridview-detail-content-background.png"; sourceTree = "<group>"; };
+		FE8AC5EC14876AD600A7F867 /* clothe-gridview-detail-content-background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clothe-gridview-detail-content-background@2x.png"; sourceTree = "<group>"; };
+		FE8AC5ED14876AD600A7F867 /* clothe-gridview-detail-shadow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clothe-gridview-detail-shadow@2x.png"; sourceTree = "<group>"; };
+		FE8AC5FC14876B4000A7F867 /* clothe-gridview-detail-1-orangeImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clothe-gridview-detail-1-orangeImage.png"; sourceTree = "<group>"; };
+		FE8AC5FD14876B4000A7F867 /* clothe-gridview-detail-1-orangeImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clothe-gridview-detail-1-orangeImage@2x.png"; sourceTree = "<group>"; };
+		FEBD195A1486008700692310 /* PFIClotheGridViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFIClotheGridViewCell.h; sourceTree = "<group>"; };
+		FEBD195B1486008700692310 /* PFIClotheGridViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFIClotheGridViewCell.m; sourceTree = "<group>"; };
 		FEBF460C14761F1F004C0525 /* SampleInterface.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleInterface.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEBF461014761F1F004C0525 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FEBF461214761F1F004C0525 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FEBF461414761F1F004C0525 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		FEDF76C4148362B000623535 /* PFINavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFINavigationController.h; sourceTree = "<group>"; };
+		FEDF76C5148362B000623535 /* PFINavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFINavigationController.m; sourceTree = "<group>"; };
 		FEDFA762147BB0520028A7E5 /* PFIBagViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PFIBagViewController.xib; sourceTree = "<group>"; };
 		FEDFA763147BB0520028A7E5 /* PFICalendarViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PFICalendarViewController.xib; sourceTree = "<group>"; };
-		FEDFA764147BB0520028A7E5 /* PFIClotheViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PFIClotheViewController.xib; sourceTree = "<group>"; };
-		FEDFA765147BB0520028A7E5 /* DataToLoad.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DataToLoad.plist; sourceTree = "<group>"; };
+		FEDFA765147BB0520028A7E5 /* HomeData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = HomeData.plist; sourceTree = "<group>"; };
 		FEDFA766147BB0520028A7E5 /* PFIHomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PFIHomeViewController.xib; sourceTree = "<group>"; };
 		FEDFA767147BB0520028A7E5 /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
 		FEDFA768147BB0520028A7E5 /* PFIMapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PFIMapViewController.xib; sourceTree = "<group>"; };
@@ -112,8 +205,6 @@
 		FEDFA77C147BB05E0028A7E5 /* PFIBagViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFIBagViewController.m; sourceTree = "<group>"; };
 		FEDFA77D147BB05E0028A7E5 /* PFICalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFICalendarViewController.h; sourceTree = "<group>"; };
 		FEDFA77E147BB05E0028A7E5 /* PFICalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFICalendarViewController.m; sourceTree = "<group>"; };
-		FEDFA77F147BB05E0028A7E5 /* PFIClotheViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFIClotheViewController.h; sourceTree = "<group>"; };
-		FEDFA780147BB05E0028A7E5 /* PFIClotheViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFIClotheViewController.m; sourceTree = "<group>"; };
 		FEDFA781147BB05E0028A7E5 /* PFIHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFIHomeViewController.h; sourceTree = "<group>"; };
 		FEDFA782147BB05E0028A7E5 /* PFIHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFIHomeViewController.m; sourceTree = "<group>"; };
 		FEDFA783147BB05E0028A7E5 /* PFIMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFIMapViewController.h; sourceTree = "<group>"; };
@@ -122,6 +213,30 @@
 		FEDFA786147BB05E0028A7E5 /* PFIRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFIRootViewController.m; sourceTree = "<group>"; };
 		FEDFA788147BB05E0028A7E5 /* CustomBackground.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomBackground.h; sourceTree = "<group>"; };
 		FEDFA789147BB05E0028A7E5 /* CustomBackground.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomBackground.m; sourceTree = "<group>"; };
+		FEDFB5F3147F6742002E11BE /* clothe-bag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clothe-bag.png"; sourceTree = "<group>"; };
+		FEDFB5F5147F74B5002E11BE /* clothe-bag-hightlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clothe-bag-hightlight.png"; sourceTree = "<group>"; };
+		FEDFB5F6147F74B5002E11BE /* clothe-bag-hightlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clothe-bag-hightlight@2x.png"; sourceTree = "<group>"; };
+		FEDFB5F7147F74B5002E11BE /* clothe-clothes-hightlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clothe-clothes-hightlight.png"; sourceTree = "<group>"; };
+		FEDFB5F8147F74B5002E11BE /* clothe-clothes-hightlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clothe-clothes-hightlight@2x.png"; sourceTree = "<group>"; };
+		FEDFB5F9147F74B5002E11BE /* clothe-shoes-hightlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clothe-shoes-hightlight.png"; sourceTree = "<group>"; };
+		FEDFB5FA147F74B5002E11BE /* clothe-shoes-hightlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clothe-shoes-hightlight@2x.png"; sourceTree = "<group>"; };
+		FEDFB5FB147F74B5002E11BE /* clothe-trousers-hightlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clothe-trousers-hightlight.png"; sourceTree = "<group>"; };
+		FEDFB5FC147F74B5002E11BE /* clothe-trousers-hightlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clothe-trousers-hightlight@2x.png"; sourceTree = "<group>"; };
+		FEDFB605147F774B002E11BE /* clothe-shoes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clothe-shoes.png"; sourceTree = "<group>"; };
+		FEE327201488A57500B68517 /* PFIGradientButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFIGradientButton.h; sourceTree = "<group>"; };
+		FEE327211488A57500B68517 /* PFIGradientButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFIGradientButton.m; sourceTree = "<group>"; };
+		FEFFF6F01484B91F00F614C0 /* PFIClotheGridViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFIClotheGridViewController.h; sourceTree = "<group>"; };
+		FEFFF6F11484B91F00F614C0 /* PFIClotheGridViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFIClotheGridViewController.m; sourceTree = "<group>"; };
+		FEFFF6F61484B99A00F614C0 /* PFIClotheGridViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PFIClotheGridViewController.xib; sourceTree = "<group>"; };
+		FEFFF6F81484C40A00F614C0 /* clothe-gridview-cell-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clothe-gridview-cell-1.png"; sourceTree = "<group>"; };
+		FEFFF6F91484C40A00F614C0 /* clothe-gridview-cell-1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clothe-gridview-cell-1@2x.png"; sourceTree = "<group>"; };
+		FEFFF6FA1484C40A00F614C0 /* clothe-gridview-cell-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clothe-gridview-cell-2.png"; sourceTree = "<group>"; };
+		FEFFF6FB1484C40A00F614C0 /* clothe-gridview-cell-2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clothe-gridview-cell-2@2x.png"; sourceTree = "<group>"; };
+		FEFFF6FC1484C40A00F614C0 /* clothe-gridview-cell-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clothe-gridview-cell-3.png"; sourceTree = "<group>"; };
+		FEFFF6FD1484C40A00F614C0 /* clothe-gridview-cell-3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clothe-gridview-cell-3@2x.png"; sourceTree = "<group>"; };
+		FEFFF7041484C44800F614C0 /* ClotheGridViewData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ClotheGridViewData.plist; sourceTree = "<group>"; };
+		FEFFF7061484D80B00F614C0 /* clothe-gridview-seperation-line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clothe-gridview-seperation-line.png"; sourceTree = "<group>"; };
+		FEFFF7071484D80B00F614C0 /* clothe-gridview-seperation-line@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clothe-gridview-seperation-line@2x.png"; sourceTree = "<group>"; };
 		FFAC223E147CA7CC00FA37B8 /* calendar-image-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "calendar-image-1.jpg"; sourceTree = "<group>"; };
 		FFAC223F147CA7CC00FA37B8 /* calendar-image-1@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "calendar-image-1@2x.jpg"; sourceTree = "<group>"; };
 		FFAC2240147CA7CC00FA37B8 /* calendar-image-2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "calendar-image-2.jpg"; sourceTree = "<group>"; };
@@ -178,6 +293,55 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FE00EA61147E5C8D00874935 /* Clothe */ = {
+			isa = PBXGroup;
+			children = (
+				FE8AC5FC14876B4000A7F867 /* clothe-gridview-detail-1-orangeImage.png */,
+				FE8AC5FD14876B4000A7F867 /* clothe-gridview-detail-1-orangeImage@2x.png */,
+				FE8AC5E014876AD600A7F867 /* clothe-girdview-detail-shadow.png */,
+				FE8AC5E314876AD600A7F867 /* clothe-gridview-detail-1-silverImage.png */,
+				FE8AC5E414876AD600A7F867 /* clothe-gridview-detail-1-silverImage@2x.png */,
+				FE8AC5E514876AD600A7F867 /* clothe-gridview-detail-1-thumnail1.png */,
+				FE8AC5E614876AD600A7F867 /* clothe-gridview-detail-1-thumnail1@2x.png */,
+				FE8AC5E714876AD600A7F867 /* clothe-gridview-detail-button-color-orange.png */,
+				FE8AC5E814876AD600A7F867 /* clothe-gridview-detail-button-color-orange@2x.png */,
+				FE8AC5E914876AD600A7F867 /* clothe-gridview-detail-button-color-silver.png */,
+				FE8AC5EA14876AD600A7F867 /* clothe-gridview-detail-button-color-silver@2x.png */,
+				FE8AC5EB14876AD600A7F867 /* clothe-gridview-detail-content-background.png */,
+				FE8AC5EC14876AD600A7F867 /* clothe-gridview-detail-content-background@2x.png */,
+				FE8AC5ED14876AD600A7F867 /* clothe-gridview-detail-shadow@2x.png */,
+				FE8AC5DB1487318600A7F867 /* clothe-gridview-under-line.png */,
+				FE8AC5DC1487318600A7F867 /* clothe-gridview-under-line@2x.png */,
+				FE81FEB0148692B0007E3F63 /* clothe-gridview-cell-hightlight.png */,
+				FE81FEB1148692B0007E3F63 /* clothe-gridview-cell-hightlight@2x.png */,
+				FEFFF6F81484C40A00F614C0 /* clothe-gridview-cell-1.png */,
+				FEFFF6F91484C40A00F614C0 /* clothe-gridview-cell-1@2x.png */,
+				FEFFF7061484D80B00F614C0 /* clothe-gridview-seperation-line.png */,
+				FEFFF7071484D80B00F614C0 /* clothe-gridview-seperation-line@2x.png */,
+				FEFFF6FA1484C40A00F614C0 /* clothe-gridview-cell-2.png */,
+				FEFFF6FB1484C40A00F614C0 /* clothe-gridview-cell-2@2x.png */,
+				FEFFF6FC1484C40A00F614C0 /* clothe-gridview-cell-3.png */,
+				FEFFF6FD1484C40A00F614C0 /* clothe-gridview-cell-3@2x.png */,
+				FEDFB605147F774B002E11BE /* clothe-shoes.png */,
+				FEDFB5F5147F74B5002E11BE /* clothe-bag-hightlight.png */,
+				FEDFB5F6147F74B5002E11BE /* clothe-bag-hightlight@2x.png */,
+				FEDFB5F7147F74B5002E11BE /* clothe-clothes-hightlight.png */,
+				FEDFB5F8147F74B5002E11BE /* clothe-clothes-hightlight@2x.png */,
+				FEDFB5F9147F74B5002E11BE /* clothe-shoes-hightlight.png */,
+				FEDFB5FA147F74B5002E11BE /* clothe-shoes-hightlight@2x.png */,
+				FEDFB5FB147F74B5002E11BE /* clothe-trousers-hightlight.png */,
+				FEDFB5FC147F74B5002E11BE /* clothe-trousers-hightlight@2x.png */,
+				FE00EA62147E5C8D00874935 /* clothe-bag@2x.png */,
+				FEDFB5F3147F6742002E11BE /* clothe-bag.png */,
+				FE00EA63147E5C8D00874935 /* clothe-clothes.png */,
+				FE00EA64147E5C8D00874935 /* clothe-clothes@2x.png */,
+				FE00EA66147E5C8D00874935 /* clothe-shoes@2x.png */,
+				FE00EA67147E5C8D00874935 /* clothe-trousers.png */,
+				FE00EA68147E5C8D00874935 /* clothe-trousers@2x.png */,
+			);
+			path = Clothe;
+			sourceTree = "<group>";
+		};
 		FE4B0F9C147CE340003CEDFD /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -235,6 +399,7 @@
 		FEDFA702147BB0490028A7E5 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				FE00EA61147E5C8D00874935 /* Clothe */,
 				FFAC2244147CA7CC00FA37B8 /* Global */,
 				FE4B0F9C147CE340003CEDFD /* Home */,
 				FFAC223D147CA7CC00FA37B8 /* Calendar */,
@@ -245,14 +410,19 @@
 		FEDFA761147BB0520028A7E5 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				FE81FEC51486A74A007E3F63 /* PFIClotheGridViewCellDetail.xib */,
+				FE00EA5A147E4C3D00874935 /* PFIClotheViewController.xib */,
 				FEDFA762147BB0520028A7E5 /* PFIBagViewController.xib */,
+				FEFFF6F61484B99A00F614C0 /* PFIClotheGridViewController.xib */,
 				FEDFA763147BB0520028A7E5 /* PFICalendarViewController.xib */,
-				FEDFA764147BB0520028A7E5 /* PFIClotheViewController.xib */,
 				FEDFA766147BB0520028A7E5 /* PFIHomeViewController.xib */,
 				FEDFA768147BB0520028A7E5 /* PFIMapViewController.xib */,
 				FEDFA769147BB0520028A7E5 /* PFIRootViewController.xib */,
-				FEDFA765147BB0520028A7E5 /* DataToLoad.plist */,
+				FEDFA765147BB0520028A7E5 /* HomeData.plist */,
 				FEDFA767147BB0520028A7E5 /* InfoPlist.strings */,
+				FE00EA4E147E313600874935 /* dataBase.plist */,
+				FE00EA5F147E50A200874935 /* ClotheData.plist */,
+				FEFFF7041484C44800F614C0 /* ClotheGridViewData.plist */,
 			);
 			path = Resources;
 			sourceTree = SOURCE_ROOT;
@@ -286,8 +456,12 @@
 				FEDFA782147BB05E0028A7E5 /* PFIHomeViewController.m */,
 				FEDFA77D147BB05E0028A7E5 /* PFICalendarViewController.h */,
 				FEDFA77E147BB05E0028A7E5 /* PFICalendarViewController.m */,
-				FEDFA77F147BB05E0028A7E5 /* PFIClotheViewController.h */,
-				FEDFA780147BB05E0028A7E5 /* PFIClotheViewController.m */,
+				FE00EA55147E4BE300874935 /* PFIClotheViewController.h */,
+				FE00EA56147E4BE300874935 /* PFIClotheViewController.m */,
+				FEFFF6F01484B91F00F614C0 /* PFIClotheGridViewController.h */,
+				FEFFF6F11484B91F00F614C0 /* PFIClotheGridViewController.m */,
+				FE81FEC01486A708007E3F63 /* PFIClotheGridViewCellDetail.h */,
+				FE81FEC11486A708007E3F63 /* PFIClotheGridViewCellDetail.m */,
 				FEDFA77B147BB05E0028A7E5 /* PFIBagViewController.h */,
 				FEDFA77C147BB05E0028A7E5 /* PFIBagViewController.m */,
 				FEDFA783147BB05E0028A7E5 /* PFIMapViewController.h */,
@@ -303,6 +477,16 @@
 				FEDFA789147BB05E0028A7E5 /* CustomBackground.m */,
 				FE4B0FB1147CF36D003CEDFD /* CustomCellBackground.h */,
 				FE4B0FB2147CF36D003CEDFD /* CustomCellBackground.m */,
+				FE00EA40147E104B00874935 /* PFIHomeTableViewCell.h */,
+				FE00EA41147E104B00874935 /* PFIHomeTableViewCell.m */,
+				FE00EA5C147E4F8C00874935 /* PFIClotheTableViewCell.h */,
+				FE00EA5D147E4F8C00874935 /* PFIClotheTableViewCell.m */,
+				FEDF76C4148362B000623535 /* PFINavigationController.h */,
+				FEDF76C5148362B000623535 /* PFINavigationController.m */,
+				FEBD195A1486008700692310 /* PFIClotheGridViewCell.h */,
+				FEBD195B1486008700692310 /* PFIClotheGridViewCell.m */,
+				FEE327201488A57500B68517 /* PFIGradientButton.h */,
+				FEE327211488A57500B68517 /* PFIGradientButton.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -411,10 +595,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE00EA4F147E313600874935 /* dataBase.plist in Resources */,
 				FEDFA76C147BB0520028A7E5 /* PFIBagViewController.xib in Resources */,
 				FEDFA76D147BB0520028A7E5 /* PFICalendarViewController.xib in Resources */,
-				FEDFA76E147BB0520028A7E5 /* PFIClotheViewController.xib in Resources */,
-				FEDFA76F147BB0520028A7E5 /* DataToLoad.plist in Resources */,
+				FEDFA76F147BB0520028A7E5 /* HomeData.plist in Resources */,
 				FEDFA770147BB0520028A7E5 /* PFIHomeViewController.xib in Resources */,
 				FEDFA771147BB0520028A7E5 /* InfoPlist.strings in Resources */,
 				FEDFA772147BB0520028A7E5 /* PFIMapViewController.xib in Resources */,
@@ -469,6 +653,53 @@
 				FE4B0FAC147CE340003CEDFD /* home-icon-cell-3@2x.png in Resources */,
 				FE4B0FAF147CEFD2003CEDFD /* home-background-cell.png in Resources */,
 				FE4B0FB0147CEFD2003CEDFD /* home-background-cell@2x.png in Resources */,
+				FE00EA5B147E4C3D00874935 /* PFIClotheViewController.xib in Resources */,
+				FE00EA60147E50A200874935 /* ClotheData.plist in Resources */,
+				FE00EA6A147E5C8D00874935 /* clothe-bag@2x.png in Resources */,
+				FE00EA6B147E5C8D00874935 /* clothe-clothes.png in Resources */,
+				FE00EA6C147E5C8D00874935 /* clothe-clothes@2x.png in Resources */,
+				FE00EA6E147E5C8D00874935 /* clothe-shoes@2x.png in Resources */,
+				FE00EA6F147E5C8D00874935 /* clothe-trousers.png in Resources */,
+				FE00EA70147E5C8D00874935 /* clothe-trousers@2x.png in Resources */,
+				FEDFB5F4147F6742002E11BE /* clothe-bag.png in Resources */,
+				FEDFB5FD147F74B5002E11BE /* clothe-bag-hightlight.png in Resources */,
+				FEDFB5FE147F74B5002E11BE /* clothe-bag-hightlight@2x.png in Resources */,
+				FEDFB5FF147F74B5002E11BE /* clothe-clothes-hightlight.png in Resources */,
+				FEDFB600147F74B5002E11BE /* clothe-clothes-hightlight@2x.png in Resources */,
+				FEDFB601147F74B5002E11BE /* clothe-shoes-hightlight.png in Resources */,
+				FEDFB602147F74B5002E11BE /* clothe-shoes-hightlight@2x.png in Resources */,
+				FEDFB603147F74B5002E11BE /* clothe-trousers-hightlight.png in Resources */,
+				FEDFB604147F74B5002E11BE /* clothe-trousers-hightlight@2x.png in Resources */,
+				FEDFB606147F774B002E11BE /* clothe-shoes.png in Resources */,
+				FEFFF6F71484B99A00F614C0 /* PFIClotheGridViewController.xib in Resources */,
+				FEFFF6FE1484C40A00F614C0 /* clothe-gridview-cell-1.png in Resources */,
+				FEFFF6FF1484C40A00F614C0 /* clothe-gridview-cell-1@2x.png in Resources */,
+				FEFFF7001484C40A00F614C0 /* clothe-gridview-cell-2.png in Resources */,
+				FEFFF7011484C40A00F614C0 /* clothe-gridview-cell-2@2x.png in Resources */,
+				FEFFF7021484C40A00F614C0 /* clothe-gridview-cell-3.png in Resources */,
+				FEFFF7031484C40A00F614C0 /* clothe-gridview-cell-3@2x.png in Resources */,
+				FEFFF7051484C44800F614C0 /* ClotheGridViewData.plist in Resources */,
+				FEFFF7081484D80B00F614C0 /* clothe-gridview-seperation-line.png in Resources */,
+				FEFFF7091484D80B00F614C0 /* clothe-gridview-seperation-line@2x.png in Resources */,
+				FE81FEB2148692B0007E3F63 /* clothe-gridview-cell-hightlight.png in Resources */,
+				FE81FEB3148692B0007E3F63 /* clothe-gridview-cell-hightlight@2x.png in Resources */,
+				FE81FEC61486A74A007E3F63 /* PFIClotheGridViewCellDetail.xib in Resources */,
+				FE8AC5DD1487318600A7F867 /* clothe-gridview-under-line.png in Resources */,
+				FE8AC5DE1487318600A7F867 /* clothe-gridview-under-line@2x.png in Resources */,
+				FE8AC5EE14876AD600A7F867 /* clothe-girdview-detail-shadow.png in Resources */,
+				FE8AC5F114876AD600A7F867 /* clothe-gridview-detail-1-silverImage.png in Resources */,
+				FE8AC5F214876AD600A7F867 /* clothe-gridview-detail-1-silverImage@2x.png in Resources */,
+				FE8AC5F314876AD600A7F867 /* clothe-gridview-detail-1-thumnail1.png in Resources */,
+				FE8AC5F414876AD600A7F867 /* clothe-gridview-detail-1-thumnail1@2x.png in Resources */,
+				FE8AC5F514876AD600A7F867 /* clothe-gridview-detail-button-color-orange.png in Resources */,
+				FE8AC5F614876AD600A7F867 /* clothe-gridview-detail-button-color-orange@2x.png in Resources */,
+				FE8AC5F714876AD600A7F867 /* clothe-gridview-detail-button-color-silver.png in Resources */,
+				FE8AC5F814876AD600A7F867 /* clothe-gridview-detail-button-color-silver@2x.png in Resources */,
+				FE8AC5F914876AD600A7F867 /* clothe-gridview-detail-content-background.png in Resources */,
+				FE8AC5FA14876AD600A7F867 /* clothe-gridview-detail-content-background@2x.png in Resources */,
+				FE8AC5FB14876AD600A7F867 /* clothe-gridview-detail-shadow@2x.png in Resources */,
+				FE8AC5FE14876B4000A7F867 /* clothe-gridview-detail-1-orangeImage.png in Resources */,
+				FE8AC5FF14876B4000A7F867 /* clothe-gridview-detail-1-orangeImage@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -483,12 +714,19 @@
 				FEDFA78B147BB05E0028A7E5 /* PFIAppDelegate.m in Sources */,
 				FEDFA78C147BB05E0028A7E5 /* PFIBagViewController.m in Sources */,
 				FEDFA78D147BB05E0028A7E5 /* PFICalendarViewController.m in Sources */,
-				FEDFA78E147BB05E0028A7E5 /* PFIClotheViewController.m in Sources */,
 				FEDFA78F147BB05E0028A7E5 /* PFIHomeViewController.m in Sources */,
 				FEDFA790147BB05E0028A7E5 /* PFIMapViewController.m in Sources */,
 				FEDFA791147BB05E0028A7E5 /* PFIRootViewController.m in Sources */,
 				FEDFA792147BB05E0028A7E5 /* CustomBackground.m in Sources */,
 				FE4B0FB3147CF36D003CEDFD /* CustomCellBackground.m in Sources */,
+				FE00EA42147E104B00874935 /* PFIHomeTableViewCell.m in Sources */,
+				FE00EA58147E4BE300874935 /* PFIClotheViewController.m in Sources */,
+				FE00EA5E147E4F8C00874935 /* PFIClotheTableViewCell.m in Sources */,
+				FEDF76C7148362B000623535 /* PFINavigationController.m in Sources */,
+				FEFFF6F31484B91F00F614C0 /* PFIClotheGridViewController.m in Sources */,
+				FEBD195C1486008700692310 /* PFIClotheGridViewCell.m in Sources */,
+				FE81FEC31486A708007E3F63 /* PFIClotheGridViewCellDetail.m in Sources */,
+				FEE327221488A57500B68517 /* PFIGradientButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -547,6 +785,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SampleInterface/SampleInterface-Prefix.pch";
 				INFOPLIST_FILE = "SampleInterface/SampleInterface-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -559,6 +798,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SampleInterface/SampleInterface-Prefix.pch";
 				INFOPLIST_FILE = "SampleInterface/SampleInterface-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

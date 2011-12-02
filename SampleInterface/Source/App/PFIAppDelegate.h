@@ -19,31 +19,13 @@
  */
 @interface PFIAppDelegate : UIResponder <UIApplicationDelegate>
 {
-    /**
-     * homeNavigationController: this is the navigation controller contains PFIHomeViewController
-     * calendarNavigationController: this is the navigation controller contains PFICalendarViewController
-     * clotheNavigationController: this is the navigation controller contains PFIClotheViewController
-     * bagNavigationController: this is the navigation controller contains PFIBagViewController
-     * mapNavigationController: this is the navigation controller contains PFIMapViewController
-     */
-    UINavigationController* homeNavigationController;
-    UINavigationController* calendarNavigationController;
-    UINavigationController* clotheNavigationController;
-    UINavigationController* bagNavigationController;
-    UINavigationController* mapNavigationController;
+
+    NSMutableArray *tabBarButtons;
+    
 }
 
 @property (strong, nonatomic) UIWindow *window;
 
 @property (strong, nonatomic) PFIRootViewController *tabBarViewController;
 
-@property (strong, nonatomic)  UINavigationController* homeNavigationController;
-
-@property (strong, nonatomic) UINavigationController* calendarNavigationController;
-
-@property (strong, nonatomic)  UINavigationController* clotheNavigationController;
-
-@property (strong, nonatomic)  UINavigationController* bagNavigationController;
-
-@property (strong, nonatomic) UINavigationController* mapNavigationController;
 @end

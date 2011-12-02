@@ -4,6 +4,8 @@
 <dict>
 	<key>item0</key>
 	<dict>
+		<key>index</key>
+		<string>sixth</string>
 		<key>label1</key>
 		<string>古罗马新创世纪运动与时装的超现实演绎</string>
 		<key>label2</key>
@@ -15,6 +17,8 @@
 	</dict>
 	<key>item1</key>
 	<dict>
+		<key>index</key>
+		<string>fifth</string>
 		<key>label1</key>
 		<string>诠释 “有内涵的运动” </string>
 		<key>label2</key>
@@ -26,6 +30,8 @@
 	</dict>
 	<key>item2</key>
 	<dict>
+		<key>index</key>
+		<string>fourth</string>
 		<key>label1</key>
 		<string>当北京与哥本哈根不期而遇 </string>
 		<key>label2</key>
