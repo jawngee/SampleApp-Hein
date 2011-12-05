@@ -32,8 +32,10 @@
 }
 -(void) dealloc
 {
-    [cellBackground release];
-    [data release];
+    [cellBackground release]; 
+    cellBackground = nil;
+    [data release]; 
+    data = nil;
     [super dealloc];
 }
 #pragma mark - View lifecycle

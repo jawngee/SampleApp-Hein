@@ -32,8 +32,8 @@
 }
 -(void) dealloc
 {
-    //[data release];
-    //[arrayButton release];
+    [data release];
+    data = nil;
     [super dealloc];
 }
 #pragma mark - View lifecycle
@@ -60,7 +60,6 @@
     {
         numberOfRow = [data count] / 3 + 1;
     }
-    
 }
 
 - (void)viewDidUnload

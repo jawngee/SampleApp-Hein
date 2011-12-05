@@ -10,23 +10,27 @@
 
 @implementation PFIGradientButton
 
--(id)initWithFrame:(CGRect)frame starColor:(UIColor*) start endColor:(UIColor*) end
+@synthesize  colorEnd;
+@synthesize  colorStart;
+
+-(id)initWithFrame:(CGRect)frame startColor:(UIColor*) start endColor:(UIColor*) end
 {
 	self = [super initWithFrame:frame];
 	if (self) 
     {
-        startColor = start;
-        endColor = end; 
+        self.colorStart = start;
+        self.colorEnd = end; 
 	}
 	return self;
 }
 -(void) drawRect:(CGRect)rect
 {
+    
     CGContextRef context = UIGraphicsGetCurrentContext();
     CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
     CGFloat locations[] = { 0.0, 1.0 };
-    CGColorRef start = startColor.CGColor;
-    CGColorRef end   = endColor.CGColor;
+    CGColorRef start = self.colorStart.CGColor;
+    CGColorRef end   = self.colorEnd.CGColor;
     
     NSArray *colors = [NSArray arrayWithObjects:(id)start, (id)end, nil];
     
@@ -40,7 +44,8 @@
     CGContextAddRect(context, self.bounds);
     CGContextClip(context);
     CGContextDrawLinearGradient(context, gradient, startPoint, endPoint, 0);
-    
+    //CGContextRestoreGState(context);
+
     CGGradientRelease(gradient);
     CGColorSpaceRelease(colorSpace);
     
@@ -56,6 +61,7 @@
     CGContextSetRGBFillColor(context, 1, 1, 1, 1);
     CGContextFillPath(context);
     CGContextRestoreGState(context);
+     
 
 }
 @end

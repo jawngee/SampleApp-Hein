@@ -56,7 +56,12 @@
         x = x + imageWidth ;
     }
 }
-
+-(void) dealloc
+{
+    [imageScrollView release];
+    imageScrollView = nil;
+    [super dealloc];
+}
 -(void)viewDidUnload
 {
     [super viewDidUnload];

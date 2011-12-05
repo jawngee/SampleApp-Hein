@@ -13,11 +13,13 @@
  */
 @interface PFIGradientButton : UIButton
 {
-    UIColor *startColor;
-    UIColor *endColor;
+    UIColor *colorStart;
+    UIColor *colorEnd;
 }
+@property(nonatomic, retain) UIColor *colorStart;
+@property(nonatomic, retain) UIColor *colorEnd;
 /**
   * the init method with a starColor and endColor
  */
--(id)initWithFrame:(CGRect)frame starColor:(UIColor*) start endColor:(UIColor*) end;
+-(id)initWithFrame:(CGRect)frame startColor:(UIColor*) start endColor:(UIColor*) end;
 @end

@@ -99,6 +99,37 @@
     }
     return self;
 }
+-(void) dealloc
+{
+    if (button1)
+    {
+        [underLine1 release];
+        underLine1 = nil;
+        [button1 release];
+        button1 = nil;
+        [line1 release];
+        line1 = nil;
+    }
+   
+    if (button2)
+    {
+        [underLine2 release];
+        underLine2 = nil;
+        [button2 release];
+        button2 = nil;
+        [line2 release];
+        line2 = nil;
+    }
+ 
+    if (button3)
+    {
+        [underLine3 release];
+        underLine3 = nil;
+        [button3 release];
+        button3 = nil;
+    }
+  
+}
 -(void)itemButtonTapped:(id) sender
 {
     switch (((UIButton*) sender).tag) 

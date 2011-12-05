@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "PFIClotheGridViewCell.h"
 /**
-    * PFIClotheGridViewController is a Table View contains all the products
+    * PFIClotheGridViewController is a Table View contains all the products related to a category.
     * This class needs to do the PFIClotheGridViewCellDelegate protocol to handle the event when
         user touch on a product.
     * data: this is an array contains all products.
