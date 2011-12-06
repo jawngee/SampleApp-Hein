@@ -1,13 +1,18 @@
 //
-//  MapViewController.h
+//  PFIMapViewController.h
 //  SampleInterface
 //
-//  Created by Doan The Hien on 11/18/11.
+//  Created by Doan The Hien on 12/6/11.
 //  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
-
-@interface PFIMapViewController : UIViewController
-
+#import "CustomCellBackground.h"
+@interface PFIMapViewController : UITableViewController
+{
+    NSArray *data;
+    CustomCellBackground *backgroundSelectedCell;    
+}
+@property(nonatomic,retain) NSArray *data;
+@property(nonatomic,retain) CustomCellBackground *backgroundSelectedCell;
 @end

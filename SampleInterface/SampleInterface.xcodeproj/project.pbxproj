@@ -34,6 +34,17 @@
 		FE81FEB3148692B0007E3F63 /* clothe-gridview-cell-hightlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE81FEB1148692B0007E3F63 /* clothe-gridview-cell-hightlight@2x.png */; };
 		FE81FEC31486A708007E3F63 /* PFIClotheGridViewCellDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = FE81FEC11486A708007E3F63 /* PFIClotheGridViewCellDetail.m */; };
 		FE81FEC61486A74A007E3F63 /* PFIClotheGridViewCellDetail.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE81FEC51486A74A007E3F63 /* PFIClotheGridViewCellDetail.xib */; };
+		FE852951148DED8600B0113B /* MapDataItem.plist in Resources */ = {isa = PBXBuildFile; fileRef = FE852950148DED8600B0113B /* MapDataItem.plist */; };
+		FE852958148DF03B00B0113B /* map-icon-1.png in Resources */ = {isa = PBXBuildFile; fileRef = FE852954148DF03B00B0113B /* map-icon-1.png */; };
+		FE852959148DF03B00B0113B /* map-icon-1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE852955148DF03B00B0113B /* map-icon-1@2x.png */; };
+		FE85295A148DF03B00B0113B /* map-icon-2.png in Resources */ = {isa = PBXBuildFile; fileRef = FE852956148DF03B00B0113B /* map-icon-2.png */; };
+		FE85295B148DF03B00B0113B /* map-icon-2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE852957148DF03B00B0113B /* map-icon-2@2x.png */; };
+		FE85295F148DF0A400B0113B /* PFIMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE85295D148DF0A400B0113B /* PFIMapViewController.m */; };
+		FE852962148DF0E600B0113B /* PFIMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE852961148DF0E600B0113B /* PFIMapViewController.xib */; };
+		FE852965148DF30200B0113B /* PFIMapTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FE852964148DF30200B0113B /* PFIMapTableViewCell.m */; };
+		FE85296C148E02D500B0113B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE85296A148E02A100B0113B /* MapKit.framework */; };
+		FE852970148E09A000B0113B /* PFIMapDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE85296E148E099F00B0113B /* PFIMapDetailViewController.m */; };
+		FE852973148E09E900B0113B /* PFIMapDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE852972148E09E900B0113B /* PFIMapDetailViewController.xib */; };
 		FE8AC5DD1487318600A7F867 /* clothe-gridview-under-line.png in Resources */ = {isa = PBXBuildFile; fileRef = FE8AC5DB1487318600A7F867 /* clothe-gridview-under-line.png */; };
 		FE8AC5DE1487318600A7F867 /* clothe-gridview-under-line@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE8AC5DC1487318600A7F867 /* clothe-gridview-under-line@2x.png */; };
 		FE8AC5EE14876AD600A7F867 /* clothe-girdview-detail-shadow.png in Resources */ = {isa = PBXBuildFile; fileRef = FE8AC5E014876AD600A7F867 /* clothe-girdview-detail-shadow.png */; };
@@ -60,14 +71,12 @@
 		FEDFA76F147BB0520028A7E5 /* HomeData.plist in Resources */ = {isa = PBXBuildFile; fileRef = FEDFA765147BB0520028A7E5 /* HomeData.plist */; };
 		FEDFA770147BB0520028A7E5 /* PFIHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FEDFA766147BB0520028A7E5 /* PFIHomeViewController.xib */; };
 		FEDFA771147BB0520028A7E5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FEDFA767147BB0520028A7E5 /* InfoPlist.strings */; };
-		FEDFA772147BB0520028A7E5 /* PFIMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FEDFA768147BB0520028A7E5 /* PFIMapViewController.xib */; };
 		FEDFA773147BB0520028A7E5 /* PFIRootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FEDFA769147BB0520028A7E5 /* PFIRootViewController.xib */; };
 		FEDFA78A147BB05E0028A7E5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FEDFA777147BB05E0028A7E5 /* main.m */; };
 		FEDFA78B147BB05E0028A7E5 /* PFIAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FEDFA779147BB05E0028A7E5 /* PFIAppDelegate.m */; };
 		FEDFA78C147BB05E0028A7E5 /* PFIBagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEDFA77C147BB05E0028A7E5 /* PFIBagViewController.m */; };
 		FEDFA78D147BB05E0028A7E5 /* PFICalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEDFA77E147BB05E0028A7E5 /* PFICalendarViewController.m */; };
 		FEDFA78F147BB05E0028A7E5 /* PFIHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEDFA782147BB05E0028A7E5 /* PFIHomeViewController.m */; };
-		FEDFA790147BB05E0028A7E5 /* PFIMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEDFA784147BB05E0028A7E5 /* PFIMapViewController.m */; };
 		FEDFA791147BB05E0028A7E5 /* PFIRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEDFA786147BB05E0028A7E5 /* PFIRootViewController.m */; };
 		FEDFA792147BB05E0028A7E5 /* CustomBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = FEDFA789147BB05E0028A7E5 /* CustomBackground.m */; };
 		FEDFB5F4147F6742002E11BE /* clothe-bag.png in Resources */ = {isa = PBXBuildFile; fileRef = FEDFB5F3147F6742002E11BE /* clothe-bag.png */; };
@@ -167,6 +176,20 @@
 		FE81FEC01486A708007E3F63 /* PFIClotheGridViewCellDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFIClotheGridViewCellDetail.h; sourceTree = "<group>"; };
 		FE81FEC11486A708007E3F63 /* PFIClotheGridViewCellDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFIClotheGridViewCellDetail.m; sourceTree = "<group>"; };
 		FE81FEC51486A74A007E3F63 /* PFIClotheGridViewCellDetail.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PFIClotheGridViewCellDetail.xib; sourceTree = "<group>"; };
+		FE852950148DED8600B0113B /* MapDataItem.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MapDataItem.plist; sourceTree = "<group>"; };
+		FE852954148DF03B00B0113B /* map-icon-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map-icon-1.png"; sourceTree = "<group>"; };
+		FE852955148DF03B00B0113B /* map-icon-1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map-icon-1@2x.png"; sourceTree = "<group>"; };
+		FE852956148DF03B00B0113B /* map-icon-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map-icon-2.png"; sourceTree = "<group>"; };
+		FE852957148DF03B00B0113B /* map-icon-2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map-icon-2@2x.png"; sourceTree = "<group>"; };
+		FE85295C148DF0A400B0113B /* PFIMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFIMapViewController.h; sourceTree = "<group>"; };
+		FE85295D148DF0A400B0113B /* PFIMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFIMapViewController.m; sourceTree = "<group>"; };
+		FE852961148DF0E600B0113B /* PFIMapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PFIMapViewController.xib; sourceTree = "<group>"; };
+		FE852963148DF30200B0113B /* PFIMapTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFIMapTableViewCell.h; sourceTree = "<group>"; };
+		FE852964148DF30200B0113B /* PFIMapTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFIMapTableViewCell.m; sourceTree = "<group>"; };
+		FE85296A148E02A100B0113B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		FE85296D148E099F00B0113B /* PFIMapDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFIMapDetailViewController.h; sourceTree = "<group>"; };
+		FE85296E148E099F00B0113B /* PFIMapDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFIMapDetailViewController.m; sourceTree = "<group>"; };
+		FE852972148E09E900B0113B /* PFIMapDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PFIMapDetailViewController.xib; sourceTree = "<group>"; };
 		FE8AC5DB1487318600A7F867 /* clothe-gridview-under-line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clothe-gridview-under-line.png"; sourceTree = "<group>"; };
 		FE8AC5DC1487318600A7F867 /* clothe-gridview-under-line@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clothe-gridview-under-line@2x.png"; sourceTree = "<group>"; };
 		FE8AC5E014876AD600A7F867 /* clothe-girdview-detail-shadow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clothe-girdview-detail-shadow.png"; sourceTree = "<group>"; };
@@ -196,7 +219,6 @@
 		FEDFA765147BB0520028A7E5 /* HomeData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = HomeData.plist; sourceTree = "<group>"; };
 		FEDFA766147BB0520028A7E5 /* PFIHomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PFIHomeViewController.xib; sourceTree = "<group>"; };
 		FEDFA767147BB0520028A7E5 /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
-		FEDFA768147BB0520028A7E5 /* PFIMapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PFIMapViewController.xib; sourceTree = "<group>"; };
 		FEDFA769147BB0520028A7E5 /* PFIRootViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PFIRootViewController.xib; sourceTree = "<group>"; };
 		FEDFA777147BB05E0028A7E5 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FEDFA778147BB05E0028A7E5 /* PFIAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFIAppDelegate.h; sourceTree = "<group>"; };
@@ -207,8 +229,6 @@
 		FEDFA77E147BB05E0028A7E5 /* PFICalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFICalendarViewController.m; sourceTree = "<group>"; };
 		FEDFA781147BB05E0028A7E5 /* PFIHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFIHomeViewController.h; sourceTree = "<group>"; };
 		FEDFA782147BB05E0028A7E5 /* PFIHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFIHomeViewController.m; sourceTree = "<group>"; };
-		FEDFA783147BB05E0028A7E5 /* PFIMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFIMapViewController.h; sourceTree = "<group>"; };
-		FEDFA784147BB05E0028A7E5 /* PFIMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFIMapViewController.m; sourceTree = "<group>"; };
 		FEDFA785147BB05E0028A7E5 /* PFIRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFIRootViewController.h; sourceTree = "<group>"; };
 		FEDFA786147BB05E0028A7E5 /* PFIRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFIRootViewController.m; sourceTree = "<group>"; };
 		FEDFA788147BB05E0028A7E5 /* CustomBackground.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomBackground.h; sourceTree = "<group>"; };
@@ -284,6 +304,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE85296C148E02D500B0113B /* MapKit.framework in Frameworks */,
 				FEBF461114761F1F004C0525 /* UIKit.framework in Frameworks */,
 				FEBF461314761F1F004C0525 /* Foundation.framework in Frameworks */,
 				FEBF461514761F1F004C0525 /* CoreGraphics.framework in Frameworks */,
@@ -359,6 +380,17 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		FE852953148DF03B00B0113B /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				FE852954148DF03B00B0113B /* map-icon-1.png */,
+				FE852955148DF03B00B0113B /* map-icon-1@2x.png */,
+				FE852956148DF03B00B0113B /* map-icon-2.png */,
+				FE852957148DF03B00B0113B /* map-icon-2@2x.png */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
 		FEBF460114761F1F004C0525 = {
 			isa = PBXGroup;
 			children = (
@@ -379,6 +411,7 @@
 		FEBF460F14761F1F004C0525 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FE85296A148E02A100B0113B /* MapKit.framework */,
 				FEBF461014761F1F004C0525 /* UIKit.framework */,
 				FEBF461214761F1F004C0525 /* Foundation.framework */,
 				FEBF461414761F1F004C0525 /* CoreGraphics.framework */,
@@ -399,6 +432,7 @@
 		FEDFA702147BB0490028A7E5 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				FE852953148DF03B00B0113B /* Map */,
 				FE00EA61147E5C8D00874935 /* Clothe */,
 				FFAC2244147CA7CC00FA37B8 /* Global */,
 				FE4B0F9C147CE340003CEDFD /* Home */,
@@ -410,19 +444,21 @@
 		FEDFA761147BB0520028A7E5 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				FE852972148E09E900B0113B /* PFIMapDetailViewController.xib */,
+				FE852961148DF0E600B0113B /* PFIMapViewController.xib */,
 				FE81FEC51486A74A007E3F63 /* PFIClotheGridViewCellDetail.xib */,
 				FE00EA5A147E4C3D00874935 /* PFIClotheViewController.xib */,
 				FEDFA762147BB0520028A7E5 /* PFIBagViewController.xib */,
 				FEFFF6F61484B99A00F614C0 /* PFIClotheGridViewController.xib */,
 				FEDFA763147BB0520028A7E5 /* PFICalendarViewController.xib */,
 				FEDFA766147BB0520028A7E5 /* PFIHomeViewController.xib */,
-				FEDFA768147BB0520028A7E5 /* PFIMapViewController.xib */,
 				FEDFA769147BB0520028A7E5 /* PFIRootViewController.xib */,
 				FEDFA765147BB0520028A7E5 /* HomeData.plist */,
 				FEDFA767147BB0520028A7E5 /* InfoPlist.strings */,
 				FE00EA4E147E313600874935 /* dataBase.plist */,
 				FE00EA5F147E50A200874935 /* ClotheData.plist */,
 				FEFFF7041484C44800F614C0 /* ClotheGridViewData.plist */,
+				FE852950148DED8600B0113B /* MapDataItem.plist */,
 			);
 			path = Resources;
 			sourceTree = SOURCE_ROOT;
@@ -464,8 +500,10 @@
 				FE81FEC11486A708007E3F63 /* PFIClotheGridViewCellDetail.m */,
 				FEDFA77B147BB05E0028A7E5 /* PFIBagViewController.h */,
 				FEDFA77C147BB05E0028A7E5 /* PFIBagViewController.m */,
-				FEDFA783147BB05E0028A7E5 /* PFIMapViewController.h */,
-				FEDFA784147BB05E0028A7E5 /* PFIMapViewController.m */,
+				FE85295C148DF0A400B0113B /* PFIMapViewController.h */,
+				FE85295D148DF0A400B0113B /* PFIMapViewController.m */,
+				FE85296D148E099F00B0113B /* PFIMapDetailViewController.h */,
+				FE85296E148E099F00B0113B /* PFIMapDetailViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -487,6 +525,8 @@
 				FEBD195B1486008700692310 /* PFIClotheGridViewCell.m */,
 				FEE327201488A57500B68517 /* PFIGradientButton.h */,
 				FEE327211488A57500B68517 /* PFIGradientButton.m */,
+				FE852963148DF30200B0113B /* PFIMapTableViewCell.h */,
+				FE852964148DF30200B0113B /* PFIMapTableViewCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -601,7 +641,6 @@
 				FEDFA76F147BB0520028A7E5 /* HomeData.plist in Resources */,
 				FEDFA770147BB0520028A7E5 /* PFIHomeViewController.xib in Resources */,
 				FEDFA771147BB0520028A7E5 /* InfoPlist.strings in Resources */,
-				FEDFA772147BB0520028A7E5 /* PFIMapViewController.xib in Resources */,
 				FEDFA773147BB0520028A7E5 /* PFIRootViewController.xib in Resources */,
 				FFAC226E147CA7CC00FA37B8 /* calendar-image-1.jpg in Resources */,
 				FFAC226F147CA7CC00FA37B8 /* calendar-image-1@2x.jpg in Resources */,
@@ -700,6 +739,13 @@
 				FE8AC5FB14876AD600A7F867 /* clothe-gridview-detail-shadow@2x.png in Resources */,
 				FE8AC5FE14876B4000A7F867 /* clothe-gridview-detail-1-orangeImage.png in Resources */,
 				FE8AC5FF14876B4000A7F867 /* clothe-gridview-detail-1-orangeImage@2x.png in Resources */,
+				FE852951148DED8600B0113B /* MapDataItem.plist in Resources */,
+				FE852958148DF03B00B0113B /* map-icon-1.png in Resources */,
+				FE852959148DF03B00B0113B /* map-icon-1@2x.png in Resources */,
+				FE85295A148DF03B00B0113B /* map-icon-2.png in Resources */,
+				FE85295B148DF03B00B0113B /* map-icon-2@2x.png in Resources */,
+				FE852962148DF0E600B0113B /* PFIMapViewController.xib in Resources */,
+				FE852973148E09E900B0113B /* PFIMapDetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -715,7 +761,6 @@
 				FEDFA78C147BB05E0028A7E5 /* PFIBagViewController.m in Sources */,
 				FEDFA78D147BB05E0028A7E5 /* PFICalendarViewController.m in Sources */,
 				FEDFA78F147BB05E0028A7E5 /* PFIHomeViewController.m in Sources */,
-				FEDFA790147BB05E0028A7E5 /* PFIMapViewController.m in Sources */,
 				FEDFA791147BB05E0028A7E5 /* PFIRootViewController.m in Sources */,
 				FEDFA792147BB05E0028A7E5 /* CustomBackground.m in Sources */,
 				FE4B0FB3147CF36D003CEDFD /* CustomCellBackground.m in Sources */,
@@ -727,6 +772,9 @@
 				FEBD195C1486008700692310 /* PFIClotheGridViewCell.m in Sources */,
 				FE81FEC31486A708007E3F63 /* PFIClotheGridViewCellDetail.m in Sources */,
 				FEE327221488A57500B68517 /* PFIGradientButton.m in Sources */,
+				FE85295F148DF0A400B0113B /* PFIMapViewController.m in Sources */,
+				FE852965148DF30200B0113B /* PFIMapTableViewCell.m in Sources */,
+				FE852970148E09A000B0113B /* PFIMapDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

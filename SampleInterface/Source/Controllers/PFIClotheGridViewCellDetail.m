@@ -80,11 +80,14 @@
     
     ///add description to contentView
     UILabel *descriptionLabel = [[UILabel alloc] initWithFrame: CGRectMake(8, 35, 26, 12)];
+    NSLog(@"descriptionLabel retainCount is %d",[descriptionLabel retainCount]);
+
     descriptionLabel.text = @"面料:";
     [descriptionLabel setFont:[UIFont systemFontOfSize:10 ]];
     [descriptionLabel setTextColor:[UIColor colorWithRed:209.0 / 255.0 green:209.0 / 255.0 blue:209.0 / 255.0 alpha:1.0]];
     [descriptionLabel setHighlighted:NO];
     [descriptionLabel setBackgroundColor:[UIColor clearColor]];
+   
     [contentView addSubview: descriptionLabel];
     [descriptionLabel release];
     descriptionLabel = nil;

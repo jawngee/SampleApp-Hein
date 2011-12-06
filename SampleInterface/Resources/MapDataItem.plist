@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Item0</key>
+	<dict>
+		<key>longitude</key>
+		<string>106.70376777648926</string>
+		<key>latitude</key>
+		<string>10.775891489212619</string>
+		<key>subtitle</key>
+		<string>开业全场买赠优惠</string>
+		<key>content</key>
+		<string>地址：北京东城区东长安街1号东方新天地商场首层第四区AA61B</string>
+		<key>title</key>
+		<string>北京东方新天地店</string>
+		<key>icon</key>
+		<string>map-icon-1</string>
+	</dict>
+	<key>Item1</key>
+	<dict>
+		<key>longitude</key>
+		<string>106.66011214256287</string>
+		<key>latitude</key>
+		<string>10.773794092778923</string>
+		<key>subtitle</key>
+		<string> </string>
+		<key>content</key>
+		<string>地址：北京东城区东长安街1号东方新天地商场首层第四区AA61B</string>
+		<key>title</key>
+		<string>北京国贸店</string>
+		<key>icon</key>
+		<string>map-icon-2</string>
+	</dict>
+</dict>
+</plist>

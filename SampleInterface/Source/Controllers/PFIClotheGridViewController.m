@@ -118,6 +118,7 @@
     if (indexPath.row * 3  < [data count])
     {
         data1 = [data objectAtIndex: indexPath.row * 3 ];
+       // NSLog(@"data1 retainCount = %d", [[data objectAtIndex: indexPath.row * 3 ] retainCount]);
     }
     else data1 = nil;
     
@@ -137,6 +138,7 @@
     { 
         cell = [[[PFIClotheGridViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier item1:data1 item2:data2 item3: data3] autorelease];
         cell.delegate = self;
+
     }
     else
     {
@@ -147,7 +149,7 @@
 }
 -(void) presentGridViewCellDetail:(NSDictionary*) dataItem
 {
-    NSLog(@"presentGridviewdetail");
+    //NSLog(@"presentGridviewdetail");
     
     PFIClotheGridViewCellDetail *detailViewController = [[PFIClotheGridViewCellDetail alloc] initWithNibName:@"PFIClotheGridViewCellDetail" bundle:nil data:dataItem];
     
