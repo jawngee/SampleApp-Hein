@@ -29,6 +29,14 @@
 	return self;
 }
 
+
+-(void)dealloc
+{
+    NSLog(@"DEALLOC %@",NSStringFromClass([self class]));
+    
+    [super dealloc];
+}
+
 @end
 
 ///implementing PFIMapDetailViewController class
@@ -51,6 +59,13 @@
     [super didReceiveMemoryWarning];
     
     // Release any cached data, images, etc that aren't in use.
+}
+
+-(void)dealloc
+{
+    NSLog(@"DEALLOC %@",NSStringFromClass([self class]));
+    
+    [super dealloc];
 }
 
 #pragma mark - View lifecycle
@@ -91,7 +106,7 @@
 
 - (MKAnnotationView *) mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>) annotation
 {
-	MKPinAnnotationView *annView=[[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"currentloc"];
+	MKPinAnnotationView *annView=[[[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"currentloc"] autorelease];
 	annView.pinColor = MKPinAnnotationColorGreen;
 	annView.animatesDrop=TRUE;
 	annView.canShowCallout = YES;

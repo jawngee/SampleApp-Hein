@@ -25,6 +25,7 @@
 
 -(void)didReceiveMemoryWarning
 {
+    NSLog(@"HELLO THERE MISTER PANTS");
     // Releases the view if it doesn't have a superview.
     [super didReceiveMemoryWarning];
     
@@ -57,7 +58,9 @@
     }
 }
 -(void) dealloc
-{
+{    
+    NSLog(@"DEALLOC %@",NSStringFromClass([self class]));
+
     [imageScrollView release];
     imageScrollView = nil;
     [super dealloc];

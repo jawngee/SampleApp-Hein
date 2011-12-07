@@ -29,11 +29,14 @@
 {
     // Releases the view if it doesn't have a superview.
     [super didReceiveMemoryWarning];
-    
+
     // Release any cached data, images, etc that aren't in use.
 }
+
 -(void) dealloc
 {
+    NSLog(@"DEALLOC %@",NSStringFromClass([self class]));
+    
     [data release];
     data = nil;
     [selectedCellBackground release];
@@ -47,7 +50,7 @@
 
     ///set Table view
     self.tableView.rowHeight = 92;
-    [self.tableView setBackgroundView:[[ CustomBackground alloc] init]];
+    [self.tableView setBackgroundView:[[[CustomBackground alloc] init] autorelease]];
     
     ///load data
     NSString *dataPath = [[NSBundle mainBundle] pathForResource:@"ClotheData" ofType:@"plist"];

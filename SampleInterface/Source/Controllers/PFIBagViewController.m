@@ -28,6 +28,13 @@
     // Release any cached data, images, etc that aren't in use.
 }
 
+-(void)dealloc
+{
+    NSLog(@"DEALLOC %@",NSStringFromClass([self class]));
+    
+    [super dealloc];
+}
+
 #pragma mark - View lifecycle
 
 -(void)viewDidLoad

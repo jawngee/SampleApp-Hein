@@ -31,10 +31,19 @@
     // Release any cached data, images, etc that aren't in use.
 }
 
+-(void)dealloc
+{
+    NSLog(@"DEALLOC %@",NSStringFromClass([self class]));
+    
+    [super dealloc];
+}
+
 #pragma mark - View lifecycle
 
 - (void)viewDidLoad
 {
+    NSLog(@"LOADED BIATCHES");
+    
     [super viewDidLoad];
     
     ///load data to an array
@@ -43,7 +52,7 @@
     self.data = [loadedFile allValues];
     
     ///set background view 
-    [self.tableView setBackgroundView:[[ CustomBackground alloc] init]];
+    [self.tableView setBackgroundView:[[[CustomBackground alloc] init] autorelease]];
 
     ///set background selected cell
     backgroundSelectedCell = [[CustomCellBackground alloc] init];

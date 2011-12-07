@@ -30,14 +30,18 @@
     
     // Release any cached data, images, etc that aren't in use.
 }
+
 -(void) dealloc
 {
+    NSLog(@"DEALLOC %@",NSStringFromClass([self class]));
+    
     [cellBackground release]; 
     cellBackground = nil;
     [data release]; 
     data = nil;
     [super dealloc];
 }
+
 #pragma mark - View lifecycle
 
 -(void)viewDidLoad
@@ -63,7 +67,7 @@
         
    // [self.navigationItem.rightBarButtonItem setBackgroundImage:[UIImage imageNamed:@"global-header-refresh-background"] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
         
-    [self.tableView setBackgroundView:[[ CustomBackground alloc] init]];
+    [self.tableView setBackgroundView:[[[CustomBackground alloc] init] autorelease]];
     
     cellBackground = [[CustomCellBackground alloc] init];
 }

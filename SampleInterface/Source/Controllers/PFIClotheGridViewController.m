@@ -32,6 +32,8 @@
 }
 -(void) dealloc
 {
+    NSLog(@"DEALLOC %@",NSStringFromClass([self class]));
+
     [data release];
     data = nil;
     [super dealloc];
@@ -50,7 +52,7 @@
     NSDictionary *loadedFile=[NSDictionary dictionaryWithContentsOfFile:dataPath];
     self.data = [loadedFile allValues];
     
-    [self.tableView setBackgroundView:[[ CustomBackground alloc] init]];
+    [self.tableView setBackgroundView:[[[ CustomBackground alloc] init] autorelease]];
     
     if ( [data count] % 3 == 0)
     {

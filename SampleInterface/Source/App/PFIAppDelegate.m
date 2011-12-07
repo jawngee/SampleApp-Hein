@@ -127,4 +127,11 @@
      */
 }
 
+- (void)applicationDidReceiveMemoryWarning:(UIApplication *)application
+{
+    NSLog(@"MEMORY WARNING");
+    
+    [self.tabBarViewController didReceiveMemoryWarning];
+}
+
 @end
