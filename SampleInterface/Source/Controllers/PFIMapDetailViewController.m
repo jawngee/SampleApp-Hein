@@ -64,7 +64,10 @@
 -(void)dealloc
 {
     NSLog(@"DEALLOC %@",NSStringFromClass([self class]));
-    
+    [mapView release];
+    mapView = nil;
+    [addAnnotation release];
+    addAnnotation = nil;
     [super dealloc];
 }
 

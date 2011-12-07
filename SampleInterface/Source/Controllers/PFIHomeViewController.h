@@ -21,6 +21,6 @@
     CustomCellBackground *cellBackground;
 }
 
-@property(nonatomic, retain) NSArray *data;
-@property(nonatomic, retain) CustomCellBackground *cellBackground;
+@property(nonatomic,assign) NSArray *data;
+@property(nonatomic,assign) CustomCellBackground *cellBackground;
 @end

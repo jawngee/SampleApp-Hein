@@ -16,8 +16,8 @@
     /**
      * imageScrollView is the scroll view to show out all the images of the collection.
      */
-    IBOutlet UIScrollView *imageScrollView;
+     UIScrollView *imageScrollView;
     
 }
-@property(strong, retain) UIScrollView *imageScrollView;
+@property(nonatomic, retain) UIScrollView *imageScrollView;
 @end

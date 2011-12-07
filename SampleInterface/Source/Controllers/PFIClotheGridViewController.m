@@ -44,29 +44,36 @@
 {
     [super viewDidLoad];
     
-    ///set Table height
     self.tableView.rowHeight = 123;
     
-    ///load data in an array
-    NSString *dataPath = [[NSBundle mainBundle] pathForResource:@"ClotheGridViewData" ofType:@"plist"];
-    NSDictionary *loadedFile=[NSDictionary dictionaryWithContentsOfFile:dataPath];
-    self.data = [loadedFile allValues];
-    
-    [self.tableView setBackgroundView:[[[ CustomBackground alloc] init] autorelease]];
-    
-    if ( [data count] % 3 == 0)
+    if (!self.data)
     {
-        numberOfRow = [data count] / 3;
-    }
-    else
-    {
-        numberOfRow = [data count] / 3 + 1;
+        ///set Table height
+        
+        
+        ///load data in an array
+        NSString *dataPath = [[NSBundle mainBundle] pathForResource:@"ClotheGridViewData" ofType:@"plist"];
+        NSDictionary *loadedFile=[NSDictionary dictionaryWithContentsOfFile:dataPath];
+        self.data = [loadedFile allValues];
+        
+        [self.tableView setBackgroundView:[[[ CustomBackground alloc] init] autorelease]];
+        
+        if ( [data count] % 3 == 0)
+        {
+            numberOfRow = [data count] / 3;
+        }
+        else
+        {
+            numberOfRow = [data count] / 3 + 1;
+        }
+
     }
 }
 
 - (void)viewDidUnload
 {
     [super viewDidUnload];
+   
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
 }
@@ -107,6 +114,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
+    //NSLog(@"number of Row in Clothe Grid View = %d",numberOfRow );
     return numberOfRow;
 }
 

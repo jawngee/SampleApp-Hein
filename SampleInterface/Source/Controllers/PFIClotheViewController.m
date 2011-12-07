@@ -47,18 +47,22 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    ///set Table view
-    self.tableView.rowHeight = 92;
-    [self.tableView setBackgroundView:[[[CustomBackground alloc] init] autorelease]];
     
-    ///load data
-    NSString *dataPath = [[NSBundle mainBundle] pathForResource:@"ClotheData" ofType:@"plist"];
-    NSDictionary *loadedFile=[NSDictionary dictionaryWithContentsOfFile:dataPath];
-    self.data = [loadedFile allValues];
-    
-    selectedCellBackground = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 92)];
-    [selectedCellBackground setBackgroundColor:[UIColor colorWithRed:35.0 / 255.0 green:150.0 / 255.0 blue:210.0 / 255.0 alpha:1.0]];
+    if (!self.data)
+    {
+        
+        ///set Table view
+        self.tableView.rowHeight = 92;
+        [self.tableView setBackgroundView:[[[CustomBackground alloc] init] autorelease]];
+        
+        ///load data
+        NSString *dataPath = [[NSBundle mainBundle] pathForResource:@"ClotheData" ofType:@"plist"];
+        NSDictionary *loadedFile=[NSDictionary dictionaryWithContentsOfFile:dataPath];
+        self.data = [loadedFile allValues];
+        
+        selectedCellBackground = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 92)];
+        [selectedCellBackground setBackgroundColor:[UIColor colorWithRed:35.0 / 255.0 green:150.0 / 255.0 blue:210.0 / 255.0 alpha:1.0]];
+    }
 }
 
 - (void)viewDidUnload

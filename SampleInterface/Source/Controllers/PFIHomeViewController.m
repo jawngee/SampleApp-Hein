@@ -4,6 +4,13 @@
 //
 //  Created by Doan The Hien on 11/21/11.
 //  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
+/*
+ NSString *error;
+ NSPropertyListFormat format; 
+ NSData *plistData = [NSData dataWithContentsOfFile:dataPath]; 
+ self.data = (NSArray *) [[NSPropertyListSerialization propertyListFromData:plistData mutabilityOption:NSPropertyListImmutable format:&format errorDescription:&error] retain]; 
+ */
+
 //
 
 #import "PFIHomeViewController.h"
@@ -48,28 +55,21 @@
 {
     [super viewDidLoad];
     
-    ///load data to an array
-    NSString *dataPath = [[NSBundle mainBundle] pathForResource:@"HomeData" ofType:@"plist"];
-    NSDictionary *loadedFile=[NSDictionary dictionaryWithContentsOfFile:dataPath];
-    self.data = [loadedFile allValues];
-     
-   /*
-    NSString *error;
-    NSPropertyListFormat format; 
-    NSData *plistData = [NSData dataWithContentsOfFile:dataPath]; 
-    self.data = (NSArray *) [[NSPropertyListSerialization propertyListFromData:plistData mutabilityOption:NSPropertyListImmutable format:&format errorDescription:&error] retain]; 
-   */
-    
-    ///set table height
-    self.tableView.rowHeight = 123 ; 
-    
-    //self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"global-header-button-refresh"] style:0 target:self action:@selector(refreshPage:)];
+    self.tableView.rowHeight = 123;
+
+    if(!self.data)
+    {
+        ///load data to an array
+        NSString *dataPath = [[NSBundle mainBundle] pathForResource:@"HomeData" ofType:@"plist"];
+        NSDictionary *loadedFile=[NSDictionary dictionaryWithContentsOfFile:dataPath];
+        self.data = [loadedFile allValues];
         
-   // [self.navigationItem.rightBarButtonItem setBackgroundImage:[UIImage imageNamed:@"global-header-refresh-background"] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+        ///set table height
         
-    [self.tableView setBackgroundView:[[[CustomBackground alloc] init] autorelease]];
-    
-    cellBackground = [[CustomCellBackground alloc] init];
+        [self.tableView setBackgroundView:[[[CustomBackground alloc] init] autorelease]];
+        
+        cellBackground = [[CustomCellBackground alloc] init];
+    }
 }
 
 -(void)viewDidUnload

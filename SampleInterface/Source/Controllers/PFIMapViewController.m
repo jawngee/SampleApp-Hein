@@ -46,17 +46,20 @@
     
     [super viewDidLoad];
     
-    ///load data to an array
-    NSString *dataPath = [[NSBundle mainBundle] pathForResource:@"MapDataItem" ofType:@"plist"];
-    NSDictionary *loadedFile=[NSDictionary dictionaryWithContentsOfFile:dataPath];
-    self.data = [loadedFile allValues];
-    
-    ///set background view 
-    [self.tableView setBackgroundView:[[[CustomBackground alloc] init] autorelease]];
-
-    ///set background selected cell
-    backgroundSelectedCell = [[CustomCellBackground alloc] init];
-    
+    if (!self.data)
+    {
+        ///load data to an array
+        NSString *dataPath = [[NSBundle mainBundle] pathForResource:@"MapDataItem" ofType:@"plist"];
+        NSDictionary *loadedFile=[NSDictionary dictionaryWithContentsOfFile:dataPath];
+        self.data = [loadedFile allValues];
+        
+        ///set background view 
+        [self.tableView setBackgroundView:[[[CustomBackground alloc] init] autorelease]];
+        
+        ///set background selected cell
+        backgroundSelectedCell = [[CustomCellBackground alloc] init];
+    }
+ 
     ///set table view Height
     self.tableView.rowHeight = 123;
 }
