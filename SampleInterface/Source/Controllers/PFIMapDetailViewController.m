@@ -49,6 +49,7 @@
     {
         latitudeValue = lat;
         longitudeValue = lon;
+        firstLoad = TRUE;
     }
     return self;
 }
@@ -80,30 +81,34 @@
 }
 -(void) showAddress 
 {
-	
-	MKCoordinateRegion region;
-	MKCoordinateSpan span;
-	span.latitudeDelta=0.2;
-	span.longitudeDelta=0.2;
-	
-	CLLocationCoordinate2D location = mapView.userLocation.coordinate;
-    
-	location.latitude  =  latitudeValue; //10.775891489212619;//38.898748 ;
-	location.longitude =  longitudeValue;//106.70376777648926;//-77.037684;
-	region.span=span;
-	region.center=location;
-	
-	if(addAnnotation != nil) {
-		[mapView removeAnnotation:addAnnotation];
-		[addAnnotation release];
-		addAnnotation = nil;
-	}
-	
-	addAnnotation = [[AddressAnnotation alloc] initWithCoordinate:location];
-	[mapView addAnnotation:addAnnotation];
-	
-	[mapView setRegion:region animated:TRUE];
-	[mapView regionThatFits:region];
+    if (firstLoad)
+    {
+        firstLoad = FALSE;
+        
+        MKCoordinateRegion region;
+        MKCoordinateSpan span;
+        span.latitudeDelta=0.2;
+        span.longitudeDelta=0.2;
+        
+        CLLocationCoordinate2D location = mapView.userLocation.coordinate;
+        
+        location.latitude  =  latitudeValue; //10.775891489212619;//38.898748 ;
+        location.longitude =  longitudeValue;//106.70376777648926;//-77.037684;
+        region.span=span;
+        region.center=location;
+        
+        if(addAnnotation != nil) {
+            [mapView removeAnnotation:addAnnotation];
+            [addAnnotation release];
+            addAnnotation = nil;
+        }
+        
+        addAnnotation = [[AddressAnnotation alloc] initWithCoordinate:location];
+        [mapView addAnnotation:addAnnotation];
+        
+        [mapView setRegion:region animated:TRUE];
+        [mapView regionThatFits:region];
+    }
 	//[mapView selectAnnotation:mLodgeAnnotation animated:YES];
 }
 

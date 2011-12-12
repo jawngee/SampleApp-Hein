@@ -27,6 +27,7 @@
     
     CLLocationDegrees latitudeValue;
     CLLocationDegrees longitudeValue;
+    BOOL firstLoad;
 
 }
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil latitude:(CLLocationDegrees) lat longitude:(CLLocationDegrees) lon;

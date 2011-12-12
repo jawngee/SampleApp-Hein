@@ -64,10 +64,10 @@
     [  self.tabBarViewController.tabBar addSubview:[[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"global-footer-background"]] autorelease]];
     
     self.tabBarViewController.viewControllers = [NSArray arrayWithObjects: [PFINavigationController navigationControllerForViewController:@"PFIHomeViewController" hasReload:YES],
-                                                 [PFINavigationController navigationControllerForViewController:@"PFICalendarViewController" hasReload:NO],
-                                                 [PFINavigationController navigationControllerForViewController:@"PFIClotheViewController" hasReload:NO],
-                                                 [PFINavigationController navigationControllerForViewController:@"PFIBagViewController" hasReload:NO],
-                                                 [PFINavigationController navigationControllerForViewController:@"PFIMapViewController" hasReload:NO],
+                                                 [PFINavigationController navigationControllerForViewController:@"PFICalendarViewController" hasReload:YES],
+                                                 [PFINavigationController navigationControllerForViewController:@"PFIClotheSexViewController" hasReload:YES],
+                                                 [PFINavigationController navigationControllerForViewController:@"PFIBagViewController" hasReload:YES],
+                                                 [PFINavigationController navigationControllerForViewController:@"PFIMapViewController" hasReload:YES],
                                                   nil];
     
     [self addTabBarButtonAtIndex:0 normalImage:@"global-footer-home" selectedImage:@"global-footer-home-on" isSelected:YES];

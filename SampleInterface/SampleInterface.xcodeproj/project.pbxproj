@@ -65,6 +65,31 @@
 		FEBF461114761F1F004C0525 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEBF461014761F1F004C0525 /* UIKit.framework */; };
 		FEBF461314761F1F004C0525 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEBF461214761F1F004C0525 /* Foundation.framework */; };
 		FEBF461514761F1F004C0525 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEBF461414761F1F004C0525 /* CoreGraphics.framework */; };
+		FECC21F41491B38A0019AEFC /* bag-scroll-image-1.png in Resources */ = {isa = PBXBuildFile; fileRef = FECC21EC1491B38A0019AEFC /* bag-scroll-image-1.png */; };
+		FECC21F51491B38A0019AEFC /* bag-scroll-image-1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FECC21ED1491B38A0019AEFC /* bag-scroll-image-1@2x.png */; };
+		FECC21F61491B38A0019AEFC /* bag-scroll-image-2.png in Resources */ = {isa = PBXBuildFile; fileRef = FECC21EE1491B38A0019AEFC /* bag-scroll-image-2.png */; };
+		FECC21F71491B38A0019AEFC /* bag-scroll-image-2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FECC21EF1491B38A0019AEFC /* bag-scroll-image-2@2x.png */; };
+		FECC21F81491B38A0019AEFC /* bag-scroll-image-3.png in Resources */ = {isa = PBXBuildFile; fileRef = FECC21F01491B38A0019AEFC /* bag-scroll-image-3.png */; };
+		FECC21F91491B38A0019AEFC /* bag-scroll-image-3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FECC21F11491B38A0019AEFC /* bag-scroll-image-3@2x.png */; };
+		FECC21FA1491B38A0019AEFC /* bag-scroll-image-4.png in Resources */ = {isa = PBXBuildFile; fileRef = FECC21F21491B38A0019AEFC /* bag-scroll-image-4.png */; };
+		FECC21FB1491B38A0019AEFC /* bag-scroll-image-4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FECC21F31491B38A0019AEFC /* bag-scroll-image-4@2x.png */; };
+		FECC22031491C7E90019AEFC /* global-header-back.png in Resources */ = {isa = PBXBuildFile; fileRef = FECC22011491C7E90019AEFC /* global-header-back.png */; };
+		FECC22041491C7E90019AEFC /* global-header-back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FECC22021491C7E90019AEFC /* global-header-back@2x.png */; };
+		FED665121495FB9D00832D5A /* clothe-female.png in Resources */ = {isa = PBXBuildFile; fileRef = FED665101495FB9D00832D5A /* clothe-female.png */; };
+		FED665131495FB9D00832D5A /* clothe-female@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FED665111495FB9D00832D5A /* clothe-female@2x.png */; };
+		FED665171495FBB800832D5A /* clothe-male.png in Resources */ = {isa = PBXBuildFile; fileRef = FED665151495FBB800832D5A /* clothe-male.png */; };
+		FED665181495FBB800832D5A /* clothe-male@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FED665161495FBB800832D5A /* clothe-male@2x.png */; };
+		FED6651B1495FBC300832D5A /* clothe-hanger.png in Resources */ = {isa = PBXBuildFile; fileRef = FED665191495FBC300832D5A /* clothe-hanger.png */; };
+		FED6651C1495FBC300832D5A /* clothe-hanger@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FED6651A1495FBC300832D5A /* clothe-hanger@2x.png */; };
+		FED665201495FC5000832D5A /* PFIClotheSexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FED6651E1495FC5000832D5A /* PFIClotheSexViewController.m */; };
+		FED665231495FCB200832D5A /* PFIClotheSexViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FED665221495FCB200832D5A /* PFIClotheSexViewController.xib */; };
+		FED665251495FF0500832D5A /* ClotheSexData.plist in Resources */ = {isa = PBXBuildFile; fileRef = FED665241495FF0500832D5A /* ClotheSexData.plist */; };
+		FED6652C1496021000832D5A /* clothe-female-highlight.png in Resources */ = {isa = PBXBuildFile; fileRef = FED665261496021000832D5A /* clothe-female-highlight.png */; };
+		FED6652D1496021000832D5A /* clothe-female-highlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FED665271496021000832D5A /* clothe-female-highlight@2x.png */; };
+		FED6652E1496021000832D5A /* clothe-hanger-highlight.png in Resources */ = {isa = PBXBuildFile; fileRef = FED665281496021000832D5A /* clothe-hanger-highlight.png */; };
+		FED6652F1496021000832D5A /* clothe-hanger-highlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FED665291496021000832D5A /* clothe-hanger-highlight@2x.png */; };
+		FED665301496021000832D5A /* clothe-male-highlight.png in Resources */ = {isa = PBXBuildFile; fileRef = FED6652A1496021000832D5A /* clothe-male-highlight.png */; };
+		FED665311496021000832D5A /* clothe-male-highlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FED6652B1496021000832D5A /* clothe-male-highlight@2x.png */; };
 		FEDF76C7148362B000623535 /* PFINavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEDF76C5148362B000623535 /* PFINavigationController.m */; };
 		FEDFA76C147BB0520028A7E5 /* PFIBagViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FEDFA762147BB0520028A7E5 /* PFIBagViewController.xib */; };
 		FEDFA76D147BB0520028A7E5 /* PFICalendarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FEDFA763147BB0520028A7E5 /* PFICalendarViewController.xib */; };
@@ -212,6 +237,32 @@
 		FEBF461014761F1F004C0525 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FEBF461214761F1F004C0525 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FEBF461414761F1F004C0525 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		FECC21EC1491B38A0019AEFC /* bag-scroll-image-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bag-scroll-image-1.png"; sourceTree = "<group>"; };
+		FECC21ED1491B38A0019AEFC /* bag-scroll-image-1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bag-scroll-image-1@2x.png"; sourceTree = "<group>"; };
+		FECC21EE1491B38A0019AEFC /* bag-scroll-image-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bag-scroll-image-2.png"; sourceTree = "<group>"; };
+		FECC21EF1491B38A0019AEFC /* bag-scroll-image-2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bag-scroll-image-2@2x.png"; sourceTree = "<group>"; };
+		FECC21F01491B38A0019AEFC /* bag-scroll-image-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bag-scroll-image-3.png"; sourceTree = "<group>"; };
+		FECC21F11491B38A0019AEFC /* bag-scroll-image-3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bag-scroll-image-3@2x.png"; sourceTree = "<group>"; };
+		FECC21F21491B38A0019AEFC /* bag-scroll-image-4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bag-scroll-image-4.png"; sourceTree = "<group>"; };
+		FECC21F31491B38A0019AEFC /* bag-scroll-image-4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bag-scroll-image-4@2x.png"; sourceTree = "<group>"; };
+		FECC22011491C7E90019AEFC /* global-header-back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "global-header-back.png"; sourceTree = "<group>"; };
+		FECC22021491C7E90019AEFC /* global-header-back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "global-header-back@2x.png"; sourceTree = "<group>"; };
+		FED665101495FB9D00832D5A /* clothe-female.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clothe-female.png"; sourceTree = "<group>"; };
+		FED665111495FB9D00832D5A /* clothe-female@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clothe-female@2x.png"; sourceTree = "<group>"; };
+		FED665151495FBB800832D5A /* clothe-male.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clothe-male.png"; sourceTree = "<group>"; };
+		FED665161495FBB800832D5A /* clothe-male@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clothe-male@2x.png"; sourceTree = "<group>"; };
+		FED665191495FBC300832D5A /* clothe-hanger.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clothe-hanger.png"; sourceTree = "<group>"; };
+		FED6651A1495FBC300832D5A /* clothe-hanger@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clothe-hanger@2x.png"; sourceTree = "<group>"; };
+		FED6651D1495FC5000832D5A /* PFIClotheSexViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFIClotheSexViewController.h; sourceTree = "<group>"; };
+		FED6651E1495FC5000832D5A /* PFIClotheSexViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFIClotheSexViewController.m; sourceTree = "<group>"; };
+		FED665221495FCB200832D5A /* PFIClotheSexViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PFIClotheSexViewController.xib; sourceTree = "<group>"; };
+		FED665241495FF0500832D5A /* ClotheSexData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ClotheSexData.plist; sourceTree = "<group>"; };
+		FED665261496021000832D5A /* clothe-female-highlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clothe-female-highlight.png"; sourceTree = "<group>"; };
+		FED665271496021000832D5A /* clothe-female-highlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clothe-female-highlight@2x.png"; sourceTree = "<group>"; };
+		FED665281496021000832D5A /* clothe-hanger-highlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clothe-hanger-highlight.png"; sourceTree = "<group>"; };
+		FED665291496021000832D5A /* clothe-hanger-highlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clothe-hanger-highlight@2x.png"; sourceTree = "<group>"; };
+		FED6652A1496021000832D5A /* clothe-male-highlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clothe-male-highlight.png"; sourceTree = "<group>"; };
+		FED6652B1496021000832D5A /* clothe-male-highlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clothe-male-highlight@2x.png"; sourceTree = "<group>"; };
 		FEDF76C4148362B000623535 /* PFINavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFINavigationController.h; sourceTree = "<group>"; };
 		FEDF76C5148362B000623535 /* PFINavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFINavigationController.m; sourceTree = "<group>"; };
 		FEDFA762147BB0520028A7E5 /* PFIBagViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PFIBagViewController.xib; sourceTree = "<group>"; };
@@ -317,7 +368,19 @@
 		FE00EA61147E5C8D00874935 /* Clothe */ = {
 			isa = PBXGroup;
 			children = (
+				FED665261496021000832D5A /* clothe-female-highlight.png */,
+				FED665271496021000832D5A /* clothe-female-highlight@2x.png */,
+				FED665281496021000832D5A /* clothe-hanger-highlight.png */,
+				FED665291496021000832D5A /* clothe-hanger-highlight@2x.png */,
+				FED6652A1496021000832D5A /* clothe-male-highlight.png */,
+				FED6652B1496021000832D5A /* clothe-male-highlight@2x.png */,
+				FED665101495FB9D00832D5A /* clothe-female.png */,
+				FED665111495FB9D00832D5A /* clothe-female@2x.png */,
 				FE8AC5FC14876B4000A7F867 /* clothe-gridview-detail-1-orangeImage.png */,
+				FED665191495FBC300832D5A /* clothe-hanger.png */,
+				FED6651A1495FBC300832D5A /* clothe-hanger@2x.png */,
+				FED665151495FBB800832D5A /* clothe-male.png */,
+				FED665161495FBB800832D5A /* clothe-male@2x.png */,
 				FE8AC5FD14876B4000A7F867 /* clothe-gridview-detail-1-orangeImage@2x.png */,
 				FE8AC5E014876AD600A7F867 /* clothe-girdview-detail-shadow.png */,
 				FE8AC5E314876AD600A7F867 /* clothe-gridview-detail-1-silverImage.png */,
@@ -429,9 +492,25 @@
 			path = SampleInterface;
 			sourceTree = "<group>";
 		};
+		FECC21EB1491B38A0019AEFC /* Bag */ = {
+			isa = PBXGroup;
+			children = (
+				FECC21EC1491B38A0019AEFC /* bag-scroll-image-1.png */,
+				FECC21ED1491B38A0019AEFC /* bag-scroll-image-1@2x.png */,
+				FECC21EE1491B38A0019AEFC /* bag-scroll-image-2.png */,
+				FECC21EF1491B38A0019AEFC /* bag-scroll-image-2@2x.png */,
+				FECC21F01491B38A0019AEFC /* bag-scroll-image-3.png */,
+				FECC21F11491B38A0019AEFC /* bag-scroll-image-3@2x.png */,
+				FECC21F21491B38A0019AEFC /* bag-scroll-image-4.png */,
+				FECC21F31491B38A0019AEFC /* bag-scroll-image-4@2x.png */,
+			);
+			path = Bag;
+			sourceTree = "<group>";
+		};
 		FEDFA702147BB0490028A7E5 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				FECC21EB1491B38A0019AEFC /* Bag */,
 				FE852953148DF03B00B0113B /* Map */,
 				FE00EA61147E5C8D00874935 /* Clothe */,
 				FFAC2244147CA7CC00FA37B8 /* Global */,
@@ -444,6 +523,7 @@
 		FEDFA761147BB0520028A7E5 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				FED665221495FCB200832D5A /* PFIClotheSexViewController.xib */,
 				FE852972148E09E900B0113B /* PFIMapDetailViewController.xib */,
 				FE852961148DF0E600B0113B /* PFIMapViewController.xib */,
 				FE81FEC51486A74A007E3F63 /* PFIClotheGridViewCellDetail.xib */,
@@ -459,6 +539,7 @@
 				FE00EA5F147E50A200874935 /* ClotheData.plist */,
 				FEFFF7041484C44800F614C0 /* ClotheGridViewData.plist */,
 				FE852950148DED8600B0113B /* MapDataItem.plist */,
+				FED665241495FF0500832D5A /* ClotheSexData.plist */,
 			);
 			path = Resources;
 			sourceTree = SOURCE_ROOT;
@@ -492,6 +573,8 @@
 				FEDFA782147BB05E0028A7E5 /* PFIHomeViewController.m */,
 				FEDFA77D147BB05E0028A7E5 /* PFICalendarViewController.h */,
 				FEDFA77E147BB05E0028A7E5 /* PFICalendarViewController.m */,
+				FED6651D1495FC5000832D5A /* PFIClotheSexViewController.h */,
+				FED6651E1495FC5000832D5A /* PFIClotheSexViewController.m */,
 				FE00EA55147E4BE300874935 /* PFIClotheViewController.h */,
 				FE00EA56147E4BE300874935 /* PFIClotheViewController.m */,
 				FEFFF6F01484B91F00F614C0 /* PFIClotheGridViewController.h */,
@@ -547,6 +630,8 @@
 		FFAC2244147CA7CC00FA37B8 /* Global */ = {
 			isa = PBXGroup;
 			children = (
+				FECC22011491C7E90019AEFC /* global-header-back.png */,
+				FECC22021491C7E90019AEFC /* global-header-back@2x.png */,
 				FFAC229C147CA93600FA37B8 /* global-header-shadow.png */,
 				FFAC229D147CA93600FA37B8 /* global-header-shadow@2x.png */,
 				FFAC2245147CA7CC00FA37B8 /* global-footer-background.png */,
@@ -746,6 +831,30 @@
 				FE85295B148DF03B00B0113B /* map-icon-2@2x.png in Resources */,
 				FE852962148DF0E600B0113B /* PFIMapViewController.xib in Resources */,
 				FE852973148E09E900B0113B /* PFIMapDetailViewController.xib in Resources */,
+				FECC21F41491B38A0019AEFC /* bag-scroll-image-1.png in Resources */,
+				FECC21F51491B38A0019AEFC /* bag-scroll-image-1@2x.png in Resources */,
+				FECC21F61491B38A0019AEFC /* bag-scroll-image-2.png in Resources */,
+				FECC21F71491B38A0019AEFC /* bag-scroll-image-2@2x.png in Resources */,
+				FECC21F81491B38A0019AEFC /* bag-scroll-image-3.png in Resources */,
+				FECC21F91491B38A0019AEFC /* bag-scroll-image-3@2x.png in Resources */,
+				FECC21FA1491B38A0019AEFC /* bag-scroll-image-4.png in Resources */,
+				FECC21FB1491B38A0019AEFC /* bag-scroll-image-4@2x.png in Resources */,
+				FECC22031491C7E90019AEFC /* global-header-back.png in Resources */,
+				FECC22041491C7E90019AEFC /* global-header-back@2x.png in Resources */,
+				FED665121495FB9D00832D5A /* clothe-female.png in Resources */,
+				FED665131495FB9D00832D5A /* clothe-female@2x.png in Resources */,
+				FED665171495FBB800832D5A /* clothe-male.png in Resources */,
+				FED665181495FBB800832D5A /* clothe-male@2x.png in Resources */,
+				FED6651B1495FBC300832D5A /* clothe-hanger.png in Resources */,
+				FED6651C1495FBC300832D5A /* clothe-hanger@2x.png in Resources */,
+				FED665231495FCB200832D5A /* PFIClotheSexViewController.xib in Resources */,
+				FED665251495FF0500832D5A /* ClotheSexData.plist in Resources */,
+				FED6652C1496021000832D5A /* clothe-female-highlight.png in Resources */,
+				FED6652D1496021000832D5A /* clothe-female-highlight@2x.png in Resources */,
+				FED6652E1496021000832D5A /* clothe-hanger-highlight.png in Resources */,
+				FED6652F1496021000832D5A /* clothe-hanger-highlight@2x.png in Resources */,
+				FED665301496021000832D5A /* clothe-male-highlight.png in Resources */,
+				FED665311496021000832D5A /* clothe-male-highlight@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -775,6 +884,7 @@
 				FE85295F148DF0A400B0113B /* PFIMapViewController.m in Sources */,
 				FE852965148DF30200B0113B /* PFIMapTableViewCell.m in Sources */,
 				FE852970148E09A000B0113B /* PFIMapDetailViewController.m in Sources */,
+				FED665201495FC5000832D5A /* PFIClotheSexViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

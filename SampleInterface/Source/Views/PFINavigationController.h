@@ -31,6 +31,8 @@
 {
     UIViewController<PFINavigationControllerDelegate> *delegate;
     BOOL reload;
+    /** Custom Back Button */
+    UIButton *backButton;
 }
 +(PFINavigationController*) navigationControllerForViewController:(NSString *)viewControllerName hasReload:(BOOL)hasReload;
 @end

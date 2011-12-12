@@ -40,6 +40,15 @@
         // Push it onto the stack
         [self pushViewController:delegate animated:NO];
         
+        UIImage *backImage=[UIImage imageNamed:@"global-header-back"];
+        backButton=[UIButton buttonWithType:UIButtonTypeCustom];
+        [backButton setImage:backImage forState:UIControlStateNormal];
+        [backButton addTarget:self action:@selector(backTapped:) forControlEvents:UIControlEventTouchUpInside];
+        backButton.frame=CGRectMake(0, 7, backImage.size.width, backImage.size.height);
+       
+        [self.navigationBar addSubview: backButton];
+        [backButton setHidden:YES];
+
     }
     
     return self;
@@ -95,6 +104,34 @@
     }
 }
 
+-(void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated
+{
+    
+    if (self.topViewController==nil)
+    {
+        [super pushViewController:viewController animated:animated];
+        return;
+    }
+    
+    NSLog(@"push view controller %@",NSStringFromClass([viewController class]));
+    
+    [viewController.navigationItem setHidesBackButton:YES];
+    
+    [super pushViewController:viewController animated:animated];
+    
+    
+    if( [self.viewControllers count] >= 2 )
+    {
+        [backButton setHidden: NO];
+    }
+    
+}
+-(void)backTapped:(id)sender
+{
+    [self popViewControllerAnimated:YES];
+    if([self.viewControllers count] == 1) [backButton setHidden: YES];
+}
+
 -(void) reloadTapped:(id)sender
 {
     
@@ -106,6 +143,10 @@
     // e.g. self.myOutlet = nil;
 }
 
+-(void) dealloc
+{
+    [delegate release];
+}
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     // Return YES for supported orientations

@@ -45,12 +45,8 @@
     [super viewDidLoad];
     
     self.tableView.rowHeight = 123;
-    
     if (!self.data)
     {
-        ///set Table height
-        
-        
         ///load data in an array
         NSString *dataPath = [[NSBundle mainBundle] pathForResource:@"ClotheGridViewData" ofType:@"plist"];
         NSDictionary *loadedFile=[NSDictionary dictionaryWithContentsOfFile:dataPath];
@@ -69,7 +65,10 @@
 
     }
 }
-
+-(void) backButtonPress:(id) sender
+{
+    
+}
 - (void)viewDidUnload
 {
     [super viewDidUnload];
