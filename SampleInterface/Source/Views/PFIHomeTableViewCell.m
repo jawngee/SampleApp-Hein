@@ -18,11 +18,14 @@
 -(id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier elements:(NSDictionary *) dataItem
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
-    if (self) {
-        // Initialization code
+    if (self) 
+    {
+        
+        self.frame = CGRectMake(0, 0, 320, 124);
+        
+        ///add icon
         NSString *imageName;
         imageName = [dataItem objectForKey:@"icon"];
-        
         icon = [[UIImageView alloc] initWithImage:[UIImage imageNamed:imageName]] ;
         icon.frame = CGRectMake(8 , 15 , 133 , 94 ); 
         [self addSubview:icon];
@@ -67,9 +70,20 @@
         [dateLabel setHighlightedTextColor:[UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0]];
         [dateLabel setBackgroundColor:[UIColor clearColor]];
         [self addSubview: dateLabel];
+        
+        
 
     }
     return self;
+}
+-(void) drawRect:(CGRect)rect
+{
+    ///draw a line between 2 cells
+    CGContextRef ctx = UIGraphicsGetCurrentContext(); 
+    CGContextSetRGBStrokeColor(ctx, 145.0 / 255.0, 145.0 / 255.0, 145.0 / 255.0, 1.0); ///black color
+    CGContextMoveToPoint(ctx, 0, 123);
+    CGContextAddLineToPoint( ctx, 319,123);
+    CGContextStrokePath(ctx);
 }
 -(void) setElements:(NSDictionary *) dataItem
 {

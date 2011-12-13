@@ -88,7 +88,15 @@
     ///set dateLabel
     contentLabel.text = [dataItem objectForKey:@"content"];
 }
-
+-(void) drawRect:(CGRect)rect
+{
+    ///draw a line between 2 cells
+    CGContextRef ctx = UIGraphicsGetCurrentContext(); 
+    CGContextSetRGBStrokeColor(ctx, 145.0 / 255.0, 145.0 / 255.0, 145.0 / 255.0, 1.0); ///black color
+    CGContextMoveToPoint(ctx, 0, 123);
+    CGContextAddLineToPoint( ctx, 319,123);
+    CGContextStrokePath(ctx);
+}
 -(void) dealloc
 {
     [icon release];

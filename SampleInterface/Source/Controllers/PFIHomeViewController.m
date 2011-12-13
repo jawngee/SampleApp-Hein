@@ -55,7 +55,7 @@
 {
     [super viewDidLoad];
     
-    self.tableView.rowHeight = 123;
+    self.tableView.rowHeight = 124;
 
     if(!self.data)
     {

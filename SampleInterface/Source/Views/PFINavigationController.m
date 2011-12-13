@@ -44,7 +44,7 @@
         backButton=[UIButton buttonWithType:UIButtonTypeCustom];
         [backButton setImage:backImage forState:UIControlStateNormal];
         [backButton addTarget:self action:@selector(backTapped:) forControlEvents:UIControlEventTouchUpInside];
-        backButton.frame=CGRectMake(0, 7, backImage.size.width, backImage.size.height);
+        backButton.frame=CGRectMake(10, 15, backImage.size.width, backImage.size.height);
        
         [self.navigationBar addSubview: backButton];
         [backButton setHidden:YES];

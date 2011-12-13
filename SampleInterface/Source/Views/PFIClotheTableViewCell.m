@@ -51,5 +51,13 @@
 
     // Configure the view for the selected state
 }
-
+-(void) drawRect:(CGRect)rect
+{
+    ///draw a line between 2 cells
+    CGContextRef ctx = UIGraphicsGetCurrentContext(); 
+    CGContextSetRGBStrokeColor(ctx, 145.0 / 255.0, 145.0 / 255.0, 145.0 / 255.0, 1.0); ///black color
+    CGContextMoveToPoint(ctx, 0, 91);
+    CGContextAddLineToPoint( ctx, 319,91);
+    CGContextStrokePath(ctx);
+}
 @end

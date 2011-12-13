@@ -61,7 +61,7 @@
     }
  
     ///set table view Height
-    self.tableView.rowHeight = 123;
+    self.tableView.rowHeight = 124;
 }
 
 - (void)viewDidUnload
