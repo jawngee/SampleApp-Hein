@@ -92,8 +92,8 @@
         
         CLLocationCoordinate2D location = mapView.userLocation.coordinate;
         
-        location.latitude  =  latitudeValue; //10.775891489212619;//38.898748 ;
-        location.longitude =  longitudeValue;//106.70376777648926;//-77.037684;
+        location.latitude  =  latitudeValue; 
+        location.longitude =  longitudeValue;
         region.span=span;
         region.center=location;
         

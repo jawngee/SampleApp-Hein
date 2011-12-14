@@ -65,6 +65,7 @@
 		FEBF461114761F1F004C0525 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEBF461014761F1F004C0525 /* UIKit.framework */; };
 		FEBF461314761F1F004C0525 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEBF461214761F1F004C0525 /* Foundation.framework */; };
 		FEBF461514761F1F004C0525 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEBF461414761F1F004C0525 /* CoreGraphics.framework */; };
+		FECA05951497403500EDC03C /* PFIDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FECA05941497403500EDC03C /* PFIDataManager.m */; };
 		FECC21F41491B38A0019AEFC /* bag-scroll-image-1.png in Resources */ = {isa = PBXBuildFile; fileRef = FECC21EC1491B38A0019AEFC /* bag-scroll-image-1.png */; };
 		FECC21F51491B38A0019AEFC /* bag-scroll-image-1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FECC21ED1491B38A0019AEFC /* bag-scroll-image-1@2x.png */; };
 		FECC21F61491B38A0019AEFC /* bag-scroll-image-2.png in Resources */ = {isa = PBXBuildFile; fileRef = FECC21EE1491B38A0019AEFC /* bag-scroll-image-2.png */; };
@@ -237,6 +238,8 @@
 		FEBF461014761F1F004C0525 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FEBF461214761F1F004C0525 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FEBF461414761F1F004C0525 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		FECA05931497403500EDC03C /* PFIDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFIDataManager.h; sourceTree = "<group>"; };
+		FECA05941497403500EDC03C /* PFIDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFIDataManager.m; sourceTree = "<group>"; };
 		FECC21EC1491B38A0019AEFC /* bag-scroll-image-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bag-scroll-image-1.png"; sourceTree = "<group>"; };
 		FECC21ED1491B38A0019AEFC /* bag-scroll-image-1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bag-scroll-image-1@2x.png"; sourceTree = "<group>"; };
 		FECC21EE1491B38A0019AEFC /* bag-scroll-image-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bag-scroll-image-2.png"; sourceTree = "<group>"; };
@@ -610,6 +613,8 @@
 				FEE327211488A57500B68517 /* PFIGradientButton.m */,
 				FE852963148DF30200B0113B /* PFIMapTableViewCell.h */,
 				FE852964148DF30200B0113B /* PFIMapTableViewCell.m */,
+				FECA05931497403500EDC03C /* PFIDataManager.h */,
+				FECA05941497403500EDC03C /* PFIDataManager.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -885,6 +890,7 @@
 				FE852965148DF30200B0113B /* PFIMapTableViewCell.m in Sources */,
 				FE852970148E09A000B0113B /* PFIMapDetailViewController.m in Sources */,
 				FED665201495FC5000832D5A /* PFIClotheSexViewController.m in Sources */,
+				FECA05951497403500EDC03C /* PFIDataManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

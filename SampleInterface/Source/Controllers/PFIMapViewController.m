@@ -10,6 +10,8 @@
 #import "CustomBackground.h"
 #import "PFIMapTableViewCell.h"
 #import "PFIMapDetailViewController.h"
+#import "PFIDataManager.h"
+
 @implementation PFIMapViewController
 
 @synthesize data;
@@ -48,10 +50,8 @@
     
     if (!self.data)
     {
-        ///load data to an array
-        NSString *dataPath = [[NSBundle mainBundle] pathForResource:@"MapDataItem" ofType:@"plist"];
-        NSDictionary *loadedFile=[NSDictionary dictionaryWithContentsOfFile:dataPath];
-        self.data = [loadedFile allValues];
+        ///load data
+        self.data = [[PFIDataManager sharedManager] getMapDataItems];
         
         ///set background view 
         [self.tableView setBackgroundView:[[[CustomBackground alloc] init] autorelease]];

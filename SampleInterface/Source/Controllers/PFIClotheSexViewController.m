@@ -10,6 +10,7 @@
 #import "CustomBackground.h"
 #import "PFIClotheTableViewCell.h"
 #import "PFIClotheViewController.h"
+#import "PFIDataManager.h"
 @implementation PFIClotheSexViewController
 
 @synthesize data;
@@ -45,10 +46,14 @@
         self.tableView.rowHeight = 92;
         [self.tableView setBackgroundView:[[[CustomBackground alloc] init] autorelease]];
         
+        /*
         ///load data
         NSString *dataPath = [[NSBundle mainBundle] pathForResource:@"ClotheSexData" ofType:@"plist"];
         NSDictionary *loadedFile=[NSDictionary dictionaryWithContentsOfFile:dataPath];
         self.data = [loadedFile allValues];
+        */
+        
+        self.data = [[PFIDataManager sharedManager] getClotheSexDataItems];
         
         selectedCellBackground = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 92)];
         [selectedCellBackground setBackgroundColor:[UIColor colorWithRed:35.0 / 255.0 green:150.0 / 255.0 blue:210.0 / 255.0 alpha:1.0]];
@@ -139,8 +144,6 @@
 {
     NSLog(@"DEALLOC %@",NSStringFromClass([self class]));
     
-    [data release];
-    data = nil;
     [selectedCellBackground release];
     selectedCellBackground = nil;
 }

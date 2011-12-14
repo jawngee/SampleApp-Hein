@@ -16,6 +16,7 @@
 #import "PFIHomeViewController.h"
 #import "CustomBackground.h"
 #import "PFIHomeTableViewCell.h"
+#import "PFIDataManager.h"
 @implementation PFIHomeViewController
 
 @synthesize data;
@@ -44,8 +45,6 @@
     
     [cellBackground release]; 
     cellBackground = nil;
-    [data release]; 
-    data = nil;
     [super dealloc];
 }
 
@@ -59,13 +58,9 @@
 
     if(!self.data)
     {
-        ///load data to an array
-        NSString *dataPath = [[NSBundle mainBundle] pathForResource:@"HomeData" ofType:@"plist"];
-        NSDictionary *loadedFile=[NSDictionary dictionaryWithContentsOfFile:dataPath];
-        self.data = [loadedFile allValues];
-        
-        ///set table height
-        
+        ///load data
+        self.data = [[PFIDataManager sharedManager] getHomeNewsItems];
+      
         [self.tableView setBackgroundView:[[[CustomBackground alloc] init] autorelease]];
         
         cellBackground = [[CustomCellBackground alloc] init];

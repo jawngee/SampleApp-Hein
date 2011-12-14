@@ -10,6 +10,8 @@
 #import "CustomBackground.h"
 #import "PFIClotheGridViewCell.h"
 #import "PFIClotheGridViewCellDetail.h"
+#import "PFIDataManager.h"
+
 @implementation PFIClotheGridViewController
 
 @synthesize data;
@@ -33,9 +35,6 @@
 -(void) dealloc
 {
     NSLog(@"DEALLOC %@",NSStringFromClass([self class]));
-
-    [data release];
-    data = nil;
     [super dealloc];
 }
 #pragma mark - View lifecycle
@@ -47,10 +46,13 @@
     self.tableView.rowHeight = 123;
     if (!self.data)
     {
+        /*
         ///load data in an array
         NSString *dataPath = [[NSBundle mainBundle] pathForResource:@"ClotheGridViewData" ofType:@"plist"];
         NSDictionary *loadedFile=[NSDictionary dictionaryWithContentsOfFile:dataPath];
         self.data = [loadedFile allValues];
+        */
+        self.data = [[PFIDataManager sharedManager] getClotheDataGridViewItems];
         
         [self.tableView setBackgroundView:[[[ CustomBackground alloc] init] autorelease]];
         
