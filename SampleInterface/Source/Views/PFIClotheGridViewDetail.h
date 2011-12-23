@@ -15,7 +15,11 @@
     UIImageView *productImage;
     UIScrollView *productView;
     bool firstLoad;
+    bool view1Active;
     
+    NSArray *colors;
+    NSArray *view1;
+    NSArray *view2;
     UIImageView *background;
     UIImageView *shadow;
     UIView *contentView ;

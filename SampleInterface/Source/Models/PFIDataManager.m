@@ -7,6 +7,9 @@
 //
 
 #import "PFIDataManager.h"
+#import "ASIHTTPRequest.h"
+#import "JSONKit.h"
+
 
 @implementation PFIDataManager
 
@@ -17,6 +20,7 @@ static PFIDataManager* sharedDataManager;
     if (sharedDataManager == nil)
     {
         sharedDataManager = (PFIDataManager*)[[self alloc] init];
+        
     }
     return sharedDataManager;
 }
@@ -24,20 +28,50 @@ static PFIDataManager* sharedDataManager;
 {
     if (self = [super init])
     {
-        
     }
     return self;
 }
--(NSArray*)getHomeNewsItems
+-(void)loadClotheGridViewItems:(PFIDataManagerCompleteBlock) block
 {
-    if(homeNewsData == nil)
-    {
-        NSString *dataPath = [[NSBundle mainBundle] pathForResource:@"HomeData" ofType:@"plist"];
-        NSDictionary *loadedFile=[NSDictionary dictionaryWithContentsOfFile:dataPath];
-        homeNewsData = [loadedFile allValues];
-    }
-    return homeNewsData;
+    gridItemBlock = [block copy];
+    NSURL *url = [NSURL URLWithString:@"http://robe.local/robe/products/"];
+    __block ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:url];
+    
+    [request setCompletionBlock:^
+     {
+         NSString *responseString=[request responseString];
+         NSArray *myArray=[responseString objectFromJSONString];
+         gridItemBlock(myArray);
+         [gridItemBlock release];
+     }];
+    
+    [request setFailedBlock:^
+     {
+         //NSError *error = [request error];
+     }];
+    [request startAsynchronous];
 }
+-(void) loadHomeNewsItems:(PFIDataManagerCompleteBlock) block
+{
+    dasBlock = [block copy];
+    NSURL *url = [NSURL URLWithString:@"http://robe.local/robe/news/"];
+    __block ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:url];
+    
+    [request setCompletionBlock:^
+     {
+         NSString *responseString=[request responseString];
+         NSArray *myArray=[responseString objectFromJSONString];
+         dasBlock(myArray);
+         [dasBlock release];
+     }];
+    
+    [request setFailedBlock:^
+     {
+         //NSError *error = [request error];
+     }];
+    [request startAsynchronous];
+}
+
 
 -(NSArray*)getClotheDataItems
 {

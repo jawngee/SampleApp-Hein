@@ -17,6 +17,8 @@
 #import "CustomBackground.h"
 #import "PFIHomeTableViewCell.h"
 #import "PFIDataManager.h"
+#import "PFIHomeNewsItem.h"
+#import "ASIHTTPRequest.h"
 @implementation PFIHomeViewController
 
 @synthesize data;
@@ -58,13 +60,53 @@
 
     if(!self.data)
     {
-        ///load data
-        self.data = [[PFIDataManager sharedManager] getHomeNewsItems];
-      
-        [self.tableView setBackgroundView:[[[CustomBackground alloc] init] autorelease]];
         
+        imageArray = [[NSMutableArray alloc] initWithCapacity:20];
+        
+        [[PFIDataManager sharedManager] loadHomeNewsItems:^(id dataArray)
+         {
+             data = [dataArray retain];
+             NSLog(@"number of home items  = %d",[data count]);
+             [self.tableView reloadData];
+             
+         }];
+        
+        [self.tableView setBackgroundView:[[[CustomBackground alloc] init] autorelease]];
         cellBackground = [[CustomCellBackground alloc] init];
     }
+}
+-(void) loadingIconImage
+{
+    if (!networkQueue) {
+		networkQueue = [[ASINetworkQueue alloc] init];	
+	}
+	[networkQueue reset];
+	[networkQueue setRequestDidFinishSelector:@selector(imageFetchComplete:)];
+	[networkQueue setRequestDidFailSelector:@selector(imageFetchFailed:)];
+	[networkQueue setDelegate:self];
+    
+    for (int i = 0; i < [data count]; i++)
+    {
+        NSDictionary *item = [data objectAtIndex:i];
+        NSURL *url = [NSURL URLWithString:[item objectForKey:@"icon"]];
+        ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:url];
+        
+        [request setDownloadDestinationPath:[[NSHomeDirectory() stringByAppendingPathComponent:@"Documents"] stringByAppendingPathComponent:[NSString stringWithFormat:@"%d.png",i]]];
+        [request setUserInfo:[NSDictionary dictionaryWithObject:[NSString stringWithFormat:@"%d",i] forKey:@"name"]];
+        [networkQueue addOperation:request];
+        
+    }
+    [networkQueue go];
+}
+- (void)imageFetchComplete:(ASIHTTPRequest *)request
+{
+	UIImage *img = [UIImage imageWithContentsOfFile:[request downloadDestinationPath]];
+    [imageArray addObject:img];
+}
+
+- (void)imageFetchFailed:(ASIHTTPRequest *)request
+{
+	NSLog(@"imageFetchFailed");
 }
 
 -(void)viewDidUnload
@@ -126,7 +168,7 @@
     PFIHomeTableViewCell *cell = (PFIHomeTableViewCell*)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     int indexRow = indexPath.row;
     NSDictionary *dataItem = [self.data objectAtIndex: indexRow];
-    //NSLog([dataItem objectForKey:@"index"]);
+
     if (cell == nil)
     {
         cell = [[[PFIHomeTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier elements: dataItem] autorelease];

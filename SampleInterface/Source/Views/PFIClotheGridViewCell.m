@@ -7,6 +7,7 @@
 //
 
 #import "PFIClotheGridViewCell.h"
+#import "UIButton+WebCache.h"
 
 @implementation PFIClotheGridViewCell
 
@@ -35,10 +36,10 @@
         
         if (dataItem1)
         {
-            NSString *imageName = [dataItem1 objectForKey:@"iconImage"];
+            NSString *imageName = [dataItem1 objectForKey:@"icon"];
             button1 = [[UIButton alloc] init];
             button1.frame = CGRectMake(0, 0, buttonWidth, buttonHeight);
-            [button1 setImage:[UIImage imageNamed: imageName] forState:UIControlStateNormal];
+            [button1 setImageWithURL:[NSURL URLWithString: imageName]];
             [button1 setBackgroundImage:[UIImage imageNamed:@"clothe-gridview-cell-hightlight"] forState:UIControlStateHighlighted];
             button1.tag = 1;
             [button1 addTarget:self action:@selector(itemButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
@@ -52,16 +53,17 @@
             [self addSubview: button1];
             [self addSubview: line1];
             [self addSubview: underLine1];
+            
         }
         
         if (dataItem2)
         {
            
             
-            NSString *imageName = [dataItem2 objectForKey:@"iconImage"];
+            NSString *imageName = [dataItem2 objectForKey:@"icon"];
             button2 = [[UIButton alloc] init];
             button2.frame = CGRectMake(buttonWidth + 1, 0, buttonWidth, buttonHeight);
-            [button2 setImage:[UIImage imageNamed: imageName] forState:UIControlStateNormal];
+            [button2 setImageWithURL:[NSURL URLWithString: imageName]];
             [button2 setBackgroundImage:[UIImage imageNamed:@"clothe-gridview-cell-hightlight"] forState:UIControlStateHighlighted];
             button2.tag = 2;
             [button2 addTarget:self action:@selector(itemButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
@@ -81,10 +83,10 @@
         {
 
         
-            NSString *imageName = [dataItem3 objectForKey:@"iconImage"];
+            NSString *imageName = [dataItem3 objectForKey:@"icon"];
             button3 = [[UIButton alloc] init];
             button3.frame = CGRectMake(buttonWidth * 2 + 2, 0, buttonWidth, buttonHeight);
-            [button3 setImage:[UIImage imageNamed: imageName] forState:UIControlStateNormal];
+            [button3 setImageWithURL:[NSURL URLWithString: imageName]];
             [button3 setBackgroundImage:[UIImage imageNamed:@"clothe-gridview-cell-hightlight"] forState:UIControlStateHighlighted];
             button3.tag = 3;
             [button3 addTarget:self action:@selector(itemButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
@@ -148,21 +150,20 @@
 -(void) adjustCell:(NSDictionary*) data1 item2:(NSDictionary*) data2 item3:(NSDictionary*) data3
 {
     dataItem1 = data1;
-    NSString *imageName = [data1 objectForKey:@"iconImage"];
-    [button1 setImage:[UIImage imageNamed: imageName] forState:UIControlStateNormal];
-    
+    NSString *imageName = [data1 objectForKey:@"icon"];
+    [button1 setImageWithURL:[NSURL URLWithString: imageName]];
     if (data2)
     {
-        imageName = [data2 objectForKey:@"iconImage"];
-        [button2 setImage:[UIImage imageNamed: imageName]  forState:UIControlStateNormal];
+        imageName = [data2 objectForKey:@"icon"];
+        [button2 setImageWithURL:[NSURL URLWithString: imageName]];
         [button2 setHidden: NO];
         [underLine2 setHidden: NO];
         dataItem2 = data2;
         
         if (data3)
         {
-            imageName = [data3 objectForKey:@"iconImage"];
-            [button3 setImage:[UIImage imageNamed: imageName] forState:UIControlStateNormal];
+            imageName = [data3 objectForKey:@"icon"];
+            [button3 setImageWithURL:[NSURL URLWithString: imageName]];
             [button3 setHidden: NO];
             [underLine3 setHidden: NO];
             [line2   setHidden: NO];

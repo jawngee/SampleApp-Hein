@@ -4,9 +4,11 @@
 //
 //  Created by Doan The Hien on 12/19/11.
 //  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
-//
+
 
 #import "PFIClotheGridViewDetail.h"
+#import "UIImageView+WebCache.h"
+#import "UIButton+WebCache.h"
 
 #define  SilverButtonTouched 1
 #define  OrangeButtonTouched 2
@@ -30,7 +32,12 @@
     self = [super init];
     if (self)
     {
+        view1Active = TRUE;
         itemData = item;
+        
+        colors = [itemData objectForKey:@"colors"];
+        view1 = [[colors objectAtIndex:0] objectForKey:@"views"];
+        view2 = [[colors objectAtIndex:1] objectForKey:@"views"];
         
         //home-background-tableview
         background = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"home-background-tableview"]];
@@ -45,7 +52,8 @@
         
         
         ///add Image
-        productImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"clothe-gridview-detail-1-silverImage"]];
+        productImage = [[UIImageView alloc] init];
+        [productImage setImageWithURL:[NSURL URLWithString:[[view1 objectAtIndex:0] objectForKey:@"image"]]];
         productImage.frame = CGRectMake(53, 55, 207, 114);
         [self addSubview: productImage];
         
@@ -100,38 +108,59 @@
         
         
         ///add silver button
-        silverButton =[[PFIGradientButton alloc] initWithFrame:CGRectMake(43, 54, 26, 26) startColor:[UIColor colorWithRed:199.0 / 255.0 green:199.0 / 255.0 blue:199.0 / 255.0 alpha:1.0] endColor:[UIColor colorWithRed:183.0 / 255.0 green:183.0 / 255.0 blue:183.0 / 255.0 alpha:1.0]];
+        NSString *silver = [[colors objectAtIndex:0] objectForKey:@"color"];
+        NSScanner *scanner2 = [NSScanner scannerWithString:silver];
+        unsigned baseColor1;
+        [scanner2 scanHexInt:&baseColor1]; 
+        CGFloat red   = ((baseColor1 & 0xFF0000) >> 16) / 255.0f;
+        CGFloat green = ((baseColor1 & 0x00FF00) >>  8) / 255.0f;
+        CGFloat blue  =  (baseColor1 & 0x0000FF) / 255.0f;
+        
+        silverButton =[[PFIGradientButton alloc] initWithFrame:CGRectMake(43, 54, 26, 26) startColor:[UIColor colorWithRed:red green:green blue:blue alpha:1.0] endColor:[UIColor colorWithRed:red green:green blue:blue alpha:1.0]];
         silverButton.tag = SilverButtonTouched;
         [silverButton addTarget:self action:@selector(myButtonTouched:) forControlEvents:UIControlEventTouchUpInside];
         [contentView addSubview: silverButton];
         
         
         ///add orange button
-        orangeButton =[[PFIGradientButton alloc] initWithFrame:CGRectMake(75, 54, 26, 26) startColor:[UIColor colorWithRed:230.0 / 255.0 green:181.0 / 255.0 blue:133.0 / 255.0 alpha:1.0] endColor:[UIColor colorWithRed:221.0 / 255.0 green:157.0 / 255.0 blue:93.0 / 255.0 alpha:1.0]];
+        NSString *orange = [[colors objectAtIndex:1] objectForKey:@"color"];
+        NSScanner *scanner = [NSScanner scannerWithString:orange];
+        unsigned baseColor;
+        [scanner scanHexInt:&baseColor]; 
+        red   = ((baseColor & 0xFF0000) >> 16) / 255.0f;
+        green = ((baseColor & 0x00FF00) >>  8) / 255.0f;
+        blue  =  (baseColor & 0x0000FF) / 255.0f;
+        
+        orangeButton =[[PFIGradientButton alloc] initWithFrame:CGRectMake(75, 54, 26, 26) startColor:[UIColor colorWithRed:red green:green blue:blue alpha:1.0] endColor:[UIColor colorWithRed:red green:green blue:blue alpha:1.0]];
         orangeButton.tag = OrangeButtonTouched;
         [orangeButton addTarget:self action:@selector(myButtonTouched:) forControlEvents:UIControlEventTouchUpInside];
         [contentView addSubview: orangeButton];
         
-        
+        //CGRectMake(165, 35, 45, 44)
+        //CGRectMake(217, 35, 45, 44)
+        //CGRectMake(268, 35, 45, 44)
         ///add thumnai button 1
-        thumnailButton1 = [[UIButton alloc] initWithFrame:CGRectMake(165, 35, 45, 44)];
-        [thumnailButton1 setImage:[UIImage imageNamed:@"clothe-gridview-detail-1-thumnail1"] forState:UIControlStateNormal];
+        thumnailButton1 = [[UIButton alloc] init];
+        [thumnailButton1 setImageWithURL:[NSURL URLWithString:[[view1 objectAtIndex:0] objectForKey:@"thumbnail"]]];
+        thumnailButton1.frame = CGRectMake(165, 35, 45, 44);
         thumnailButton1.tag = ThumnailButton1Touched;
         [thumnailButton1 addTarget:self action:@selector(myButtonTouched:) forControlEvents:UIControlEventTouchUpInside];
         [contentView addSubview: thumnailButton1];
         
         
         ///add thumnai button 2
-        thumnailButton2 = [[UIButton alloc] initWithFrame:CGRectMake(217, 35, 45, 44)];
-        [thumnailButton2 setImage:[UIImage imageNamed:@"clothe-gridview-detail-1-thumnail1"] forState:UIControlStateNormal];
+        thumnailButton2 = [[UIButton alloc] init];
+        [thumnailButton2 setImageWithURL:[NSURL URLWithString:[[view1 objectAtIndex:1] objectForKey:@"thumbnail"]]];
+        thumnailButton2.frame =CGRectMake(217, 35, 45, 44);
         thumnailButton2.tag = ThumnailButton2Touched;
         [thumnailButton2 addTarget:self action:@selector(myButtonTouched:) forControlEvents:UIControlEventTouchUpInside];
         [contentView addSubview: thumnailButton2];
         
         
         ///add thumnai button 3
-        thumnailButton3 = [[UIButton alloc] initWithFrame:CGRectMake(268, 35, 45, 44)];
-        [thumnailButton3 setImage:[UIImage imageNamed:@"clothe-gridview-detail-1-thumnail1"] forState:UIControlStateNormal];
+        thumnailButton3 = [[UIButton alloc] init];
+        [thumnailButton3 setImageWithURL:[NSURL URLWithString:[[view1 objectAtIndex:2] objectForKey:@"thumbnail"]]];
+        thumnailButton3.frame = CGRectMake(268, 35, 45, 44);
         thumnailButton3.tag = ThumnailButton3Touched;
         [thumnailButton3 addTarget:self action:@selector(myButtonTouched:) forControlEvents:UIControlEventTouchUpInside];
         [contentView addSubview: thumnailButton3];
@@ -140,7 +169,7 @@
         [self addSubview: contentView];
         [contentView release];
         contentView = nil;
-
+        
     }
     return self;
 }
@@ -150,19 +179,56 @@
     switch (((UIButton*)sender).tag)
     {
         case  SilverButtonTouched:
-            [productImage setImage: [UIImage imageNamed:@"clothe-gridview-detail-1-silverImage"]];
+            view1Active = TRUE;
+            ///set product image
+            [productImage setImageWithURL:[NSURL URLWithString:[[view1 objectAtIndex:0] objectForKey:@"image"]]];
+            
+            ///set 3 thumnail images for view1
+            [thumnailButton1 setImageWithURL:[NSURL URLWithString:[[view1 objectAtIndex:0] objectForKey:@"thumbnail" ]]];
+            [thumnailButton2 setImageWithURL:[NSURL URLWithString:[[view1 objectAtIndex:1] objectForKey:@"thumbnail" ]]];
+            [thumnailButton3 setImageWithURL:[NSURL URLWithString:[[view1 objectAtIndex:2] objectForKey:@"thumbnail" ]]];
+            
             break;
         case  OrangeButtonTouched:
-            [productImage setImage: [UIImage imageNamed:@"clothe-gridview-detail-1-orangeImage"]];
+            view1Active = FALSE;
+            ///set product image
+            [productImage setImageWithURL:[NSURL URLWithString:[[view2 objectAtIndex:0] objectForKey:@"image"]]];
+            
+            ///set 3 thumnail images for view1
+            [thumnailButton1 setImageWithURL:[NSURL URLWithString:[[view1 objectAtIndex:0] objectForKey:@"thumbnail" ]]];
+            [thumnailButton2 setImageWithURL:[NSURL URLWithString:[[view1 objectAtIndex:1] objectForKey:@"thumbnail" ]]];
+            [thumnailButton3 setImageWithURL:[NSURL URLWithString:[[view1 objectAtIndex:2] objectForKey:@"thumbnail" ]]];
+            
             break;
         case  ThumnailButton1Touched:
-            
+            if (view1Active)
+            {
+                [productImage setImageWithURL:[NSURL URLWithString:[[view1 objectAtIndex:0] objectForKey:@"image"]]];
+            }
+            else
+            {
+                [productImage setImageWithURL:[NSURL URLWithString:[[view2 objectAtIndex:0] objectForKey:@"image"]]];
+            }
             break;
         case  ThumnailButton2Touched:
-            
+            if (view1Active)
+            {
+                [productImage setImageWithURL:[NSURL URLWithString:[[view1 objectAtIndex:1] objectForKey:@"image"]]];
+            }
+            else
+            {
+                [productImage setImageWithURL:[NSURL URLWithString:[[view2 objectAtIndex:1] objectForKey:@"image"]]];
+            }
             break;
         case  ThumnailButton3Touched:
-            
+            if (view1Active)
+            {
+                [productImage setImageWithURL:[NSURL URLWithString:[[view1 objectAtIndex:2] objectForKey:@"image"]]];
+            }
+            else
+            {
+                [productImage setImageWithURL:[NSURL URLWithString:[[view2 objectAtIndex:2] objectForKey:@"image"]]];
+            }
             break;
             
     }
@@ -191,12 +257,12 @@
 }
 
 /*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
-{
-    // Drawing code
-}
-*/
+ // Only override drawRect: if you perform custom drawing.
+ // An empty implementation adversely affects performance during animation.
+ - (void)drawRect:(CGRect)rect
+ {
+ // Drawing code
+ }
+ */
 
 @end

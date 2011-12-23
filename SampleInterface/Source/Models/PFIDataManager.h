@@ -7,6 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "UIKit/UIkit.h"
+#import "JSONKit.h"
+
+typedef void(^PFIDataManagerCompleteBlock)(id);
+
+@protocol PFIDataManagerProtocol 
+
+-(void)loadHomeNewsItems:(NSArray*)data;
+
+@end
 
 @interface PFIDataManager : NSObject
 {
@@ -15,12 +25,15 @@
     NSArray *clotheDataGridView;
     NSArray *clotheSexData;
     NSArray *mapData;
+    PFIDataManagerCompleteBlock dasBlock;
+    PFIDataManagerCompleteBlock gridItemBlock;
 }
 
 +(PFIDataManager*)sharedManager;
--(NSArray*)getHomeNewsItems;
 -(NSArray*)getClotheDataItems;
 -(NSArray*)getClotheDataGridViewItems;
 -(NSArray*)getClotheSexDataItems;
 -(NSArray*)getMapDataItems;
+-(void)loadHomeNewsItems:(PFIDataManagerCompleteBlock) block;
+-(void)loadClotheGridViewItems:(PFIDataManagerCompleteBlock) block;
 @end

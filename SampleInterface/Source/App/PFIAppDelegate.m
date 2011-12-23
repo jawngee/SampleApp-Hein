@@ -9,10 +9,13 @@
 #import "PFIAppDelegate.h"
 #import "PFIRootViewController.h"
 #import "PFINavigationController.h"
+#import "SDImageCache.h"
+
 @implementation PFIAppDelegate
 
 @synthesize window = _window;
 @synthesize tabBarViewController;
+
 -(void)dealloc
 { 
     [_window release];
@@ -54,6 +57,10 @@
 
 -(BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [[SDImageCache sharedImageCache] clearMemory];
+    [[SDImageCache sharedImageCache] clearDisk];
+    [[SDImageCache sharedImageCache] clearMemory];
+    
     tabBarButtons=[[NSMutableArray alloc] initWithCapacity:0];
     self.window     = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
       

@@ -46,16 +46,27 @@
     self.tableView.rowHeight = 123;
     if (!self.data)
     {
+        
+        [[PFIDataManager sharedManager] loadClotheGridViewItems:^(id dataArray)
+         {
+             data = [dataArray retain];
+             NSLog(@"number of home items  = %d",[data count]);
+             
+             if ( [data count] % 3 == 0)
+             {
+                 numberOfRow = [data count] / 3;
+             }
+             else
+             {
+                 numberOfRow = [data count] / 3 + 1;
+             }
+
+             [self.tableView reloadData];
+             
+         }];
+        
         /*
-        ///load data in an array
-        NSString *dataPath = [[NSBundle mainBundle] pathForResource:@"ClotheGridViewData" ofType:@"plist"];
-        NSDictionary *loadedFile=[NSDictionary dictionaryWithContentsOfFile:dataPath];
-        self.data = [loadedFile allValues];
-        */
         self.data = [[PFIDataManager sharedManager] getClotheDataGridViewItems];
-        
-        [self.tableView setBackgroundView:[[[ CustomBackground alloc] init] autorelease]];
-        
         if ( [data count] % 3 == 0)
         {
             numberOfRow = [data count] / 3;
@@ -64,7 +75,11 @@
         {
             numberOfRow = [data count] / 3 + 1;
         }
-
+        */
+        
+        [self.tableView setBackgroundView:[[[ CustomBackground alloc] init] autorelease]];
+        
+        
     }
 }
 -(void) backButtonPress:(id) sender

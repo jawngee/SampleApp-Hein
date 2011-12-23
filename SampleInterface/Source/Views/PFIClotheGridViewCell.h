@@ -11,7 +11,6 @@
    * PFIClotheGridViewCellDelegate protocol is to handle the event when User tap on a cell in Clothe Grid View
  */
 @protocol PFIClotheGridViewCellDelegate
-
 /**
   * this method is to show the Detail View of a cell.
  */
