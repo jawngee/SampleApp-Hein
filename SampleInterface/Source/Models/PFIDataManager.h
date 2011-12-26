@@ -27,6 +27,8 @@ typedef void(^PFIDataManagerCompleteBlock)(id);
     NSArray *mapData;
     PFIDataManagerCompleteBlock dasBlock;
     PFIDataManagerCompleteBlock gridItemBlock;
+    PFIDataManagerCompleteBlock mapItemBlock;
+
 }
 
 +(PFIDataManager*)sharedManager;
@@ -36,4 +38,6 @@ typedef void(^PFIDataManagerCompleteBlock)(id);
 -(NSArray*)getMapDataItems;
 -(void)loadHomeNewsItems:(PFIDataManagerCompleteBlock) block;
 -(void)loadClotheGridViewItems:(PFIDataManagerCompleteBlock) block;
+-(void)loadMapItems:(PFIDataManagerCompleteBlock) block;
+
 @end

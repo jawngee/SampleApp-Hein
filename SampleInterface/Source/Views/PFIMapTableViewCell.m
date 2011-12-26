@@ -7,6 +7,7 @@
 //
 
 #import "PFIMapTableViewCell.h"
+#import "UIImageView+WebCache.h"
 
 @implementation PFIMapTableViewCell
 
@@ -21,7 +22,8 @@
     if (self)
     {
         ///add icon image
-        icon = [[UIImageView alloc] initWithImage:[UIImage imageNamed:[dataItem objectForKey:@"icon"]]] ;
+        icon = [[UIImageView alloc] init] ;
+        [icon setImageWithURL:[NSURL URLWithString:[dataItem objectForKey:@"icon"]]];
         icon.frame = CGRectMake(8 , 15 , 133 , 94 ); 
         [self addSubview:icon];
         
@@ -74,7 +76,7 @@
 {
     
     ///set icon image
-    [self.icon setImage:[UIImage imageNamed:[dataItem objectForKey:@"icon"]]];
+    [icon setImageWithURL:[NSURL URLWithString:[dataItem objectForKey:@"icon"]]];
     
     ///set titleLabel
     [self.titleLabel setText:[dataItem objectForKey:@"title"]];

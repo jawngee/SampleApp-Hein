@@ -87,8 +87,8 @@
         
         MKCoordinateRegion region;
         MKCoordinateSpan span;
-        span.latitudeDelta=0.2;
-        span.longitudeDelta=0.2;
+        span.latitudeDelta = 0.2;
+        span.longitudeDelta = 0.2;
         
         CLLocationCoordinate2D location = mapView.userLocation.coordinate;
         

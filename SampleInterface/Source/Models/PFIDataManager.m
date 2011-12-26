@@ -31,6 +31,26 @@ static PFIDataManager* sharedDataManager;
     }
     return self;
 }
+-(void)loadMapItems:(PFIDataManagerCompleteBlock) block
+{
+    mapItemBlock = [block copy];
+    NSURL *url = [NSURL URLWithString:@"http://robe.local/robe/locations/"];
+    __block ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:url];
+    
+    [request setCompletionBlock:^
+     {
+         NSString *responseString=[request responseString];
+         NSArray *myArray=[responseString objectFromJSONString];
+         mapItemBlock(myArray);
+         [mapItemBlock release];
+     }];
+    
+    [request setFailedBlock:^
+     {
+         //NSError *error = [request error];
+     }];
+    [request startAsynchronous];
+}
 -(void)loadClotheGridViewItems:(PFIDataManagerCompleteBlock) block
 {
     gridItemBlock = [block copy];

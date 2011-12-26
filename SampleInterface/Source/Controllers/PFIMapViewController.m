@@ -51,7 +51,13 @@
     if (!self.data)
     {
         ///load data
-        self.data = [[PFIDataManager sharedManager] getMapDataItems];
+        [[PFIDataManager sharedManager] loadMapItems:^(id dataArray)
+         {
+             data = [dataArray retain];
+             NSLog(@"number of home items  = %d",[data count]);
+             [self.tableView reloadData];
+             
+         }];
         
         ///set background view 
         [self.tableView setBackgroundView:[[[CustomBackground alloc] init] autorelease]];
@@ -142,8 +148,8 @@
 {
     int indexRow = indexPath.row;
     NSDictionary *dataItem = [self.data objectAtIndex: indexRow];
-    CLLocationDegrees lat = [[dataItem objectForKey:@"latitude"] doubleValue];
-    CLLocationDegrees lon = [[dataItem objectForKey:@"longitude"] doubleValue];
+    CLLocationDegrees lat = [[dataItem objectForKey:@"lat"] doubleValue];
+    CLLocationDegrees lon = [[dataItem objectForKey:@"long"] doubleValue];
 
     PFIMapDetailViewController *detailViewController = [[PFIMapDetailViewController alloc] initWithNibName:@"PFIMapDetailViewController" bundle:nil latitude:lat longitude:lon];
     
