@@ -7,9 +7,11 @@
 //
 
 #import "PFIAppDelegate.h"
-#import "PFIRootViewController.h"
 #import "PFINavigationController.h"
 #import "SDImageCache.h"
+#import "ASIHTTPRequest.h"
+#import "JSONKit.h"
+#import "PFIDataManager.h"
 
 @implementation PFIAppDelegate
 
@@ -20,6 +22,7 @@
 { 
     [_window release];
     [tabBarViewController release];
+    [networkQueue release];
     [super dealloc];
 }
 
@@ -65,8 +68,7 @@
     self.window     = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
       
     /// init Root view controller and configure it
-    self.tabBarViewController = [[[PFIRootViewController alloc] initWithNibName:@"PFIRootViewController" bundle:nil] autorelease];
-
+    self.tabBarViewController = [[[UITabBarController alloc] init] autorelease];
     ///add background image to tab bar
     [  self.tabBarViewController.tabBar addSubview:[[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"global-footer-background"]] autorelease]];
     
@@ -82,10 +84,84 @@
     [self addTabBarButtonAtIndex:2 normalImage:@"global-footer-cloth" selectedImage:@"global-footer-cloth-on" isSelected:NO];
     [self addTabBarButtonAtIndex:3 normalImage:@"global-footer-bag" selectedImage:@"global-footer-bag-on" isSelected:NO];
     [self addTabBarButtonAtIndex:4 normalImage:@"global-footer-map" selectedImage:@"global-footer-map-on" isSelected:NO];
-
+    
+    ///addding tab bar view
     self.window.rootViewController = self.tabBarViewController;
+    [tabBarViewController.view setUserInteractionEnabled:NO];
+    
+    ///adding progress view
+    progressView = [LGViewHUD defaultHUD];
+    progressView.activityIndicatorOn=YES;
+    [progressView showInView:tabBarViewController.view];
+    
+    ///starting downloading all JSON Files
+    if (!networkQueue) {
+		networkQueue = [[ASINetworkQueue alloc] init];	
+	}
+    [networkQueue reset];
+	[networkQueue setRequestDidFinishSelector:@selector(imageFetchComplete:)];
+	[networkQueue setRequestDidFailSelector:@selector(imageFetchFailed:)];
+	[networkQueue setDelegate:self];
+    
+    ASIHTTPRequest *request;
+	request = [ASIHTTPRequest requestWithURL:[NSURL URLWithString:@"http://robe.local/robe/news/"]];
+    [request setUserInfo:[NSDictionary dictionaryWithObject:@"HomeRequest" forKey:@"name"]];
+	[networkQueue addOperation:request];
+    
+    request = [ASIHTTPRequest requestWithURL:[NSURL URLWithString:@"http://robe.local/robe/products/"]];
+    [request setUserInfo:[NSDictionary dictionaryWithObject:@"ProductRequest" forKey:@"name"]];
+	[networkQueue addOperation:request];
+    ///[request setShowAccurateProgress:NO];
+    
+    request = [ASIHTTPRequest requestWithURL:[NSURL URLWithString:@"http://robe.local/robe/locations/"]];
+    [request setUserInfo:[NSDictionary dictionaryWithObject:@"MapRequest" forKey:@"name"]];
+	[networkQueue addOperation:request];
+    //[request setShowAccurateProgress:NO];
+    
+    [networkQueue go];
+
     [self.window makeKeyAndVisible];
     return YES;
+}
+
+- (void)imageFetchComplete:(ASIHTTPRequest *)request
+{
+    NSDictionary *myDict =[request userInfo];
+    NSString *requestItem = [myDict objectForKey:@"name"];
+    NSLog(@"%@",requestItem);
+    
+    NSString *responseString=[request responseString];
+    NSArray *myArray=[responseString objectFromJSONString];
+    
+    if ([requestItem isEqualToString:@"HomeRequest"])
+    {
+        [PFIDataManager sharedManager].homeNewsData = [myArray retain];
+    }
+    else 
+        if([requestItem isEqualToString:@"ProductRequest"])
+        {
+            [PFIDataManager sharedManager].clotheDataGridView = [myArray retain];
+        }
+        else ///MapRequest
+        {
+            [PFIDataManager sharedManager].mapData = [myArray retain];
+        }
+    ///check if downloading is finished
+    if ([[PFIDataManager sharedManager] homeNewsData] != nil &&
+        [[PFIDataManager sharedManager] clotheDataGridView] != nil &&
+        [[PFIDataManager sharedManager] mapData] != nil)
+    {
+        [[LGViewHUD defaultHUD] hideWithAnimation:HUDAnimationHideFadeOut];
+        [tabBarViewController.view setUserInteractionEnabled:YES];
+        PFINavigationController *controller = [[tabBarViewController viewControllers] objectAtIndex:0];
+        PFIHomeViewController *homeController = (PFIHomeViewController*) controller.topViewController;
+        [homeController.tableView reloadData];
+    }
+}
+
+- (void)imageFetchFailed:(ASIHTTPRequest *)request
+{
+	
 }
 
 -(void)tabBarButtonSelected:(id)sender

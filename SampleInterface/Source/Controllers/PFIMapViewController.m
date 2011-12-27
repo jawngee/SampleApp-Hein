@@ -51,14 +51,7 @@
     if (!self.data)
     {
         ///load data
-        [[PFIDataManager sharedManager] loadMapItems:^(id dataArray)
-         {
-             data = [dataArray retain];
-             NSLog(@"number of home items  = %d",[data count]);
-             [self.tableView reloadData];
-             
-         }];
-        
+        self.data = [[PFIDataManager sharedManager] mapData];
         ///set background view 
         [self.tableView setBackgroundView:[[[CustomBackground alloc] init] autorelease]];
         

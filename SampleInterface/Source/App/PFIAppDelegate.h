@@ -12,6 +12,9 @@
 #import "PFIClotheViewController.h"
 #import "PFIBagViewController.h"
 #import "PFIMapViewController.h"
+#import "ASINetworkQueue.h"
+#import "LGViewHUD.h"
+
 @class PFIRootViewController;
 
 /**
@@ -21,11 +24,13 @@
 {
 
     NSMutableArray *tabBarButtons;
+    ASINetworkQueue *networkQueue;
+    LGViewHUD *progressView;
     
 }
 
 @property (strong, nonatomic) UIWindow *window;
 
-@property (strong, nonatomic) PFIRootViewController *tabBarViewController;
+@property (strong, nonatomic) UITabBarController *tabBarViewController;
 
 @end

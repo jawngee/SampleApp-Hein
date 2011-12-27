@@ -10,8 +10,6 @@
 #import "UIKit/UIkit.h"
 #import "JSONKit.h"
 
-typedef void(^PFIDataManagerCompleteBlock)(id);
-
 @protocol PFIDataManagerProtocol 
 
 -(void)loadHomeNewsItems:(NSArray*)data;
@@ -21,23 +19,19 @@ typedef void(^PFIDataManagerCompleteBlock)(id);
 @interface PFIDataManager : NSObject
 {
     NSArray *homeNewsData;
-    NSArray *clotheData;
     NSArray *clotheDataGridView;
-    NSArray *clotheSexData;
     NSArray *mapData;
-    PFIDataManagerCompleteBlock dasBlock;
-    PFIDataManagerCompleteBlock gridItemBlock;
-    PFIDataManagerCompleteBlock mapItemBlock;
-
+    
+    NSArray *clotheSexData;
+    NSArray *clotheData;
 }
+@property(assign,readwrite,nonatomic) NSArray *homeNewsData;
+@property(assign,readwrite,nonatomic) NSArray *clotheDataGridView;
+@property(assign,readwrite,nonatomic) NSArray *mapData;
 
-+(PFIDataManager*)sharedManager;
--(NSArray*)getClotheDataItems;
--(NSArray*)getClotheDataGridViewItems;
 -(NSArray*)getClotheSexDataItems;
--(NSArray*)getMapDataItems;
--(void)loadHomeNewsItems:(PFIDataManagerCompleteBlock) block;
--(void)loadClotheGridViewItems:(PFIDataManagerCompleteBlock) block;
--(void)loadMapItems:(PFIDataManagerCompleteBlock) block;
+-(NSArray*)getClotheDataItems;
++(PFIDataManager*)sharedManager;
+
 
 @end

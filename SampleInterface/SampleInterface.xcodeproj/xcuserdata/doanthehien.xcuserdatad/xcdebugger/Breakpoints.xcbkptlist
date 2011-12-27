@@ -9,20 +9,6 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "Source/Externals/SDWebImageDecoder.m"
-         timestampString = "346316051.24601"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "120"
-         endingLineNumber = "120"
-         landmarkName = "+decodedImageWithImage:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "Yes"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         isPathRelative = "1"
-         filePath = "Source/Externals/SDWebImageDecoder.m"
          timestampString = "346316098.909007"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"

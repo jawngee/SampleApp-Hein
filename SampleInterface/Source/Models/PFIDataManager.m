@@ -13,6 +13,10 @@
 
 @implementation PFIDataManager
 
+@synthesize homeNewsData;
+@synthesize clotheDataGridView;
+@synthesize mapData;
+
 static PFIDataManager* sharedDataManager;
 
 +(PFIDataManager*)sharedManager
@@ -31,89 +35,6 @@ static PFIDataManager* sharedDataManager;
     }
     return self;
 }
--(void)loadMapItems:(PFIDataManagerCompleteBlock) block
-{
-    mapItemBlock = [block copy];
-    NSURL *url = [NSURL URLWithString:@"http://robe.local/robe/locations/"];
-    __block ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:url];
-    
-    [request setCompletionBlock:^
-     {
-         NSString *responseString=[request responseString];
-         NSArray *myArray=[responseString objectFromJSONString];
-         mapItemBlock(myArray);
-         [mapItemBlock release];
-     }];
-    
-    [request setFailedBlock:^
-     {
-         //NSError *error = [request error];
-     }];
-    [request startAsynchronous];
-}
--(void)loadClotheGridViewItems:(PFIDataManagerCompleteBlock) block
-{
-    gridItemBlock = [block copy];
-    NSURL *url = [NSURL URLWithString:@"http://robe.local/robe/products/"];
-    __block ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:url];
-    
-    [request setCompletionBlock:^
-     {
-         NSString *responseString=[request responseString];
-         NSArray *myArray=[responseString objectFromJSONString];
-         gridItemBlock(myArray);
-         [gridItemBlock release];
-     }];
-    
-    [request setFailedBlock:^
-     {
-         //NSError *error = [request error];
-     }];
-    [request startAsynchronous];
-}
--(void) loadHomeNewsItems:(PFIDataManagerCompleteBlock) block
-{
-    dasBlock = [block copy];
-    NSURL *url = [NSURL URLWithString:@"http://robe.local/robe/news/"];
-    __block ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:url];
-    
-    [request setCompletionBlock:^
-     {
-         NSString *responseString=[request responseString];
-         NSArray *myArray=[responseString objectFromJSONString];
-         dasBlock(myArray);
-         [dasBlock release];
-     }];
-    
-    [request setFailedBlock:^
-     {
-         //NSError *error = [request error];
-     }];
-    [request startAsynchronous];
-}
-
-
--(NSArray*)getClotheDataItems
-{
-    if(clotheData == nil)
-    {
-        NSString *dataPath = [[NSBundle mainBundle] pathForResource:@"ClotheData" ofType:@"plist"];
-        NSDictionary *loadedFile=[NSDictionary dictionaryWithContentsOfFile:dataPath];
-        clotheData = [loadedFile allValues];
-    }
-    return clotheData;
-}
-
--(NSArray*)getClotheDataGridViewItems
-{
-    if(clotheDataGridView == nil)
-    {
-        NSString *dataPath = [[NSBundle mainBundle] pathForResource:@"ClotheGridViewData" ofType:@"plist"];
-        NSDictionary *loadedFile=[NSDictionary dictionaryWithContentsOfFile:dataPath];
-        clotheDataGridView = [loadedFile allValues];
-    }
-    return clotheDataGridView;
-}
 
 -(NSArray*)getClotheSexDataItems
 {
@@ -125,25 +46,23 @@ static PFIDataManager* sharedDataManager;
     }
     return clotheSexData;
 }
-
--(NSArray*)getMapDataItems;
+-(NSArray*)getClotheDataItems
 {
-    if(mapData == nil)
+    if(clotheData == nil)
     {
-        NSString *dataPath = [[NSBundle mainBundle] pathForResource:@"MapDataItem" ofType:@"plist"];
+        NSString *dataPath = [[NSBundle mainBundle] pathForResource:@"ClotheData" ofType:@"plist"];
         NSDictionary *loadedFile=[NSDictionary dictionaryWithContentsOfFile:dataPath];
-        mapData = [loadedFile allValues];
+        clotheData = [loadedFile allValues];
     }
-    return mapData;
+    return clotheData;
 }
-
 -(void)dealloc
 {
     [homeNewsData release];
     [clotheData release];
     [clotheDataGridView release];
-    [clotheSexData release];
     [mapData release];
+    [clotheSexData release];
     [super dealloc];
     
 }

@@ -19,6 +19,7 @@
 #import "PFIDataManager.h"
 #import "PFIHomeNewsItem.h"
 #import "ASIHTTPRequest.h"
+#import "LGViewHUD.h"
 @implementation PFIHomeViewController
 
 @synthesize data;
@@ -60,53 +61,10 @@
 
     if(!self.data)
     {
-        
-        imageArray = [[NSMutableArray alloc] initWithCapacity:20];
-        
-        [[PFIDataManager sharedManager] loadHomeNewsItems:^(id dataArray)
-         {
-             data = [dataArray retain];
-             NSLog(@"number of home items  = %d",[data count]);
-             [self.tableView reloadData];
-             
-         }];
-        
+        self.data = [[PFIDataManager sharedManager] homeNewsData];
         [self.tableView setBackgroundView:[[[CustomBackground alloc] init] autorelease]];
         cellBackground = [[CustomCellBackground alloc] init];
     }
-}
--(void) loadingIconImage
-{
-    if (!networkQueue) {
-		networkQueue = [[ASINetworkQueue alloc] init];	
-	}
-	[networkQueue reset];
-	[networkQueue setRequestDidFinishSelector:@selector(imageFetchComplete:)];
-	[networkQueue setRequestDidFailSelector:@selector(imageFetchFailed:)];
-	[networkQueue setDelegate:self];
-    
-    for (int i = 0; i < [data count]; i++)
-    {
-        NSDictionary *item = [data objectAtIndex:i];
-        NSURL *url = [NSURL URLWithString:[item objectForKey:@"icon"]];
-        ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:url];
-        
-        [request setDownloadDestinationPath:[[NSHomeDirectory() stringByAppendingPathComponent:@"Documents"] stringByAppendingPathComponent:[NSString stringWithFormat:@"%d.png",i]]];
-        [request setUserInfo:[NSDictionary dictionaryWithObject:[NSString stringWithFormat:@"%d",i] forKey:@"name"]];
-        [networkQueue addOperation:request];
-        
-    }
-    [networkQueue go];
-}
-- (void)imageFetchComplete:(ASIHTTPRequest *)request
-{
-	UIImage *img = [UIImage imageWithContentsOfFile:[request downloadDestinationPath]];
-    [imageArray addObject:img];
-}
-
-- (void)imageFetchFailed:(ASIHTTPRequest *)request
-{
-	NSLog(@"imageFetchFailed");
 }
 
 -(void)viewDidUnload
@@ -118,7 +76,8 @@
 
 -(void) refreshPage:(id)sender
 {
-    
+    self.data = [[PFIDataManager sharedManager] homeNewsData];
+    [self.tableView reloadData];
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -151,7 +110,6 @@
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-
     // Return the number of sections.
     return 1;
 }
@@ -159,6 +117,7 @@
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
+    self.data = [[PFIDataManager sharedManager] homeNewsData];
     return [self.data count];
 }
 

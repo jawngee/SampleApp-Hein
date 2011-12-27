@@ -54,12 +54,6 @@
         self.tableView.rowHeight = 92;
         [self.tableView setBackgroundView:[[[CustomBackground alloc] init] autorelease]];
         
-        /*
-        ///load data
-        NSString *dataPath = [[NSBundle mainBundle] pathForResource:@"ClotheData" ofType:@"plist"];
-        NSDictionary *loadedFile=[NSDictionary dictionaryWithContentsOfFile:dataPath];
-        self.data = [loadedFile allValues];
-        */
         self.data = [[PFIDataManager sharedManager] getClotheDataItems];
         
         selectedCellBackground = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 92)];

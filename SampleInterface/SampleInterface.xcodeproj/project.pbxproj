@@ -28,6 +28,7 @@
 		FE2644D114A334EC0050F555 /* SDWebImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FE2644CA14A334EC0050F555 /* SDWebImageManager.m */; };
 		FE2644D214A334EC0050F555 /* SDWebImagePrefetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = FE2644CD14A334EC0050F555 /* SDWebImagePrefetcher.m */; };
 		FE27E63414A1B14600F09B3B /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = FE27E63314A1B14600F09B3B /* Reachability.m */; };
+		FE289E5B14A99EC000AF7FF1 /* LGViewHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = FE289E5A14A99EC000AF7FF1 /* LGViewHUD.m */; };
 		FE4B0FA5147CE340003CEDFD /* home-background-tableview.png in Resources */ = {isa = PBXBuildFile; fileRef = FE4B0F9D147CE340003CEDFD /* home-background-tableview.png */; };
 		FE4B0FA6147CE340003CEDFD /* home-background-tableview@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE4B0F9E147CE340003CEDFD /* home-background-tableview@2x.png */; };
 		FE4B0FA7147CE340003CEDFD /* home-icon-cell-1.png in Resources */ = {isa = PBXBuildFile; fileRef = FE4B0F9F147CE340003CEDFD /* home-icon-cell-1.png */; };
@@ -126,7 +127,6 @@
 		FEDFA78C147BB05E0028A7E5 /* PFIBagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEDFA77C147BB05E0028A7E5 /* PFIBagViewController.m */; };
 		FEDFA78D147BB05E0028A7E5 /* PFICalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEDFA77E147BB05E0028A7E5 /* PFICalendarViewController.m */; };
 		FEDFA78F147BB05E0028A7E5 /* PFIHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEDFA782147BB05E0028A7E5 /* PFIHomeViewController.m */; };
-		FEDFA791147BB05E0028A7E5 /* PFIRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEDFA786147BB05E0028A7E5 /* PFIRootViewController.m */; };
 		FEDFA792147BB05E0028A7E5 /* CustomBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = FEDFA789147BB05E0028A7E5 /* CustomBackground.m */; };
 		FEDFB5F4147F6742002E11BE /* clothe-bag.png in Resources */ = {isa = PBXBuildFile; fileRef = FEDFB5F3147F6742002E11BE /* clothe-bag.png */; };
 		FEDFB5FD147F74B5002E11BE /* clothe-bag-hightlight.png in Resources */ = {isa = PBXBuildFile; fileRef = FEDFB5F5147F74B5002E11BE /* clothe-bag-hightlight.png */; };
@@ -230,6 +230,8 @@
 		FE2644CD14A334EC0050F555 /* SDWebImagePrefetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWebImagePrefetcher.m; sourceTree = "<group>"; };
 		FE27E63214A1B14600F09B3B /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		FE27E63314A1B14600F09B3B /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		FE289E5914A99EC000AF7FF1 /* LGViewHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGViewHUD.h; sourceTree = "<group>"; };
+		FE289E5A14A99EC000AF7FF1 /* LGViewHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGViewHUD.m; sourceTree = "<group>"; };
 		FE4B0F9D147CE340003CEDFD /* home-background-tableview.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home-background-tableview.png"; sourceTree = "<group>"; };
 		FE4B0F9E147CE340003CEDFD /* home-background-tableview@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home-background-tableview@2x.png"; sourceTree = "<group>"; };
 		FE4B0F9F147CE340003CEDFD /* home-icon-cell-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home-icon-cell-1.png"; sourceTree = "<group>"; };
@@ -356,8 +358,6 @@
 		FEDFA77E147BB05E0028A7E5 /* PFICalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFICalendarViewController.m; sourceTree = "<group>"; };
 		FEDFA781147BB05E0028A7E5 /* PFIHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFIHomeViewController.h; sourceTree = "<group>"; };
 		FEDFA782147BB05E0028A7E5 /* PFIHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFIHomeViewController.m; sourceTree = "<group>"; };
-		FEDFA785147BB05E0028A7E5 /* PFIRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFIRootViewController.h; sourceTree = "<group>"; };
-		FEDFA786147BB05E0028A7E5 /* PFIRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFIRootViewController.m; sourceTree = "<group>"; };
 		FEDFA788147BB05E0028A7E5 /* CustomBackground.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomBackground.h; sourceTree = "<group>"; };
 		FEDFA789147BB05E0028A7E5 /* CustomBackground.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomBackground.m; sourceTree = "<group>"; };
 		FEDFB5F3147F6742002E11BE /* clothe-bag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clothe-bag.png"; sourceTree = "<group>"; };
@@ -548,6 +548,8 @@
 		FE9AC4FD14A100FB005FF4CB /* Externals */ = {
 			isa = PBXGroup;
 			children = (
+				FE289E5914A99EC000AF7FF1 /* LGViewHUD.h */,
+				FE289E5A14A99EC000AF7FF1 /* LGViewHUD.m */,
 				FE1D339314A437860057A5EC /* UIButton+WebCache.h */,
 				FE1D339414A437860057A5EC /* UIButton+WebCache.m */,
 				FE27E63214A1B14600F09B3B /* Reachability.h */,
@@ -713,8 +715,6 @@
 		FEDFA77A147BB05E0028A7E5 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				FEDFA785147BB05E0028A7E5 /* PFIRootViewController.h */,
-				FEDFA786147BB05E0028A7E5 /* PFIRootViewController.m */,
 				FEDFA781147BB05E0028A7E5 /* PFIHomeViewController.h */,
 				FEDFA782147BB05E0028A7E5 /* PFIHomeViewController.m */,
 				FEDFA77D147BB05E0028A7E5 /* PFICalendarViewController.h */,
@@ -1018,7 +1018,6 @@
 				FEDFA78C147BB05E0028A7E5 /* PFIBagViewController.m in Sources */,
 				FEDFA78D147BB05E0028A7E5 /* PFICalendarViewController.m in Sources */,
 				FEDFA78F147BB05E0028A7E5 /* PFIHomeViewController.m in Sources */,
-				FEDFA791147BB05E0028A7E5 /* PFIRootViewController.m in Sources */,
 				FEDFA792147BB05E0028A7E5 /* CustomBackground.m in Sources */,
 				FE4B0FB3147CF36D003CEDFD /* CustomCellBackground.m in Sources */,
 				FE00EA42147E104B00874935 /* PFIHomeTableViewCell.m in Sources */,
@@ -1053,6 +1052,7 @@
 				FE2644D114A334EC0050F555 /* SDWebImageManager.m in Sources */,
 				FE2644D214A334EC0050F555 /* SDWebImagePrefetcher.m in Sources */,
 				FE1D339514A437860057A5EC /* UIButton+WebCache.m in Sources */,
+				FE289E5B14A99EC000AF7FF1 /* LGViewHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

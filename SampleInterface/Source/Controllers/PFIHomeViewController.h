@@ -26,5 +26,4 @@
 
 @property(nonatomic,assign) NSArray *data;
 @property(nonatomic,assign) CustomCellBackground *cellBackground;
--(void) loadingIconImage;
 @end
