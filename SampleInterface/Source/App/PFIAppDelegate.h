@@ -26,7 +26,8 @@
     NSMutableArray *tabBarButtons;
     ASINetworkQueue *networkQueue;
     LGViewHUD *progressView;
-    
+    BOOL failed;
+    BOOL loadFromLocal;
 }
 
 @property (strong, nonatomic) UIWindow *window;

@@ -59,11 +59,40 @@
 }
 
 -(BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
-    [[SDImageCache sharedImageCache] clearMemory];
+{  
     [[SDImageCache sharedImageCache] clearDisk];
-    [[SDImageCache sharedImageCache] clearMemory];
+    [[SDImageCache sharedImageCache] cleanDisk];
     
+    ////////Compare the time creation of file with current time
+    loadFromLocal = FALSE;
+    NSString *myString  = [[NSHomeDirectory() stringByAppendingPathComponent:@"Documents"] stringByAppendingPathComponent:@"productRequest.txt"];
+    NSDictionary* fileAttribs = [[NSFileManager defaultManager] attributesOfItemAtPath:myString error:nil];
+    NSDate *date = [fileAttribs valueForKey:NSFileModificationDate];
+    //NSLog(@"Date creation = %@",result);
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSDateComponents *components = [calendar components:(kCFCalendarUnitHour | kCFCalendarUnitMinute | kCFCalendarUnitDay | kCFCalendarUnitMonth | kCFCalendarUnitYear) fromDate:date];
+    NSInteger hour = [components hour];
+    NSInteger year = [components year];
+    NSInteger day = [components day];
+    NSInteger month = [components month];
+        
+    NSDate *now = [NSDate date];
+    NSDateComponents *componentsNow = [calendar components:(kCFCalendarUnitHour | kCFCalendarUnitMinute | kCFCalendarUnitDay | kCFCalendarUnitMonth | kCFCalendarUnitYear) fromDate:now];
+    NSInteger currentHour = [componentsNow hour];
+    NSInteger currentYear = [componentsNow year];
+    NSInteger currentDay = [componentsNow day];
+    NSInteger currentMonth = [componentsNow month];
+    
+    ///we load data from local only when it has the same year,month,day,and hour, otherwise we load from web service
+    if (currentYear == year && currentMonth == month && currentDay == day)
+    {
+        NSLog(@"the same day");
+        if (currentHour - hour == 0) ///the same hour
+        {
+            loadFromLocal = TRUE;
+        }
+    }
+
     tabBarButtons=[[NSMutableArray alloc] initWithCapacity:0];
     self.window     = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
       
@@ -87,51 +116,84 @@
     
     ///addding tab bar view
     self.window.rootViewController = self.tabBarViewController;
-    [tabBarViewController.view setUserInteractionEnabled:NO];
     
-    ///adding progress view
-    progressView = [LGViewHUD defaultHUD];
-    progressView.activityIndicatorOn=YES;
-    [progressView showInView:tabBarViewController.view];
-    
-    ///starting downloading all JSON Files
-    if (!networkQueue) {
-		networkQueue = [[ASINetworkQueue alloc] init];	
-	}
-    [networkQueue reset];
-	[networkQueue setRequestDidFinishSelector:@selector(imageFetchComplete:)];
-	[networkQueue setRequestDidFailSelector:@selector(imageFetchFailed:)];
-	[networkQueue setDelegate:self];
-    
-    ASIHTTPRequest *request;
-	request = [ASIHTTPRequest requestWithURL:[NSURL URLWithString:@"http://robe.local/robe/news/"]];
-    [request setUserInfo:[NSDictionary dictionaryWithObject:@"HomeRequest" forKey:@"name"]];
-	[networkQueue addOperation:request];
-    
-    request = [ASIHTTPRequest requestWithURL:[NSURL URLWithString:@"http://robe.local/robe/products/"]];
-    [request setUserInfo:[NSDictionary dictionaryWithObject:@"ProductRequest" forKey:@"name"]];
-	[networkQueue addOperation:request];
-    ///[request setShowAccurateProgress:NO];
-    
-    request = [ASIHTTPRequest requestWithURL:[NSURL URLWithString:@"http://robe.local/robe/locations/"]];
-    [request setUserInfo:[NSDictionary dictionaryWithObject:@"MapRequest" forKey:@"name"]];
-	[networkQueue addOperation:request];
-    //[request setShowAccurateProgress:NO];
-    
-    [networkQueue go];
+    ///check if loading from local or not
+    if (loadFromLocal)
+    {
+        ///getting home data
+        NSString *homePath = [[NSHomeDirectory() stringByAppendingPathComponent:@"Documents"] stringByAppendingPathComponent:@"homeRequest.txt"];
+        NSString *homeData = [NSString stringWithContentsOfFile:homePath encoding:NSUTF8StringEncoding error:NULL];
+        NSArray *homeJason = [homeData objectFromJSONString];
+        [PFIDataManager sharedManager].homeNewsData = [homeJason retain];
+        
+        ///getting product data: clotheDataGridView --->data for Grid View
+        NSString *productPath = [[NSHomeDirectory() stringByAppendingPathComponent:@"Documents"] stringByAppendingPathComponent:@"productRequest.txt"];
+        NSString *productData = [NSString stringWithContentsOfFile:productPath encoding:NSUTF8StringEncoding error:NULL];
+        NSArray *productJason = [productData objectFromJSONString];
+        [PFIDataManager sharedManager].clotheDataGridView = [productJason retain];
+        
+        ///getting location data
+        NSString *mapPath = [[NSHomeDirectory() stringByAppendingPathComponent:@"Documents"] stringByAppendingPathComponent:@"mapRequest.txt"];
+        NSString *mapData = [NSString stringWithContentsOfFile:mapPath encoding:NSUTF8StringEncoding error:NULL];
+        NSArray *mapJason = [mapData objectFromJSONString];
+        [PFIDataManager sharedManager].mapData = [mapJason retain];
+        
+        ///reload data from Home View
+        PFINavigationController *controller = [[tabBarViewController viewControllers] objectAtIndex:0];
+        PFIHomeViewController *homeController = (PFIHomeViewController*) controller.topViewController;
+        [homeController.tableView reloadData];
+    }
+    else
+    {
+        ///disable interaction of tab bar view
+        [tabBarViewController.view setUserInteractionEnabled:NO];
 
+        ///adding progress view
+        progressView = [LGViewHUD defaultHUD];
+        progressView.activityIndicatorOn = YES;
+        [progressView showInView:tabBarViewController.view];
+        
+        ///starting downloading all JSON Files
+        if (!networkQueue) {
+            networkQueue = [[ASINetworkQueue alloc] init];	
+        }
+        [networkQueue reset];
+        [networkQueue setRequestDidFinishSelector:@selector(imageFetchComplete:)];
+        [networkQueue setRequestDidFailSelector:@selector(imageFetchFailed:)];
+        [networkQueue setDelegate:self];
+        failed = NO;
+        
+        ASIHTTPRequest *request;
+        request = [ASIHTTPRequest requestWithURL:[NSURL URLWithString:@"http://robe.local/robe/news/"]];
+        [request setUserInfo:[NSDictionary dictionaryWithObject:@"HomeRequest" forKey:@"name"]];
+        [request setDownloadDestinationPath:[[NSHomeDirectory() stringByAppendingPathComponent:@"Documents"] stringByAppendingPathComponent:@"homeRequest.txt"]];
+        [networkQueue addOperation:request];
+        
+        request = [ASIHTTPRequest requestWithURL:[NSURL URLWithString:@"http://robe.local/robe/products/"]];
+        [request setUserInfo:[NSDictionary dictionaryWithObject:@"ProductRequest" forKey:@"name"]];
+        [request setDownloadDestinationPath:[[NSHomeDirectory() stringByAppendingPathComponent:@"Documents"] stringByAppendingPathComponent:@"productRequest.txt"]];
+        [networkQueue addOperation:request];
+        
+        request = [ASIHTTPRequest requestWithURL:[NSURL URLWithString:@"http://robe.local/robe/locations/"]];
+        [request setUserInfo:[NSDictionary dictionaryWithObject:@"MapRequest" forKey:@"name"]];
+        [request setDownloadDestinationPath:[[NSHomeDirectory() stringByAppendingPathComponent:@"Documents"] stringByAppendingPathComponent:@"mapRequest.txt"]];
+        [networkQueue addOperation:request];
+        
+        [networkQueue go];
+
+    }
+   
     [self.window makeKeyAndVisible];
     return YES;
 }
 
 - (void)imageFetchComplete:(ASIHTTPRequest *)request
 {
+    NSString *myString = [NSString stringWithContentsOfFile:[request downloadDestinationPath] encoding:NSUTF8StringEncoding error:NULL];
+    NSArray *myArray=[myString objectFromJSONString];
+    
     NSDictionary *myDict =[request userInfo];
     NSString *requestItem = [myDict objectForKey:@"name"];
-    NSLog(@"%@",requestItem);
-    
-    NSString *responseString=[request responseString];
-    NSArray *myArray=[responseString objectFromJSONString];
     
     if ([requestItem isEqualToString:@"HomeRequest"])
     {
@@ -151,7 +213,7 @@
         [[PFIDataManager sharedManager] clotheDataGridView] != nil &&
         [[PFIDataManager sharedManager] mapData] != nil)
     {
-        [[LGViewHUD defaultHUD] hideWithAnimation:HUDAnimationHideFadeOut];
+        [[LGViewHUD defaultHUD] hideWithAnimation:HUDAnimationHideZoom];
         [tabBarViewController.view setUserInteractionEnabled:YES];
         PFINavigationController *controller = [[tabBarViewController viewControllers] objectAtIndex:0];
         PFIHomeViewController *homeController = (PFIHomeViewController*) controller.topViewController;
@@ -161,7 +223,15 @@
 
 - (void)imageFetchFailed:(ASIHTTPRequest *)request
 {
-	
+    if (!failed) {
+		if ([[request error] domain] != NetworkRequestErrorDomain || [[request error] code] != ASIRequestCancelledErrorType) {
+			UIAlertView *alertView = [[[UIAlertView alloc] initWithTitle:@"Download failed" message:@"Please turn on your web server" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] autorelease];
+			[alertView show];
+            [[LGViewHUD defaultHUD] hideWithAnimation:HUDAnimationHideZoom];
+            [tabBarViewController.view setUserInteractionEnabled:YES];
+		}
+		failed = YES;
+	}
 }
 
 -(void)tabBarButtonSelected:(id)sender

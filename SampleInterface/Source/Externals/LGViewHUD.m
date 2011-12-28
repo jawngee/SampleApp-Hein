@@ -18,7 +18,7 @@ static LGViewHUD* defaultHUD = nil;
 @synthesize displayDuration;
 @synthesize topLabel, bottomLabel;
 
-#define kHUDDefaultAlphaValue 0.65
+#define kHUDDefaultAlphaValue 0.6
 #define kHUDDefaultDisplayDuration 2
 
 - (id)initWithFrame:(CGRect)frame {
@@ -30,26 +30,10 @@ static LGViewHUD* defaultHUD = nil;
 								UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin;
         // Initialization code.
 		double offset = frame.size.height/4.0;
-		topLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, offset/3.0, frame.size.width, offset/2)];
-		topLabel.backgroundColor=[UIColor clearColor];
-		topLabel.textColor=[UIColor whiteColor];
-		topLabel.font=[UIFont boldSystemFontOfSize:17];
-		topLabel.shadowColor=[UIColor blackColor];
-		topLabel.shadowOffset=CGSizeMake(1, 1);
-		topLabel.textAlignment=UITextAlignmentCenter;
-		
-		bottomLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, frame.size.height-2*offset/3.0, frame.size.width, offset/2)];
-		bottomLabel.backgroundColor=[UIColor clearColor];
-		bottomLabel.textColor=[UIColor whiteColor];
-		bottomLabel.font=[UIFont boldSystemFontOfSize:17];
-		bottomLabel.shadowColor=[UIColor blackColor];
-		bottomLabel.shadowOffset=CGSizeMake(1, 1);
-		
-		bottomLabel.textAlignment=UITextAlignmentCenter;
 		image=nil;
 		
 		backgroundView= [[UIView alloc] initWithFrame:CGRectMake(0, 0, frame.size.width, frame.size.height)];
-		backgroundView.layer.cornerRadius=10;
+		//backgroundView.layer.cornerRadius=10;
 		backgroundView.backgroundColor=[UIColor blackColor];
 		backgroundView.alpha=kHUDDefaultAlphaValue;
 		
@@ -66,8 +50,6 @@ static LGViewHUD* defaultHUD = nil;
 		activityIndicator=nil;
 		[self addSubview:backgroundView];
 		[self addSubview:imageView];
-		//[self addSubview:topLabel];
-		//[self addSubview:bottomLabel];
 		self.userInteractionEnabled=NO;
 		displayDuration=kHUDDefaultDisplayDuration;
 		
@@ -127,13 +109,15 @@ static LGViewHUD* defaultHUD = nil;
 -(void) setActivityIndicatorOn:(BOOL)isOn {
 	if (activityIndicatorOn!=isOn) {
 		activityIndicatorOn=isOn;
-		if (activityIndicatorOn) {
+		if (activityIndicatorOn)
+        {
 			activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
 			[activityIndicator startAnimating];
 			activityIndicator.center=CGPointMake(self.bounds.size.width/2.0, self.bounds.size.height/2.0);
 			imageView.hidden=YES;
 			[self addSubview:activityIndicator];
-		} else {
+		} else 
+        {
 			//when applying an image, this will auto hide the HUD.
 			[activityIndicator removeFromSuperview];
 			imageView.hidden=NO;
@@ -214,17 +198,17 @@ static LGViewHUD* defaultHUD = nil;
 	switch (animation) {
 		case HUDAnimationHideZoom:
 			[UIView beginAnimations:@"HUDHideZoom" context:nil];
-			[UIView setAnimationDuration:0.4];
+			[UIView setAnimationDuration:1.0];
 			[UIView setAnimationDelegate:self];
 			[UIView setAnimationCurve:UIViewAnimationCurveEaseOut];
-			self.transform=CGAffineTransformMakeScale(0.1, 0.1);
+			self.transform=CGAffineTransformMakeScale(0.025, 0.025);
 			self.alpha=0;
 			[UIView commitAnimations];
 			break;
 		case HUDAnimationHideFadeOut:
 			[UIView beginAnimations:@"HUDHideFade" context:nil];
 			[UIView setAnimationDelegate:self];
-			[UIView setAnimationDuration:1.0];
+			[UIView setAnimationDuration:1.5];
 			self.alpha=0.0;
 			[UIView commitAnimations];
 			break;
