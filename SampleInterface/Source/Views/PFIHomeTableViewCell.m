@@ -27,8 +27,8 @@
         NSString *imageName;
         imageName = [dataItem objectForKey:@"icon"];
         icon = [[UIImageView alloc] init] ;
+        icon.frame = CGRectMake(8 , 15 , 133 , 94 );
         [icon setImageWithURL:[NSURL URLWithString:imageName]];
-        icon.frame = CGRectMake(8 , 15 , 133 , 94 ); 
         [self addSubview:icon];
         
         ///add title label

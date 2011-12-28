@@ -23,8 +23,8 @@
     {
         ///add icon image
         icon = [[UIImageView alloc] init] ;
-        [icon setImageWithURL:[NSURL URLWithString:[dataItem objectForKey:@"icon"]]];
         icon.frame = CGRectMake(8 , 15 , 133 , 94 ); 
+        [icon setImageWithURL:[NSURL URLWithString:[dataItem objectForKey:@"icon"]]];
         [self addSubview:icon];
         
         ///add title label

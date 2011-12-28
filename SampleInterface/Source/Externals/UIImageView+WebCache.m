@@ -17,6 +17,17 @@
 
 - (void)setImageWithURL:(NSURL *)url placeholderImage:(UIImage *)placeholder
 {
+    UIActivityIndicatorView *activityView=(UIActivityIndicatorView *)[self viewWithTag:666];
+    if (activityView == Nil)
+    {
+        activityView=[[[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite] autorelease];
+        activityView.tag=666;
+        
+        [self addSubview:activityView];
+        activityView.center=CGPointMake(self.frame.size.width / 2, self.frame.size.height / 2);
+        [activityView startAnimating];
+    }
+    
     [self setImageWithURL:url placeholderImage:placeholder options:0];
 }
 
@@ -42,6 +53,8 @@
 
 - (void)webImageManager:(SDWebImageManager *)imageManager didFinishWithImage:(UIImage *)image
 {
+    UIActivityIndicatorView *activityView=(UIActivityIndicatorView *)[self viewWithTag:666];
+    [activityView removeFromSuperview];
     self.image = image;
 }
 
